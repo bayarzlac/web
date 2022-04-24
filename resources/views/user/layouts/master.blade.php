@@ -25,20 +25,10 @@
     <!-- SLEEK CSS -->
     <link id="sleek-css" rel="stylesheet" href="{{ asset('user_assets/css/sleek.css') }}" />
 
-
-
     <!-- FAVICON -->
     <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" />
 
-    <!--
-    HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-  -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-    <script src="{{ asset('user_assets/plugins/nprogress/nprogress.js') }}"></script>
+    <script src="assets/plugins/nprogress/nprogress.js"></script>
 </head>
 
 
@@ -654,58 +644,21 @@
 
                     <div class="navbar-right ">
                         <ul class="nav navbar-nav">
-                            <!-- Github Link Button -->
-                            <li class="github-link mr-3">
-                                <a class="btn btn-outline-secondary btn-sm"
-                                    href="https://github.com/tafcoder/sleek-dashboard" target="_blank">
-                                    <span class="d-none d-md-inline-block mr-2">Source Code</span>
-                                    <i class="mdi mdi-github-circle"></i>
-                                </a>
-
-                            </li>
                             <li class="dropdown notifications-menu">
                                 <button class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="mdi mdi-bell-outline"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-header">You have 5 notifications</li>
+                                    <li class="dropdown-header">Танд 5 мэдэгдэл байна.</li>
                                     <li>
                                         <a href="#">
-                                            <i class="mdi mdi-account-plus"></i> New user registered
+                                            <i class="mdi mdi-account-plus"></i> Бүртгэл үүслээ
                                             <span class=" font-size-12 d-inline-block float-right"><i
                                                     class="mdi mdi-clock-outline"></i> 10 AM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="mdi mdi-account-remove"></i> User deleted
-                                            <span class=" font-size-12 d-inline-block float-right"><i
-                                                    class="mdi mdi-clock-outline"></i> 07 AM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="mdi mdi-chart-areaspline"></i> Sales report is ready
-                                            <span class=" font-size-12 d-inline-block float-right"><i
-                                                    class="mdi mdi-clock-outline"></i> 12 PM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="mdi mdi-account-supervisor"></i> New client
-                                            <span class=" font-size-12 d-inline-block float-right"><i
-                                                    class="mdi mdi-clock-outline"></i> 10 AM</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="mdi mdi-server-network-off"></i> Server overloaded
-                                            <span class=" font-size-12 d-inline-block float-right"><i
-                                                    class="mdi mdi-clock-outline"></i> 05 AM</span>
                                         </a>
                                     </li>
                                     <li class="dropdown-footer">
-                                        <a class="text-center" href="#"> View All </a>
+                                        <a class="text-center" href="#"> Бүгдийг харах </a>
                                     </li>
                                 </ul>
                             </li>
@@ -718,7 +671,8 @@
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
                                     <li class="dropdown-header">
-                                        <img src="user_assets/img/user/user.png" class="img-circle" alt="User Image" />
+                                        <img src="user_assets/img/user/user.png" class="img-circle"
+                                            alt="User Image" />
                                         <div class="d-inline-block">
                                             Abdus Salam <small class="pt-1">abdus@gmail.com</small>
                                         </div>
@@ -728,17 +682,6 @@
                                         <a href="profile.html">
                                             <i class="mdi mdi-account"></i> My Profile
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="email-inbox.html">
-                                            <i class="mdi mdi-email"></i> Message
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
                                     </li>
 
                                     <li class="dropdown-footer">
@@ -756,7 +699,7 @@
 
             <div class="content-wrapper">
                 <div class="content">
-                    @yield('admin')                    
+                    @yield('user')
                 </div>
             </div>
 
@@ -800,4 +743,5 @@
     <script src="{{ asset('user_assets/js/custom.js') }}"></script>
 
 </body>
+
 </html>
