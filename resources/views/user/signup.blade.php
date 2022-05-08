@@ -55,7 +55,8 @@
                     </div>
                     <div class="card-body p-5">
                         <h4 class="text-dark mb-5">Хэрэглэгчийн бүртгэл</h4>
-                        <form action="/index.html">
+                        <form action="{{ route('user.add') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
@@ -75,7 +76,7 @@
     
                                         <div class="form-group col-md-12">
                                             <label>Хүйс</label>
-                                            <select class="form-control" id="exampleFormControlSelect12">
+                                            <select class="form-control" id="exampleFormControlSelect12" name="sex">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Эрэгтэй</option>
                                                 <option>Эмэгтэй</option>
@@ -99,40 +100,66 @@
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label>Боловсролын зэрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12">
+                                            <select class="form-control" id="exampleFormControlSelect12" name="education_degree">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Оюутан</option>
                                                 <option>Бакалавр</option>
                                                 <option>Магистр</option>
-                                                <option>Доктор</option>
+                                                <option>Ph.D</option>
                                             </select>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Эрдмийн зэрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12">
+                                            <select class="form-control" id="exampleFormControlSelect12" name="academic_degree">
                                                 <option disabled selected>--Сонго--</option>
-                                                <option>Оюутан</option>
-                                                <option>Бакалавр</option>
-                                                <option>Магистр</option>
+                                                <option>ШУ Доктор</option>
+                                                <option>Дэд профессор</option>
+                                                <option>Профессор</option>
                                                 <option>Доктор</option>
                                             </select>
                                         </div>
+
+                                        <div class="form-group col-md-12">
+                                            <input type="text" class="form-control input-lg" name="work"
+                                                placeholder="Ажлын газар">
+                                        </div>
+    
+                                        <div class="form-group col-md-12">
+                                            <input type="text" class="form-control input-lg" name="position"
+                                                placeholder="Албан тушаал">
+                                        </div>
+    
+                                        <div class="form-group col-md-12">
+                                            <input type="text" class="form-control input-lg" name="phone"
+                                                placeholder="Гар утасны дугаар">
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <label>Аймаг / хот</label>
+                                            <select class="form-control" id="exampleFormControlSelect12" name="province">
+                                                <option disabled selected>--Сонго--</option>
+                                                <option>Архангай</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <label>Сум / дүүрэг</label>
+                                            <select class="form-control" id="exampleFormControlSelect12" name="district">
+                                                <option disabled selected>--Сонго--</option>
+                                                <option>Батцэнгэл</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <input type="text" class="form-control input-lg" name="address"
+                                                placeholder="Оршин суугаа хаяг">
+                                        </div>
                                     </div>
-
-
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="d-inline-block mr-3">
-                                        <label class="control control-checkbox">
-                                            <input type="checkbox" />
-                                            <div class="control-indicator"></div>
-                                            I Agree the terms and conditions
-                                        </label>
-
-                                    </div>
                                     <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Бүртгүүлэх</button>
                                     <p>Та өмнө нь бүртгүүлсэн үү?
                                         <a class="text-blue" href="sign-in.html">Нэвтрэх</a>

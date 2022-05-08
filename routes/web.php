@@ -23,3 +23,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/user/signup', [UserController::class, 'signup'])->name('user.signup');
+
+Route::post('/user/add', [UserController::class, 'add'])->name('user.add');

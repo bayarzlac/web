@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('first_name', 50);
             $table->string('last_name', 50);
             $table->date('birth_date');
-            $table->smallInteger('sex');
+            $table->string('sex', 7);
             $table->string('education_degree', 50);
             $table->string('academic_degree', 50);
             $table->string('work', 200);
