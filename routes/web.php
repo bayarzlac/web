@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\COntrollers\UserController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,5 +24,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/user/signup', [UserController::class, 'signup'])->name('user.signup');
-
 Route::post('/user/add', [UserController::class, 'add'])->name('user.add');
+
+Route::get('/user/article/new', [ArticleController::class, 'new'])->name('user.article.new');
+Route::post('/user/article/send', [ArticleController::class, 'send'])->name('user.article.send');

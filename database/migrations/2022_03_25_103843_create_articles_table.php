@@ -25,6 +25,7 @@ return new class extends Migration
             $table->dateTime('revised');
             $table->dateTime('approved');
             $table->integer('revised_u_id');
+            $table->integer('u_id');
             $table->boolean('public_publish');
             $table->timestamps();
         });

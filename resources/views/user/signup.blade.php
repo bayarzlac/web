@@ -30,6 +30,12 @@
         <!-- FAVICON -->
         <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" />
         <script src="assets/plugins/nprogress/nprogress.js"></script>
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        
+        <!-- Load our React component. -->
+        <script src="{{ asset('js/like_button.js') }}"></script>
     </head>
 
 </head>
@@ -160,11 +166,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
+                                    <div id="like_button_container">asdf</div>
                                     <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Бүртгүүлэх</button>
                                     <p>Та өмнө нь бүртгүүлсэн үү?
                                         <a class="text-blue" href="sign-in.html">Нэвтрэх</a>
                                     </p>
                                 </div>
+                                
                             </div>
                         </form>
 
