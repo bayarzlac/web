@@ -21,12 +21,11 @@ return new class extends Migration
             $table->text('abstract_en');
             $table->string('keywords', 1000);
             $table->text('full_article_link');
-            $table->dateTime('received');
-            $table->dateTime('revised');
-            $table->dateTime('approved');
-            $table->integer('revised_u_id');
-            $table->integer('u_id');
-            $table->boolean('public_publish');
+            $table->timestamp('received');
+            $table->timestamp('revised')->nullable()->default(null);
+            $table->timestamp('approved')->nullable()->default(null);
+            $table->integer('revised_u_id')->nullable()->unsigned();
+            $table->boolean('public_publish')->default(0);
             $table->timestamps();
         });
     }

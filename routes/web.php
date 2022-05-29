@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminArticlesController;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
 /*
@@ -21,6 +25,9 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admin/articles', [AdminArticlesController::class, 'index'])->name('admin.articles');
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/user/signup', [UserController::class, 'signup'])->name('user.signup');
