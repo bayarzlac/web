@@ -69,16 +69,16 @@
                         <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="{{ route('admin') }}">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
-                                <span class="nav-text">Хянах самбар</span> <b class="caret"></b>
+                                <span class="nav-text">Хянах самбар</span>
                             </a>
                         </li>
                         <li class="has-sub">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
+                                data-target="#orders" aria-expanded="false" aria-controls="orders">
                                 <i class="mdi mdi-folder-multiple-outline"></i>
                                 <span class="nav-text">Захиалгын бүртгэл</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
+                            <ul class="collapse" id="orders" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
                                         <a class="sidenav-item-link" href="introduction.html">
@@ -91,15 +91,36 @@
                         </li>
                         <li class="has-sub">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#documentation" aria-expanded="false" aria-controls="documentation">
+                                data-target="#paper" aria-expanded="false" aria-controls="paper">
                                 <i class="mdi mdi-book-open-page-variant"></i>
-                                <span class="nav-text">Өгүүлэл нийтлэх</span> <b class="caret"></b>
+                                <span class="nav-text">Өгүүлэл</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="documentation" data-parent="#sidebar-menu">
+                            <ul class="collapse" id="paper" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('admin.articles') }}">
                                             <span class="nav-text">Өгүүллүүд</span>
+                                        </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                data-target="#edition" aria-expanded="false" aria-controls="edition">
+                                <i class="mdi mdi-library-shelves"></i>
+                                <span class="nav-text">Дугаар</span> <b class="caret"></b>
+                            </a>
+                            <ul class="collapse" id="edition" data-parent="#sidebar-menu">
+                                <div class="sub-menu">
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.edition.new') }}">
+                                            <span class="nav-text">Шинэ дугаар</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('admin.edition') }}">
+                                            <span class="nav-text">Дугааруудын бүртгэл</span>
                                         </a>
                                     </li>
                                 </div>
@@ -244,6 +265,7 @@
     <script src="{{ asset('user_assets/js/date-range.js') }}"></script>
     <script src="{{ asset('user_assets/js/map.js') }}"></script>
     <script src="{{ asset('user_assets/js/custom.js') }}"></script>
+    
 </body>
 
 </html>

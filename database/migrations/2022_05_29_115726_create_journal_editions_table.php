@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('number', 6);
             $table->boolean('status')->default(0);
             $table->string('url');
+            $table->text('content');
             $table->integer('u_id');
             $table->timestamps();
         });

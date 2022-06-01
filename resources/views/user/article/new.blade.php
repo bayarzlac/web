@@ -8,6 +8,7 @@
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('user.article.send') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">

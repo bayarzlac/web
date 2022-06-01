@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminArticlesController;
+use App\Http\Controllers\EditionController;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
@@ -28,6 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/articles', [AdminArticlesController::class, 'index'])->name('admin.articles');
+
+Route::get('/admin/edition', [EditionController::class, 'index'])->name('admin.edition');
+Route::get('/admin/edition/new', [EditionController::class, 'new'])->name('admin.edition.new');
+Route::post('/admin/edition/add', [EditionController::class, 'add'])->name('admin.edition.add');
 
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::get('/user/signup', [UserController::class, 'signup'])->name('user.signup');
