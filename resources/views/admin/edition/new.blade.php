@@ -7,7 +7,7 @@
                     <h2>Шинэ дугаар үүсгэх</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('admin.edition.add') }}">
+                    <form method="POST" action="{{ route('admin.edition.add') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-4">

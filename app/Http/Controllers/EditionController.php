@@ -30,9 +30,18 @@ class EditionController extends Controller
         $edition->url = "";
         $edition->content = $request->content;
         $edition->u_id = 1;
+
+        if ($request->file('file'))
+        {
+            $file = $request->file('file');
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('files'), $filename);
+            
+            $edition->url = $filename;
+        }
+        
         $edition->save();
 
-
-        return view('admin.edition.new');
+        return redirect()->route('admin.edition');
     }
 }
