@@ -119,6 +119,7 @@
                                             <label>Эрдмийн зэрэг</label>
                                             <select class="form-control" id="exampleFormControlSelect12" name="academic_degree">
                                                 <option disabled selected>--Сонго--</option>
+                                                <option>Зэрэггүй</option>
                                                 <option>ШУ Доктор</option>
                                                 <option>Дэд профессор</option>
                                                 <option>Профессор</option>
@@ -146,6 +147,7 @@
                                             <select class="form-control" id="exampleFormControlSelect12" name="province">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Архангай</option>
+                                                <option>Баянхонгор</option>
                                             </select>
                                         </div>
 
@@ -154,6 +156,7 @@
                                             <select class="form-control" id="exampleFormControlSelect12" name="district">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Батцэнгэл</option>
+                                                <option>Зэрэг</option>
                                             </select>
                                         </div>
 
@@ -186,6 +189,16 @@
             </p>
         </div>
     </div>
+    <script>
+export default {
+  data() {
+    return {
+      message: 'Hello World!'
+    }
+  }
+}
+</script>
+
 </body>
 
 </html>
