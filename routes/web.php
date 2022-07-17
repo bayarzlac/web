@@ -39,4 +39,4 @@ Route::get('/user/signup', [UserController::class, 'signup'])->name('user.signup
 Route::post('/user/add', [UserController::class, 'add'])->name('user.add');
 
 Route::get('/user/article/new', [ArticleController::class, 'new'])->name('user.article.new');
-Route::post('/user/article/send', [ArticleController::class, 'send'])->name('user.article.send');
+Route::post('/user/article/add', [ArticleController::class, 'add'])->name('user.article.add');

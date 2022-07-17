@@ -205,7 +205,9 @@
             </header>
             <div class="content-wrapper">
                 <div class="content">
+
                     @yield('user')
+                
                 </div>
             </div>
             <footer class="footer mt-auto">

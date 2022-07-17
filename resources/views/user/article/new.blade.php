@@ -7,7 +7,7 @@
                     <h2>Өгүүлэл илгээх</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('user.article.send') }}">
+                    <form method="POST" action="{{ route('user.article.add') }}">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Зохиогч (ид)</label>
-                                    <input type="text" name="title" class="form-control"
+                                    <input type="text" name="authors" class="form-control"
                                         placeholder="Жишээ нь: Жонсон, M. C., Бат, А., Маам, Л." />
                                     <span class="mt-2 d-block">APA форматаар бичнэ үү.</span>
                                 </div>
@@ -35,13 +35,13 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Түлхүүр үгс</label>
-                                    <input type="text" name="title" class="form-control" placeholder="Жишээ нь: Johnson, M. C., Carlson, M., Hanover, L." />
+                                    <input type="text" name="keywords" class="form-control" />
                                     <span class="mt-2 d-block">APA форматаар бичнэ үү.</span>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Өгүүллийн эх файл</label>
-                                    <input type="file" name="file" class="form-control-file">
+                                    <input type="file" name="file" class="form-control-file" accept="application/pdf">
                                 </div>
 
                                 <div class="form-footer pt-4 pt-5 mt-4 border-top">

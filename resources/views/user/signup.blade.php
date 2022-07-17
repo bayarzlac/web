@@ -33,7 +33,7 @@
 
         <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-        
+
         <!-- Load our React component. -->
         <script src="{{ asset('js/like_button.js') }}"></script>
     </head>
@@ -68,18 +68,20 @@
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <input type="text" class="form-control input-lg"
-                                                aria-describedby="nameHelp" placeholder="Овог (эцэг / эхийн нэр)" name="last_name">
+                                                aria-describedby="nameHelp" placeholder="Овог (эцэг / эхийн нэр)"
+                                                name="last_name">
                                         </div>
                                         <div class="form-group col-md-12">
                                             <input type="text" class="form-control input-lg"
                                                 aria-describedby="nameHelp" placeholder="Нэр" name="first_name">
                                         </div>
-    
+
                                         <div class="form-group col-md-12">
                                             <label>Төрсөн огноо</label>
-                                            <input type="date" class="form-control input-lg" placeholder="Төрсөн огноо" name="birth_date">
+                                            <input type="date" class="form-control input-lg"
+                                                placeholder="Төрсөн огноо" name="birth_date">
                                         </div>
-    
+
                                         <div class="form-group col-md-12">
                                             <label>Хүйс</label>
                                             <select class="form-control" id="exampleFormControlSelect12" name="sex">
@@ -98,7 +100,8 @@
                                                 placeholder="Нууц үг">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="password" class="form-control input-lg" placeholder="Нууц үг давтах">
+                                            <input type="password" class="form-control input-lg"
+                                                placeholder="Нууц үг давтах">
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +109,8 @@
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label>Боловсролын зэрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12" name="education_degree">
+                                            <select class="form-control" id="exampleFormControlSelect12"
+                                                name="education_degree">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Оюутан</option>
                                                 <option>Бакалавр</option>
@@ -117,7 +121,8 @@
 
                                         <div class="form-group col-md-12">
                                             <label>Эрдмийн зэрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12" name="academic_degree">
+                                            <select class="form-control" id="exampleFormControlSelect12"
+                                                name="academic_degree">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Зэрэггүй</option>
                                                 <option>ШУ Доктор</option>
@@ -131,12 +136,12 @@
                                             <input type="text" class="form-control input-lg" name="work"
                                                 placeholder="Ажлын газар">
                                         </div>
-    
+
                                         <div class="form-group col-md-12">
                                             <input type="text" class="form-control input-lg" name="position"
                                                 placeholder="Албан тушаал">
                                         </div>
-    
+
                                         <div class="form-group col-md-12">
                                             <input type="text" class="form-control input-lg" name="phone"
                                                 placeholder="Гар утасны дугаар">
@@ -144,7 +149,8 @@
 
                                         <div class="form-group col-md-12">
                                             <label>Аймаг / хот</label>
-                                            <select class="form-control" id="exampleFormControlSelect12" name="province">
+                                            <select class="form-control" id="exampleFormControlSelect12"
+                                                name="province">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Архангай</option>
                                                 <option>Баянхонгор</option>
@@ -153,7 +159,8 @@
 
                                         <div class="form-group col-md-12">
                                             <label>Сум / дүүрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12" name="district">
+                                            <select class="form-control" id="exampleFormControlSelect12"
+                                                name="district">
                                                 <option disabled selected>--Сонго--</option>
                                                 <option>Батцэнгэл</option>
                                                 <option>Зэрэг</option>
@@ -170,12 +177,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div id="like_button_container">asdf</div>
-                                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Бүртгүүлэх</button>
+                                    <button type="submit"
+                                        class="btn btn-lg btn-primary btn-block mb-4">Бүртгүүлэх</button>
                                     <p>Та өмнө нь бүртгүүлсэн үү?
                                         <a class="text-blue" href="sign-in.html">Нэвтрэх</a>
                                     </p>
                                 </div>
-                                
+
                             </div>
                         </form>
 
@@ -189,15 +197,12 @@
             </p>
         </div>
     </div>
-    <script>
-export default {
-  data() {
-    return {
-      message: 'Hello World!'
-    }
-  }
-}
-</script>
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
 
 </body>
 
