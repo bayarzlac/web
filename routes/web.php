@@ -20,12 +20,14 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/articles', [AdminArticlesController::class, 'index'])->name('admin.articles');
