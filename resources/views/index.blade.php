@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Gaze | Home Melbourne</title>
+    <title>Боловсрол судлал сэтгүүл</title>
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -21,10 +21,12 @@
     <link rel="stylesheet" href="{{ asset('public_files/css/rev-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('public_files/css/sliders.css') }}" />
     <link rel="stylesheet" href="{{ asset('public_files/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public_files/css/colors/blue.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('public_files/css/colors/pink.css') }}" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
+
     <link rel="apple-touch-icon" href="{{ asset('public_files/img/apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('public_files/img/apple-touch-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('public_files/img/apple-touch-icon-114x114.png') }}">
@@ -77,21 +79,17 @@
                         <div class="top-bar-links">
                             <ul class="col-sm-7">
                                 <li class="top-bar-phone">
-                                    <i class="fa fa-phone"></i><a href="tel:+1-888-1554-456-123">+
-                                        1-888-1554-456-123</a>
+                                    <i class="fa fa-phone"></i><a href="tel:+976-99147780">+ 976-99147780</a>
                                 </li>
                                 <li class="top-bar-email">
                                     <i class="fa fa-envelope"></i><a
-                                        href="mailto:themesupport@gmail.com">themesupport@gmail.com</a>
+                                        href="mailto:info@bolovsrolsudlal.mn">info@bolovsrolsudlal.mn</a>
                                 </li>
                             </ul>
 
-                            <div class="col-sm-5 social-icons nobase text-right">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-vimeo"></i></a>
+                            <div class="col-sm-5 text-right">
+                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Нэвтрэх</a> | 
+                                <a href="{{ route('user.signup') }}"><i class="fa fa-register"></i> Бүртгүүлэх</a>
                             </div>
 
                         </div>
@@ -143,246 +141,20 @@
                                     <ul class="nav navbar-nav navbar-right">
 
                                         <li class="dropdown active">
-                                            <a href="#">Home</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu megamenu-wide">
-                                                <li>
-                                                    <div class="megamenu-wrap container">
-                                                        <div class="row">
-
-                                                            <div class="col-md-3 megamenu-item no-headings">
-                                                                <ul class="menu-list">
-                                                                    <li><a href="index-tokyo.html">Startup Tokyo</a>
-                                                                    </li>
-                                                                    <li><a href="index-ny.html">Business New York</a>
-                                                                    </li>
-                                                                    <li><a href="index-paris.html">Onepage Paris</a>
-                                                                    </li>
-                                                                    <li><a href="index-toronto.html">Agency Toronto</a>
-                                                                    </li>
-                                                                    <li><a href="index-melbourne.html">Corporate
-                                                                            Melbourne</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item no-headings">
-                                                                <ul class="menu-list">
-                                                                    <li><a href="index-sydney.html">Studio Sydney</a>
-                                                                    </li>
-                                                                    <li><a href="index-vancouver.html">Agency
-                                                                            Vancouver</a></li>
-                                                                    <li><a href="index-athens.html">Photography
-                                                                            Athens</a></li>
-                                                                    <li><a href="index-milan.html">Shop Milan</a></li>
-                                                                    <li><a href="index-oslo.html">Photography Oslo</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item no-headings">
-                                                                <ul class="menu-list">
-                                                                    <li><a href="index-vienna.html">Agency Vienna</a>
-                                                                    </li>
-                                                                    <li><a href="index-madrid.html">Photography
-                                                                            Madrid</a></li>
-                                                                    <li><a href="index-amsterdam.html">Portfolio
-                                                                            Amsterdam</a></li>
-                                                                    <li><a href="index-stockholm.html">Minimal
-                                                                            Stockholm</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item no-headings">
-                                                                <ul class="menu-list">
-                                                                    <li><a href="index-berlin.html">Portfolio
-                                                                            Berlin</a></li>
-                                                                    <li><a href="index-manila.html">Showcase Manila</a>
-                                                                    </li>
-                                                                    <li><a href="index-shanghai.html">App Landing
-                                                                            Shanghai</a></li>
-                                                                    <li><a href="index-london.html">Resume vCard
-                                                                            London</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <a href="{{ route('index') }}">Нүүр хуудас</a>
                                         </li>
 
                                         <li class="dropdown">
-                                            <a href="#">Pages</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                <li><a href="404.html">404</a></li>
-                                            </ul>
+                                            <a href="{{ route('articles') }}">Өгүүллүүд</a>
                                         </li>
 
                                         <li class="dropdown">
-                                            <a href="#">Portfolio</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu">
-                                                <li class="dropdown-submenu">
-                                                    <a href="#">Classic</a>
-                                                    <i class="fa fa-angle-down dropdown-trigger"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="portfolio-4-col.html">4 Columns</a></li>
-                                                        <li><a href="portfolio-3-col.html">3 Columns</a></li>
-                                                        <li><a href="portfolio-2-col.html">2 Columns</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown-submenu">
-                                                    <a href="#">Fullwidth</a>
-                                                    <i class="fa fa-angle-down dropdown-trigger"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="portfolio-5-col-wide.html">5 Columns</a></li>
-                                                        <li><a href="portfolio-4-col-wide.html">4 Columns</a></li>
-                                                        <li><a href="portfolio-3-col-wide.html">3 Columns</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown-submenu">
-                                                    <a href="#">With Title</a>
-                                                    <i class="fa fa-angle-down dropdown-trigger"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="portfolio-4-col-title.html">4 Columns</a></li>
-                                                        <li><a href="portfolio-3-col-title.html">3 Columns</a></li>
-                                                        <li><a href="portfolio-2-col-title.html">2 Columns</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown-submenu">
-                                                    <a href="#">With Description</a>
-                                                    <i class="fa fa-angle-down dropdown-trigger"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="portfolio-2-col-desc.html">2 Columns</a></li>
-                                                        <li><a href="portfolio-1-col-desc.html">1 Column</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-masonry.html">Masonry</a>
-                                                </li>
-                                                <li class="dropdown-submenu">
-                                                    <a href="#">Single Project</a>
-                                                    <i class="fa fa-angle-down dropdown-trigger"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="portfolio-single.html">Standard</a></li>
-                                                        <li><a href="portfolio-single-2.html">Extended</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            <a href="{{ route('editions') }}">Дугаарууд</a>
                                         </li> <!-- end portfolio -->
 
                                         <li class="dropdown">
-                                            <a href="#">Blog</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="blog-standard.html">Standard</a></li>
-                                                <li><a href="blog-masonry.html">Masonry</a></li>
-                                                <li><a href="blog-single.html">Single Post</a></li>
-                                                <li><a href="blog-no-sidebar.html">No Sidebar</a></li>
-                                            </ul>
+                                            <a href="{{ route('about') }}">Сэтгүүлийн тухай</a>
                                         </li>
-
-                                        <li class="dropdown">
-                                            <a href="#">Shop</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="shop-catalog.html">Catalog</a></li>
-                                                <li><a href="shop-single.html">Single Product</a></li>
-                                                <li><a href="shop-cart.html">Cart</a></li>
-                                                <li><a href="shop-checkout.html">Checkout</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown">
-                                            <a href="#">Elements</a>
-                                            <i class="fa fa-angle-down dropdown-trigger"></i>
-                                            <ul class="dropdown-menu megamenu-wide">
-                                                <li>
-                                                    <div class="megamenu-wrap container">
-                                                        <div class="row">
-
-                                                            <div class="col-md-3 megamenu-item">
-                                                                <span>Common Elements</span>
-                                                                <ul class="menu-list">
-                                                                    <li><a href="accordions.html"><i
-                                                                                class="fa fa-arrow-circle-o-down"></i>Accordions
-                                                                            &amp; Toggles</a></li>
-                                                                    <li><a href="tabs.html"><i
-                                                                                class="fa fa-folder-o"></i>Tabs</a>
-                                                                    </li>
-                                                                    <li><a href="buttons.html"><i
-                                                                                class="fa fa-hand-o-up"></i>Buttons</a>
-                                                                    </li>
-                                                                    <li><a href="forms.html"><i
-                                                                                class="fa fa-pencil-square-o"></i>Form
-                                                                            Elements</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item">
-                                                                <span>Interactive Elements</span>
-                                                                <ul class="menu-list">
-                                                                    <li><a href="sliders.html"><i
-                                                                                class="fa fa-clone"></i>Sliders</a>
-                                                                    </li>
-                                                                    <li><a href="lightboxes.html"><i
-                                                                                class="fa fa-image"></i>Lightboxes</a>
-                                                                    </li>
-                                                                    <li><a href="animations.html"><i
-                                                                                class="fa fa-forward"></i>Animations</a>
-                                                                    </li>
-                                                                    <li><a href="pricing-tables.html"><i
-                                                                                class="fa fa-dollar"></i>Pricing
-                                                                            Tables</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item">
-                                                                <span>Infographics</span>
-                                                                <ul class="menu-list">
-                                                                    <li><a href="icon-boxes.html"><i
-                                                                                class="fa fa-lightbulb-o"></i>Icon
-                                                                            Boxes</a></li>
-                                                                    <li><a href="counters.html"><i
-                                                                                class="fa fa-sort-numeric-desc"></i>Counters</a>
-                                                                    </li>
-                                                                    <li><a href="pie-skills.html"><i
-                                                                                class="fa fa-sliders"></i>Pies &amp;
-                                                                            Skills</a></li>
-                                                                    <li><a href="socials.html"><i
-                                                                                class="fa fa-twitter"></i>Social
-                                                                            Icons</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-md-3 megamenu-item">
-                                                                <span>Typography</span>
-                                                                <ul class="menu-list">
-                                                                    <li><a href="columns.html"><i
-                                                                                class="fa fa-columns"></i>Columns</a>
-                                                                    </li>
-                                                                    <li><a href="alert-boxes.html"><i
-                                                                                class="fa fa-exclamation-triangle"></i>Alert
-                                                                            Boxes</a></li>
-                                                                    <li><a href="tables.html"><i
-                                                                                class="fa fa-table"></i>Tables</a></li>
-                                                                    <li><a href="typography.html"><i
-                                                                                class="fa fa-text-width"></i>Typography</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li> <!-- end elements -->
-
                                         <!-- Nav right -->
                                         <li class="nav-right hidden-sm hidden-xs">
                                             <ul>
@@ -409,7 +181,7 @@
 
                                         <li id="mobile-search" class="hidden-lg hidden-md">
                                             <form method="get" class="mobile-search">
-                                                <input type="search" class="form-control" placeholder="Search...">
+                                                <input type="search" class="form-control" placeholder="Хайх утга...">
                                                 <button type="submit" class="search-button">
                                                     <i class="ui-search"></i>
                                                 </button>
@@ -692,28 +464,28 @@
                         <div class="col-sm-3 col-xs-6 mb-40">
                             <div class="statistic text-center">
                                 <span class="statistic-timer" data-from="0" data-to="968">968</span>
-                                <h5 class="counter-text">Cups of Coffee</h5>
+                                <h5 class="counter-text">хэвлэгдсэн дугаар</h5>
                             </div>
                         </div>
 
                         <div class="col-sm-3 col-xs-6 mb-40">
                             <div class="statistic text-center">
-                                <span class="statistic-timer" data-from="0" data-to="357">357</span>
-                                <h5 class="counter-text">Happy Clients</h5>
+                                <span class="statistic-timer" data-from="0" data-to="1357">1357</span>
+                                <h5 class="counter-text">гаруй өгүүлэл</h5>
                             </div>
                         </div>
 
                         <div class="col-sm-3 col-xs-6 mb-40">
                             <div class="statistic text-center">
-                                <span class="statistic-timer" data-from="0" data-to="813">813</span>
-                                <h5 class="counter-text">Marketing Goals</h5>
+                                <span class="statistic-timer" data-from="0" data-to="30">30</span>
+                                <h5 class="counter-text">жилийн турш</h5>
                             </div>
                         </div>
 
                         <div class="col-sm-3 col-xs-6 mb-40">
                             <div class="statistic text-center">
                                 <span class="statistic-timer" data-from="0" data-to="972">972</span>
-                                <h5 class="counter-text">Awesome Ideas</h5>
+                                <h5 class="counter-text">authors</h5>
                             </div>
                         </div>
 
@@ -824,9 +596,7 @@
                     </div>
 
                     <div class="row">
-
                         <div id="owl-partners" class="owl-carousel owl-theme">
-
                             <div class="item">
                                 <a href="#">
                                     <img src="img/partners/partner_logo_dark_1.png" alt="">
@@ -875,7 +645,7 @@
             </section> <!-- end partners -->
 
             <!-- Footer Type-4 -->
-            <footer class="footer footer-type-4 bg-dark">
+            <footer class="footer footer-type-4">
                 <div class="container">
                     <div class="footer-widgets pb-mdm-20">
                         <div class="row">
@@ -888,7 +658,7 @@
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-about-us">
-                                    <h5 class="widget-title">About Us</h5>
+                                    <h5 class="widget-title">Боловсрол судлал сэтгүүл</h5>
                                     <p class="mb-0">Our Theme is a very slick and clean e-commerce template with
                                         endless possibilities.
                                         Creating an awesome website with this Theme.</p>
@@ -897,15 +667,12 @@
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
-                                    <h5 class="widget-title">Get in Touch</h5>
-                                    <p>Phone: <a href="tel:+1-888-1554-456-123">+ 1-888-1554-456-123</a></p>
-                                    <p>Email: <a href="mailto:themesupport@gmail.com">themesupport@gmail.com</a></p>
-                                    <p>Fax: +63 918 4084 694</p>
+                                    <h5 class="widget-title">Холбоо барих</h5>
+                                    <p>Утас: + 1-888-1554-456-123</p>
+                                    <p>Email: info@bolovsrolsudlal.mn</p>
                                     <div class="footer-socials">
                                         <div class="social-icons nobase">
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="https://www.facebook.com/bolovsrolsudlalsetguul"><i class="fa fa-facebook"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -913,10 +680,9 @@
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
-                                    <h5 class="widget-title">Melbourne Office</h5>
-                                    <address class="footer-address mb-0">Melbourne's GPO<br>350 Bourke St<br>Melbourne
-                                        VIC 3000<br>
-                                        Australia</address>
+                                    <h5 class="widget-title">Хаяг байршил</h5>
+                                    <address class="footer-address mb-0">Улаанбаатар хот<br>Сүхбааатар дүүрэг<br>8-р хороо, Энхтайваны өргөн чөлөө<br>
+                                        Багшийн хөгжлийн ордон, 301 тоот</address>
                                 </div>
                             </div> <!-- end address -->
 
@@ -930,16 +696,16 @@
 
                             <div class="col-sm-6 copyright sm-text-center">
                                 <span>
-                                    &copy; 2017 Gaze Theme, Made by <a href="http://deothemes.com">DeoThemes</a>
+                                    &copy; Боловсрол судлал сэтгүүл
                                 </span>
                             </div>
 
                             <div class="col-sm-6">
                                 <ul class="bottom-footer-links text-right sm-text-center">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ route('index') }}">Нүүр хуудас</a></li>
+                                    <li><a href="{{ route('articles') }}">Өгүүлүүд</a></li>
+                                    <li><a href="{{ route('editions') }}">Дугаарууд</a></li>
+                                    <li><a href="{{ route('about') }}">Сэтгүүлийн тухай</a></li>
                                 </ul>
                             </div>
 
@@ -975,8 +741,5 @@
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-
-
 </body>
-
 </html>

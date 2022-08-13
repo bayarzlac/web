@@ -176,8 +176,7 @@ img.alignright {
 body {
   margin: 0;
   padding: 0;
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.5;
   font-smoothing: antialiased;
@@ -531,8 +530,7 @@ ul {
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 0;
   color: #424242;
   font-weight: 700;
@@ -572,7 +570,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .raleway .megamenu-item span,
 .raleway .portfolio-filter a,
 .raleway .intro .lead {
-  font-family: Cambria, Times, 'Times New Roman', serif; }
+  font-family: "Raleway", sans-serif; }
 
 .raleway .navbar-nav > li > a,
 .raleway .dropdown-menu li > a,
@@ -580,15 +578,13 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: 700 !important; }
 
 .raleway .statistic .timer {
-  /* font-family: "Open Sans", sans-serif; } */
-  font-family: Cambria, Times, 'Times New Roman', serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .playfair h1, .playfair h2, .playfair h3, .playfair h4, .playfair h5, .playfair h6,
 .playfair .overlay-menu ul li a,
 .playfair .footer-widgets .widget-title,
 .playfair .work-description h3 {
-  /* font-family: "Playfair Display", serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400 !important; }
 
 .playfair .footer.bg-white .footer-widgets .widget-title {
@@ -599,16 +595,14 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .fauna address,
 .fauna .subtitle,
 .fauna .work-description > span {
-  /* font-family: "Fauna One", sans-serif; } */
-  font-family: Cambria, Times, 'Times New Roman', serif; }
+  font-family: "Fauna One", sans-serif; }
 
 .dosis h1, .dosis h2, .dosis h3, .dosis h4, .dosis h5, .dosis h6,
 .dosis .navbar-nav > li > a,
 .dosis .megamenu-item span,
 .dosis .footer-widgets .widget-title,
 .dosis .work-description h3 {
-  /* font-family: "Dosis", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Dosis", sans-serif;
   font-weight: 500; }
 
 .poppins .navbar-nav > li > a,
@@ -616,13 +610,11 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .poppins .dropdown-menu .megamenu-wrap ul > li > a,
 .poppins .megamenu-item span,
 .poppins .btn {
-  /* font-family: "Poppins", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600; }
 
 .poppins h1, .poppins h2, .poppins h3, .poppins h4, .poppins h5, .poppins h6 {
-  /* font-family: "Poppins", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: -0.02em;
   font-weight: 600; }
 
@@ -635,8 +627,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .source-sans .navbar-nav > li > a,
 .source-sans .megamenu-item span,
 .source-sans .footer-widgets .widget-title {
-  /* font-family: "Source Sans Pro", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400; }
 
 .source-sans p {
@@ -655,14 +646,10 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: 400;
   text-transform: none;
   letter-spacing: normal;
-  /* font-family: "Source Sans Pro", sans-serif;  */
-  font-family: Cambria, Times, 'Times New Roman', serif;
-}
+  font-family: "Source Sans Pro", sans-serif; }
 
 .source-sans .btn {
-  /* font-family: "Source Sans Pro", sans-serif;  */
-  font-family: Cambria, Times, 'Times New Roman', serif
-}
+  font-family: "Source Sans Pro", sans-serif; }
 
 .source-sans .btn span {
   font-weight: 400;
@@ -732,8 +719,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     margin-bottom: 15px; }
 
 .subheading {
-  font-family: Cambria, Times, 'Times New Roman', serif;
-  /* font-family: "Noto Serif", serif; */
+  font-family: "Noto Serif", serif;
   font-style: italic;
   font-size: 18px;
   line-height: 32px;
@@ -745,9 +731,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 15px;
     line-height: 26px;
     font-style: normal;
-    font-family: Cambria, Times, 'Times New Roman', serif;
-
-    /* font-family: "Open Sans", sans-serif; */
+    font-family: "Open Sans", sans-serif;
     margin-top: 20px; }
 
 a {
@@ -830,8 +814,7 @@ blockquote {
   blockquote > p {
     font-size: 18px;
     line-height: 32px;
-    font-family: Cambria, Times, 'Times New Roman', serif;
-    /* font-family: "Noto Serif", serif; */
+    font-family: "Noto Serif", serif;
     margin-bottom: 10px !important;
     color: #424242;
     position: relative;
@@ -851,9 +834,7 @@ blockquote {
   border-left: 2px solid #1abcb0; }
 
 .dropcap {
-  /* font-family: "Montserrat", sans-serif;  */
-  font-family: Cambria, Times, 'Times New Roman', serif;
-}
+  font-family: "Montserrat", sans-serif; }
 
 .dropcap.style-1 {
   float: left;
@@ -1080,9 +1061,7 @@ ol.numbers {
   display: inline-block;
   float: none; }
   .navbar-nav > li > a {
-
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -1172,8 +1151,7 @@ header.transparent.dark .navbar-nav > li > a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-weight: 400; }
   .dropdown-menu.megamenu, .dropdown-menu.megamenu-wide {
@@ -1220,8 +1198,7 @@ header.transparent.dark .navbar-nav > li > a {
   display: block;
   margin-bottom: 15px;
   color: #d6d6d6;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
@@ -1237,8 +1214,7 @@ header.transparent.dark .navbar-nav > li > a {
     top: -18px;
     left: 100%; }
   .dropdown-submenu > a:after {
-    /* font-family: "FontAwesome"; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "FontAwesome";
     position: absolute;
     content: "\f105";
     font-size: 16px;
@@ -1375,8 +1351,7 @@ header.transparent .menu-socials a {
     border-left: none;
     border-right: none;
     border-bottom: 2px solid #eaeaea;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 32px;
     margin-bottom: 0;
     color: #424242;
@@ -1597,8 +1572,7 @@ input.main-search-input:-ms-input-placeholder {
 .nav-register a {
   display: inline-block;
   line-height: 1;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1827,9 +1801,7 @@ input.main-search-input:-ms-input-placeholder {
   letter-spacing: normal;
   font-weight: 700;
   font-size: 15px;
-  /* font-family: "Raleway", sans-serif;  */
-  font-family: Cambria, Times, 'Times New Roman', serif;
-}
+  font-family: "Raleway", sans-serif; }
 
 /*-------------------------------------------------------*/
 /* Nav Type-4 (Left Nav)
@@ -1887,8 +1859,7 @@ input.main-search-input:-ms-input-placeholder {
     letter-spacing: normal; }
 
 .nav-item-toggle > a:after {
-  /* font-family: "FontAwesome"; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "FontAwesome";
   position: absolute;
   content: "\f107";
   right: 0;
@@ -1986,8 +1957,7 @@ input.main-search-input:-ms-input-placeholder {
     vertical-align: middle;
     position: relative;
     overflow: hidden;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 40px;
     letter-spacing: -0.02em;
     color: #424242;
@@ -2141,7 +2111,7 @@ header .flex-child.flex-right {
 /* Top Bar
 /*-------------------------------------------------------*/
 .top-bar {
-  background-color: #171717;
+  background-color: #003d66;
   width: 100%;
   position: relative;
   height: 40px;
@@ -2417,8 +2387,7 @@ header .flex-child.flex-right {
     .intro.style-5 .intro-heading {
       font-size: 55px; }
     .intro.style-5 .subtitle {
-      /* font-family: "Noto Serif", serif; */
-      font-family: Cambria, Times, 'Times New Roman', serif;
+      font-family: "Noto Serif", serif;
       color: #919191;
       font-style: italic; }
     .intro.style-5 .subtitle span {
@@ -2540,8 +2509,7 @@ section.angle-bottom {
 /* Testimonials
 /*-------------------------------------------------------*/
 .testimonials .testimonial-text {
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   color: #424242;
   line-height: 34px;
@@ -2551,8 +2519,7 @@ section.angle-bottom {
 
 .testimonials .testimonial span {
   font-size: 12px;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   color: #6c6c6c; }
 
 .testimonials .testimonial a {
@@ -2590,8 +2557,7 @@ section.angle-bottom {
   color: #6c6c6c;
   margin-top: 0;
   margin-bottom: 0;
-  /* font-family: "Noto Serif", serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Noto Serif", serif;
   font-size: 17px;
   line-height: 28px; }
 
@@ -2615,8 +2581,7 @@ section.angle-bottom {
     font-size: 15px; }
   .testimonials.style-2 .testimonial-author span:last-child {
     font-size: 13px;
-    /* font-family: "Open Sans", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Open Sans", sans-serif;
     color: #6c6c6c; }
 
 .testimonials.style-2 .owl-carousel img {
@@ -2778,8 +2743,7 @@ section.angle-bottom {
 /*-------------------------------------------------------*/
 .process-step {
   font-size: 100px;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   color: #dddddd;
   line-height: 1.3;
   margin-left: -5px; }
@@ -2900,9 +2864,7 @@ section.angle-bottom {
     font-size: 10px;
     text-transform: uppercase;
     font-style: normal;
-    /* font-family: "Open Sans", sans-serif;  */
-    font-family: Cambria, Times, 'Times New Roman', serif;
-  }
+    font-family: "Open Sans", sans-serif; }
   .from-blog.style-2 .entry-meta li a {
     color: inherit; }
 
@@ -2921,8 +2883,7 @@ section.angle-bottom {
   border-radius: 50%; }
 
 .twitter-slider #tweets .tweet {
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242;
   font-size: 24px;
   margin-bottom: 20px;
@@ -3074,8 +3035,7 @@ input[type="email"].transparent {
 .gmap-btn {
   background-color: #f7f7f7;
   color: #424242;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   height: 70px;
   line-height: 70px;
@@ -3291,8 +3251,7 @@ input[type="email"].transparent {
     background: #fff;
     margin-right: 6px;
     border: 1px solid #eaeaea;
-    /* font-family: "Source Sans Pro", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
     width: 280px;
     margin-bottom: 0 !important; }
@@ -3333,8 +3292,7 @@ input[type="email"].transparent {
 
 .profile table tr td:first-child {
   padding-left: 0;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   color: #424242; }
 
 .profile table td a {
@@ -3360,8 +3318,7 @@ input[type="email"].transparent {
   margin-bottom: 24px; }
 
 .time-period {
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: #1abcb0;
   font-size: 12px; }
@@ -3506,8 +3463,7 @@ input[type="email"].transparent {
 /* 404
 /*-------------------------------------------------------*/
 .page-404 h2 {
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Open Sans", sans-serif;
   color: #6c6c6c;
   font-weight: 400;
   font-size: 24px; }
@@ -3577,8 +3533,7 @@ input[type="email"].transparent {
     content: '“';
     display: inline-block;
     font-size: 63px;
-    /* font-family: "Open Sans", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Open Sans", sans-serif;
     line-height: 1;
     position: relative;
     top: 15px; }
@@ -3624,8 +3579,7 @@ input[type="email"].transparent {
   #countdown span {
     display: block;
     font-size: 50px;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 15px;
     line-height: 1; }
     @media only screen and (max-width: 767px) {
@@ -3755,8 +3709,7 @@ input[type="email"].transparent {
 
 .entry-meta li {
   color: #a3a3a3;
-  /* font-family: "Noto Serif", serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Noto Serif", serif;
   font-style: italic;
   font-size: 12px;
   display: inline-block;
@@ -3833,8 +3786,7 @@ input[type="email"].transparent {
 
 .pagination a,
 .pagination span {
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: Cambria, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   display: inline-block;
   float: left;
@@ -3926,8 +3878,7 @@ input[type="email"].transparent {
     font-size: 14px;
     margin-bottom: 1px;
     font-weight: normal;
-    /* font-family: "Open Sans", sans-serif; */
-    font-family: Cambria, Times, 'Times New Roman', serif;
+    font-family: "Open Sans", sans-serif;
     line-height: 1.5; }
   .entry-list ul > li .entry-meta li:first-child {
     padding-left: 0; }
@@ -4002,7 +3953,7 @@ input[type="email"].transparent {
   pointer-events: none;
   top: 0;
   background-color: #424242;
-  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   color: #fff;
   font-size: 18px;
@@ -6473,6 +6424,11 @@ table th {
 /*-------------------------------------------------------*/
 /* Footer Type-4
 /*-------------------------------------------------------*/
+
+.footer-type-4 {
+  background-color: #003d66;
+}
+
 .footer-type-4 .footer-get-in-touch p,
 .footer-type-4 .footer-get-in-touch a,
 .footer-type-4 .footer-links li {
@@ -6480,19 +6436,27 @@ table th {
 
 @media (min-width: 992px) {
   .footer-type-4 .footer-about-us p {
-    padding-right: 30px; }
+    padding-right: 30px; color:rgba(255, 255, 255, 0.95); }
   .footer-type-4 .footer-widgets {
-    padding: 130px 0; } }
+    padding: 130px 0; color:rgba(255, 255, 255, 0.95);
+  } 
+}
+
+.footer-type-4 .footer-get-in-touch p {
+  color:rgba(255, 255, 255, 0.95);
+}
 
 .footer-type-4 .footer-get-in-touch p:last-of-type {
-  margin-bottom: 5px; }
+  margin-bottom: 5px; 
+  color:rgba(255, 255, 255, 0.95);
+}
 
 .footer-socials .social-icons a {
   background-color: transparent;
   width: auto;
   height: auto;
   margin-right: 14px;
-  color: #6c6c6c; }
+  color:rgba(255, 255, 255, 0.95); }
   .footer-socials .social-icons a:hover {
     background-color: transparent !important; }
 

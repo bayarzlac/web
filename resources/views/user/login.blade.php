@@ -25,7 +25,7 @@
         <link href="{{ asset('user_assets/plugins/daterangepicker/daterangepicker.css') }}" rel="stylesheet" />
 
         <!-- SLEEK CSS -->
-        <link id="sleek-css" rel="stylesheet" href="{{ asset('user_assets/css/sleek.css') }}" />
+        <link id="sleek-css" rel="stylesheet" href="assets/css/sleek.css" />
 
         <!-- FAVICON -->
         <link href="{{ asset('user_assets/img/favicon.png" rel="shortcut icon') }}" />
@@ -41,33 +41,31 @@
                 <div class="card">
                     <div class="card-header bg-primary">
                         <div class="app-brand">
-                            <a href="{{ route('index') }}">
-                                <img src="{{ asset('user_assets/logo1.png') }}" height="33" />
-                                <span class="brand-name">Боловсрол судлал сэтгүүл</span>
+                            <a href="/index.html">
+                                <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg"
+                                    preserveAspectRatio="xMidYMid" width="30" height="33" viewBox="0 0 30 33">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
+                                        <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
+                                    </g>
+                                </svg>
+                                <span class="brand-name">Sleek Dashboard</span>
                             </a>
                         </div>
                     </div>
                     <div class="card-body p-5">
 
-                        @if (session('status'))
-                            <div class="mb-4 font-medium text-sm text-green-600">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
                         <h4 class="text-dark mb-5">Sign In</h4>
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
+                        <form action="/index.html">
                             <div class="row">
                                 <div class="form-group col-md-12 mb-4">
-                                    <input type="email" class="form-control input-lg" id="email" name="email"
+                                    <input type="email" class="form-control input-lg" id="email"
                                         aria-describedby="emailHelp" placeholder="Username">
                                 </div>
                                 <div class="form-group col-md-12 ">
-                                    <input type="password" class="form-control input-lg" id="password" name="password"
+                                    <input type="password" class="form-control input-lg" id="password"
                                         placeholder="Password">
                                 </div>
-
                                 <div class="col-md-12">
                                     <div class="d-flex my-2 justify-content-between">
                                         <div class="d-inline-block mr-3">
@@ -77,14 +75,12 @@
                                             </label>
 
                                         </div>
-                                        <p><a class="text-blue" href="{{ route('password.request') }}">Нууц үгээ
-                                                мартсан бол энд дарна уу</a></p>
+                                        <p><a class="text-blue" href="#">Forgot Your Password?</a></p>
                                     </div>
-                                    <button type="submit"
-                                        class="btn btn-lg btn-primary btn-block mb-4">Нэвтрэх</button>
-                                    <p>Бүртгүүлээгүй бол
-                                        <a class="text-blue" href="sign-up.html">энд дарж</a>
-                                        бүртгүүлнэ үү.
+                                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign
+                                        In</button>
+                                    <p>Don't have an account yet ?
+                                        <a class="text-blue" href="sign-up.html">Sign Up</a>
                                     </p>
                                 </div>
                             </div>
@@ -94,7 +90,8 @@
             </div>
         </div>
         <div class="copyright pl-0">
-            <p class="text-center">&copy; Боловсрол судлал сэтгүүл                
+            <p class="text-center">&copy; 2018 Copyright Sleek Dashboard Bootstrap Template by
+                <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.
             </p>
         </div>
     </div>
