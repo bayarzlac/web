@@ -207,10 +207,10 @@
                         <ul>
                             <!-- SLIDE 1 -->
                             <li data-fstransition="fade" data-transition="fade" data-slotamount="1"
-                                data-masterspeed="1000" data-delay="5000" data-title="Creative Minimalism">
+                                data-masterspeed="1000" data-delay="5000">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="{{ asset('public_files/img/revolution/melbourne_slide_1.jpg') }}" alt=""
+                                <img src="{{ asset('public_files/img/revolution/slide1.jpg') }}" alt=""
                                     data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7"
                                     class="rev-slidebg">
 
@@ -223,7 +223,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1000"
                                     data-elementdelay="0.01">
-                                    Right ideas. Real Results. All in One
+                                    Боловсрол судлал сэтгүүлд өгүүлэл нийтлүүлэх
                                 </div>
 
                                 <!-- LAYER NR. 2 -->
@@ -234,19 +234,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1000"
                                     data-elementdelay="0.01">
-                                    Gaze is a simple and elegant template with tons of features. Based on Bootstrap
-                                    framework.
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption medium-text" data-x="center" data-y="center"
-                                    data-textAlign="center" data-voffset="[12,12,12,40]" data-fontsize="[18]"
-                                    data-lineheight="[24]" data-width="[none,none,none,400]"
-                                    data-whitespace="[nowrap, nowrap, nowrap, normal]" data-transform_idle="o:1;s:700"
-                                    data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
-                                    data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1000"
-                                    data-elementdelay="0.01">
-                                    It is retina ready, easy to customize and has amazing support.
+                                    Боловсрол судлал сэтгүүлийн цахим системээр дамжуулан өгүүллээ илгээдэг боллоо
                                 </div>
 
                                 <!-- LAYER NR. 3 -->
@@ -256,7 +244,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
                                     data-elementdelay="0.01" data-linktoslide="next"><a href='#'
-                                        class='btn btn-lg btn-color'><span>Buy Theme</span></a>
+                                        class='btn btn-lg btn-color'><span>Бүртгүүлэх</span></a>
                                 </div>
 
                                 <!-- LAYER NR. 4 -->
@@ -266,16 +254,16 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
                                     data-elementdelay="0.01" data-linktoslide="next"><a href='#'
-                                        class='btn btn-lg btn-transparent'><span>Learn More</span></a>
+                                        class='btn btn-lg btn-transparent'><span>Нэвтрэх</span></a>
                                 </div>
                             </li>
 
                             <!-- SLIDE 2 -->
                             <li data-fstransition="fade" data-transition="fade" data-slotamount="1"
-                                data-masterspeed="1000" data-delay="5000" data-title="Creative Minimalism">
+                                data-masterspeed="1000" data-delay="5000">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="{{ asset('public_files/img/revolution/melbourne_slide_2.jpg' )}}" alt=""
+                                <img src="{{ asset('public_files/img/revolution/slide2.jpg' )}}" alt=""
                                     data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7"
                                     class="rev-slidebg">
 
@@ -287,7 +275,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1000"
                                     data-elementdelay="0.01">
-                                    Amazing Flexibility
+                                    Боловсрол судлал сэтгүүлийн
                                 </div>
 
                                 <!-- LAYER NR. 2 -->
@@ -297,7 +285,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1050"
                                     data-elementdelay="0.01">
-                                    With Great Performance
+                                    цахим хувилбар захиалах
                                 </div>
 
                                 <!-- LAYER NR. 3 -->
@@ -309,20 +297,7 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
                                     data-elementdelay="0.01">
-                                    Gaze is a simple and elegant template with tons of features. Based on Bootstrap
-                                    framework.
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption medium-text" data-x="center" data-y="center"
-                                    data-textAlign="center" data-voffset="[52,52,52,45]"
-                                    data-fontsize="[18,18,18,18]" data-lineheight="[24]"
-                                    data-width="[none,none,none,400]"
-                                    data-whitespace="[nowrap, nowrap, nowrap, normal]" data-transform_idle="o:1;s:700"
-                                    data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
-                                    data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1300"
-                                    data-elementdelay="0.01">
-                                    It is retina ready, easy to customize and has amazing support.
+                                    Шинээр гарч байгаа дугааруудын цахим хувилбарыг улирлаар захиалах, өмнөх дугааруудаас худалдан авах боломжийг танд олгож байна.
                                 </div>
 
                                 <!-- LAYER NR. 5 -->
@@ -332,51 +307,8 @@
                                     data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                                     data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1400"
                                     data-elementdelay="0.01" data-linktoslide="next"><a href='#'
-                                        class='btn btn-lg btn-transparent'><span>Purchase Now</span></a>
+                                        class='btn btn-lg btn-transparent'><span>Захиалах</span></a>
                                 </div>
-
-                            </li>
-
-                            <!-- SLIDE 3 -->
-                            <li data-fstransition="fade" data-transition="fade" data-slotamount="1"
-                                data-masterspeed="1000" data-delay="5000" data-title="Creative Minimalism">
-
-                                <!-- MAIN IMAGE -->
-                                <img src="{{ asset('public_files/img/revolution/melbourne_slide_3.jpg')}}" alt=""
-                                    data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7"
-                                    class="rev-slidebg">
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption hero-text alt-font bold" data-x="center" data-y="center"
-                                    data-textAlign="center" data-voffset="[-69,-69,-69,-69]"
-                                    data-fontsize="[90,80,70,40]" data-transform_idle="o:1;s:700"
-                                    data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
-                                    data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1000"
-                                    data-elementdelay="0.01">
-                                    Unleash The Power
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption medium-text" data-x="center" data-y="center"
-                                    data-textAlign="center" data-voffset="[7,7,7,-5]" data-fontsize="[22,22,20,18]"
-                                    data-width="[none,none,none,300]"
-                                    data-whitespace="[nowrap, nowrap, nowrap, normal]" data-transform_idle="o:1;s:700"
-                                    data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
-                                    data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1100"
-                                    data-elementdelay="0.01">
-                                    Gaze is a simple and elegant template with tons of features.
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption tp-resizeme" data-x="center" data-y="center"
-                                    data-lineheight="[40]" data-voffset="[92,92,92,70]"
-                                    data-transform_idle="o:1;s:500"
-                                    data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
-                                    data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
-                                    data-elementdelay="0.01" data-linktoslide="next"><a href='#'
-                                        class='btn btn-lg btn-color'><span>Purchase Now</span></a>
-                                </div>
-
                             </li>
                         </ul>
 

@@ -1,34 +1,83 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Боловсрол судлал сэтгүүл</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
+        rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="{{ asset('user_assets/plugins/toaster/toastr.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/nprogress/nprogress.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/flag-icons/css/flag-icon.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/ladda/ladda.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('user_assets/plugins/daterangepicker/daterangepicker.css') }}" rel="stylesheet" />
+
+    <!-- SLEEK CSS -->
+    <link id="sleek-css" rel="stylesheet" href="{{ asset('user_assets/css/sleek.css') }}" />
+
+    <!-- FAVICON -->
+    <link href="{{ asset('user_assets/img/favicon.png" rel="shortcut icon') }}" />
+    <script src="{{ asset('user_assets/plugins/nprogress/nprogress.js') }}"></script>
+</head>
+
+<body class="bg-light-gray" id="body">
+    <div class="container d-flex flex-column justify-content-between vh-100">
+        <div class="row justify-content-center mt-5">
+            <div class="col-xl-5 col-lg-6 col-md-10">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <div class="app-brand">
+                            <a href="{{ route('index') }}">
+                                <img src="{{ asset('user_assets/logo1.png') }}" height="33" />
+                                <span class="brand-name">Боловсрол судлал сэтгүүл</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body p-5">
+                        <h4 class="text-dark mb-5">Нууц үг сэргээх</h4>
+                        <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
+                            <div class="row">
+                                <div class="mb-4 text-sm text-gray-600">
+                                    {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+                                </div>
+                        
+                                @if (session('status'))
+                                    <div class="mb-4 font-medium text-sm text-green-600">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
+
+                                <div class="form-group col-md-12 mb-4">
+
+                                    <input type="email" class="form-control input-lg" id="email" name="email"
+                                        aria-describedby="emailHelp" :value="old('email')" required autofocus>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button type="submit"
+                                        class="btn btn-lg btn-primary btn-block mb-4">Нууц үг шинэчлэх холбоос авах</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        <x-jet-validation-errors class="mb-4" />
-
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-
-            <div class="block">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-jet-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+        <div class="copyright pl-0">
+            <p class="text-center">&copy; Боловсрол судлал сэтгүүл
+            </p>
+        </div>
+    </div>
+</body>
+</html>
