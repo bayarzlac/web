@@ -12,9 +12,9 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/articles', function () {
-    return view('/articles');
-})->name('articles');
+Route::get('/papers', function () {
+    return view('papers');
+})->name('papers');
 
 Route::get('/editions', function () {
     return view('editions');

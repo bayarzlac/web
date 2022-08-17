@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Боловсрол судлал сэтгүүл</title>
-
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
-
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700%7COpen+Sans:400,400i,700%7CNoto+Serif:400i'
         rel='stylesheet'>
@@ -21,20 +18,16 @@
     <link rel="stylesheet" href="{{ asset('public_files/css/rev-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('public_files/css/sliders.css') }}" />
     <link rel="stylesheet" href="{{ asset('public_files/css/style.css') }}" />
-
     <link rel="stylesheet" href="{{ asset('public_files/css/colors/pink.css') }}" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
-
     <link rel="apple-touch-icon" href="{{ asset('public_files/img/apple-touch-icon.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('public_files/img/apple-touch-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('public_files/img/apple-touch-icon-114x114.png') }}">
-
 </head>
 
 <body class="relative raleway grid-1440">
-
     <!-- Preloader -->
     <div class="loader-mask">
         <div class="loader">
@@ -42,7 +35,6 @@
             <div></div>
         </div>
     </div>
-
     <!-- Sidenav -->
     <section class="sidenav">
         <img class="logo-dark mb-30" src="{{ asset('public_files/img/logo_dark.png') }}" alt="logo">
@@ -62,16 +54,12 @@
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-vimeo"></i></a>
         </div>
-
         <a href="#" id="sidenav-close">
             <i class="ui-close"></i>
         </a>
     </section> <!-- end sidenav -->
-
     <main class="main-wrapper">
-
         <header class="nav-type-3">
-
             <!-- Top Bar -->
             <div class="top-bar hidden-xs">
                 <div class="container">
@@ -96,7 +84,6 @@
                     </div>
                 </div>
             </div> <!-- end top bar -->
-
             <!-- Fullscreen search -->
             <div class="search-wrap">
                 <div class="search-inner">
@@ -110,13 +97,10 @@
                     </div>
                 </div>
             </div> <!-- end fullscreen search -->
-
             <nav class="navbar navbar-static-top">
                 <div class="navigation" id="sticky-nav">
                     <div class="container relative">
-
                         <div class="row">
-
                             <div class="navbar-header">
                                 <!-- Logo -->
                                 <div class="logo-container">
@@ -134,24 +118,18 @@
                                     <span class="icon-bar"></span>
                                 </button>
                             </div> <!-- end navbar-header -->
-
                             <div class="nav-wrap right">
                                 <div class="collapse navbar-collapse text-center" id="navbar-collapse">
-
                                     <ul class="nav navbar-nav navbar-right">
-
-                                        <li class="dropdown active">
+                                        <li class="dropdown">
                                             <a href="{{ route('index') }}">Нүүр хуудас</a>
                                         </li>
-
                                         <li class="dropdown">
-                                            <a href="{{ route('articles') }}">Өгүүллүүд</a>
+                                            <a href="{{ route('papers') }}">Өгүүллүүд</a>
                                         </li>
-
                                         <li class="dropdown">
                                             <a href="{{ route('editions') }}">Дугаарууд</a>
-                                        </li> <!-- end portfolio -->
-
+                                        </li> 
                                         <li class="dropdown">
                                             <a href="{{ route('about') }}">Сэтгүүлийн тухай</a>
                                         </li>
@@ -178,59 +156,24 @@
                                                 </li>
                                             </ul>
                                         </li>
-
-                                        <li id="mobile-search" class="hidden-lg hidden-md">
+                                        {{-- <li id="mobile-search" class="hidden-lg hidden-md">
                                             <form method="get" class="mobile-search">
                                                 <input type="search" class="form-control" placeholder="Хайх утга...">
                                                 <button type="submit" class="search-button">
                                                     <i class="ui-search"></i>
                                                 </button>
                                             </form>
-                                        </li>
-
+                                        </li> --}}
                                     </ul> <!-- end menu -->
                                 </div> <!-- end collapse -->
                             </div> <!-- end col -->
-
                         </div> <!-- end row -->
                     </div> <!-- end container -->
                 </div> <!-- end navigation -->
             </nav> <!-- end navbar -->
         </header>
-
         <div class="content-wrapper oh">
-
-            <!-- Revolution Slider -->
             
-
-            <!-- Icon Boxes -->
-            
-
-            <!-- Promo -->
-            
-
-            <!-- Counters -->
-            
-
-            <!-- Feature Boxes -->
-            
-
-            <!-- CTA -->
-            <section class="call-to-action bg-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-9 col-xs-12 sm-text-center">
-                            <h3 class="white">Are you ready to enjoy? Grab this perfect theme now</h3>
-                        </div>
-                        <div class="col-sm-3 col-xs-12 cta-button text-right sm-text-center">
-                            <a href="#" class="btn btn-lg btn-white">
-                                <span>Purchase Now</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section> <!-- end CTA -->
-
             @yield('public')
 
             <!-- Footer Type-4 -->
@@ -238,13 +181,11 @@
                 <div class="container">
                     <div class="footer-widgets pb-mdm-20">
                         <div class="row">
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-logo">
                                     <img src="img/logo_alt.png" alt="">
                                 </div>
                             </div> <!-- end about us -->
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-about-us">
                                     <h5 class="widget-title">Боловсрол судлал сэтгүүл</h5>
@@ -253,7 +194,6 @@
                                         Creating an awesome website with this Theme.</p>
                                 </div>
                             </div> <!-- end about us -->
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
                                     <h5 class="widget-title">Холбоо барих</h5>
@@ -266,7 +206,6 @@
                                     </div>
                                 </div>
                             </div> <!-- end stay in touch -->
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
                                     <h5 class="widget-title">Хаяг байршил</h5>
@@ -274,40 +213,32 @@
                                         Багшийн хөгжлийн ордон, 301 тоот</address>
                                 </div>
                             </div> <!-- end address -->
-
                         </div>
                     </div>
                 </div> <!-- end container -->
-
                 <div class="bottom-footer">
                     <div class="container">
                         <div class="row">
-
                             <div class="col-sm-6 copyright sm-text-center">
                                 <span>
                                     &copy; Боловсрол судлал сэтгүүл
                                 </span>
                             </div>
-
                             <div class="col-sm-6">
                                 <ul class="bottom-footer-links text-right sm-text-center">
                                     <li><a href="{{ route('index') }}">Нүүр хуудас</a></li>
-                                    <li><a href="{{ route('articles') }}">Өгүүлүүд</a></li>
+                                    <li><a href="{{ route('papers') }}">Өгүүлүүд</a></li>
                                     <li><a href="{{ route('editions') }}">Дугаарууд</a></li>
                                     <li><a href="{{ route('about') }}">Сэтгүүлийн тухай</a></li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div> <!-- end bottom footer -->
             </footer> <!-- end footer -->
-
-
             <div id="back-to-top">
                 <a href="#top"><i class="fa fa-angle-up"></i></a>
             </div>
-
         </div> <!-- end content wrapper -->
     </main> <!-- end main wrapper -->
 
@@ -319,7 +250,6 @@
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/js/rev-slider.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/js/scripts.js') }}"></script>
-
 
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
