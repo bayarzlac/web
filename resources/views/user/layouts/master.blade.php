@@ -50,14 +50,8 @@
             <div id="sidebar" class="sidebar sidebar-with-footer">
                 <!-- Aplication Brand -->
                 <div class="app-brand">
-                    <a href="/index.html">
-                        <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
-                            width="30" height="33" viewBox="0 0 30 33">
-                            <g fill="none" fill-rule="evenodd">
-                                <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
-                                <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
-                            </g>
-                        </svg>
+                    <a href="{{ route('user') }}">
+                        <img src="{{ asset('user_assets/logo1.png') }}" width="30" />
                         <span class="brand-name">Боловсрол судлал</span>
                     </a>
                 </div>
@@ -66,7 +60,7 @@
 
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li class="{{ (request()->is('user')) ? 'active' : '' }}">
+                        <li class="{{ request()->is('user') ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="{{ route('user') }}">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
                                 <span class="nav-text">Хянах самбар</span> <b class="caret"></b>
@@ -99,7 +93,6 @@
                                     <li>
                                         <a class="sidenav-item-link" href="{{ route('user.article.new') }}">
                                             <span class="nav-text">Өгүүлэл илгээх</span>
-
                                         </a>
                                     </li>
                                 </div>
@@ -175,7 +168,8 @@
                             <li class="dropdown user-menu">
                                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     <img src="user_assets/img/user/user.png" class="user-image" alt="User Image" />
-                                    <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                                    <span
+                                        class="d-none d-lg-inline-block">{{ Auth::user()->last_name . ' ' . Auth::user()->first_name }}</span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
@@ -183,10 +177,18 @@
                                         <img src="user_assets/img/user/user.png" class="img-circle"
                                             alt="User Image" />
                                         <div class="d-inline-block">
-                                            Abdus Salam <small class="pt-1">abdus@gmail.com</small>
+                                            {{ Auth::user()->first_name }}
+                                            <small class="pt-1">{{ Auth::user()->email }}</small>
                                         </div>
                                     </li>
-
+                                    @if (Auth::user()->role == 'Admin')
+                                        <li>
+                                            <a href="{{ route('admin') }}">
+                                                <i class="mdi mdi-settings"></i>
+                                                Удирдлагын хэсэг
+                                            </a>
+                                        </li>
+                                    @endif
                                     <li>
                                         <a href="profile.html">
                                             <i class="mdi mdi-account"></i> My Profile
@@ -194,7 +196,8 @@
                                     </li>
 
                                     <li class="dropdown-footer">
-                                        <a href="signin.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                                        <a href="{{ route('user.signout') }}"> <i class="mdi mdi-logout"></i> Гарах
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
@@ -206,7 +209,7 @@
                 <div class="content">
 
                     @yield('user')
-                
+
                 </div>
             </div>
             <footer class="footer mt-auto">

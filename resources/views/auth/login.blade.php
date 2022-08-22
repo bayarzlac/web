@@ -77,7 +77,7 @@
                                     <button type="submit"
                                         class="btn btn-lg btn-primary btn-block mb-4">Нэвтрэх</button>
                                     <p>Бүртгүүлээгүй бол
-                                        <a class="text-blue" href="sign-up.html">энд дарж</a>
+                                        <a class="text-blue" href="{{ route('user.signup') }}">энд дарж</a>
                                         бүртгүүлнэ үү.
                                     </p>
                                 </div>
