@@ -188,13 +188,13 @@
                             <!-- User Account -->
                             <li class="dropdown user-menu">
                                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <img src="user_assets/img/user/user.png" class="user-image" alt="User Image" />
+                                    <img src="{{ asset('user_assets/img/user/user.png') }}" class="user-image" alt="User Image" />
                                     <span class="d-none d-lg-inline-block">{{ Auth::user()->last_name . ' ' . Auth::user()->first_name }}</span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
                                     <li class="dropdown-header">
-                                        <img src="user_assets/img/user/user.png" class="img-circle"
+                                        <img src="{{ asset('user_assets/img/user/user.png') }}" class="img-circle"
                                             alt="User Image" />
                                         <div class="d-inline-block">
                                             {{ Auth::user()->first_name }}
@@ -225,8 +225,7 @@
             <footer class="footer mt-auto">
                 <div class="copyright bg-white">
                     <p>
-                        &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
-                        <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.
+                        &copy; <span id="copy-year"></span> Боловсрол судлал сэтгүүл
                     </p>
                 </div>
                 <script>
