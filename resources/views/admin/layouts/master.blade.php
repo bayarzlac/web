@@ -26,8 +26,8 @@
     <link id="sleek-css" rel="stylesheet" href="{{ asset('user_assets/css/sleek.css') }}" />
 
     <!-- FAVICON -->
-    <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" />
-
+    {{-- <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" /> --}}
+    <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
     <script src="{{ asset('user_assets/plugins/nprogress/nprogress.js') }}"></script>
 </head>
 
