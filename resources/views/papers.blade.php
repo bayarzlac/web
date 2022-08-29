@@ -6,7 +6,7 @@
         <div class="container relative clearfix">
             <div class="title-holder">
                 <div class="title-text">
-                    <h1 class="uppercase">Blog Masonry</h1>
+                    <h1 class="uppercase">Өгүүллүүд</h1>
                 </div>
             </div>
         </div>
@@ -20,176 +20,47 @@
 
                 <!-- content -->
                 <div class="col-md-9 post-content mb-50">
-
-                    <!-- standard post -->
-                    <article class="entry-item">
-                        <div class="entry-img">
+                    @foreach ($papers as $item)
+                        <!-- standard post -->
+                        <article class="entry-item">
+                            {{-- <div class="entry-img">
                             <a href="blog-single.html" class="hover-scale">
-                                <img src="img/blog/post_img_1.jpg" alt="">
+                                <img src="{{ asset('public_files/img/blog/post_img_1.jpg') }}" alt="">
                             </a>
-                        </div>
-
-                        <div class="entry-wrap">
-                            <div class="entry">
-                                <ul class="entry-meta">
-                                    <li class="entry-date">
-                                        <i class="fa fa-calendar-o"></i>
-                                        19 September, 2016
-                                    </li>
-                                    <li class="entry-author">
-                                        <i class="fa fa-user"></i>
-                                        <a href="#">Admin</a>
-                                    </li>
-                                    <li class="entry-category">
-                                        <i class="fa fa-folder-open"></i>
-                                        <a href="#">Fashion</a>
-                                    </li>
-                                    <li class="entry-comments">
-                                        <i class="fa fa-comment"></i>
-                                        <a href="blog-single.html">15 Comments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="entry-title">
-                                    <a href="blog-single.html">Designing Mobile eCommerce Apps</a>
-                                </h2>
-                                <div class="entry-content">
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
-                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                                    <a href="blog-single.html" class="read-more">Read More</a>
+                        </div> --}}
+                            <div class="entry-wrap">
+                                <div class="entry">
+                                    <ul class="entry-meta">
+                                        <li class="entry-date">
+                                            <i class="fa fa-calendar-o"></i>
+                                            {{ $item->approved }}
+                                        </li>
+                                        <li class="entry-author">
+                                            <i class="fa fa-user"></i>
+                                            <a href="#">{{ $item->authors }}</a>
+                                        </li>
+                                        <li class="entry-category">
+                                            <i class="fa fa-folder-open"></i>
+                                            <a href="#">Fashion</a>
+                                        </li>
+                                        <li class="entry-comments">
+                                            <i class="fa fa-comment"></i>
+                                            <a href="blog-single.html">15 Comments</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="entry-title">
+                                        <a href="blog-single.html">{{ $item->title }}</a>
+                                    </h2>
+                                    <div class="entry-content">
+                                        <p>
+                                            {{ $item->abstract_mn }}
+                                        </p>
+                                        <a href="blog-single.html" class="read-more">Дэлгэрэнгүй</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article> <!-- end standard post -->
-
-                    <!-- gallery post -->
-                    <article class="entry-item">
-                        <div class="entry-slider">
-                            <div class="flexslider dots-inside" id="flexslider">
-                                <ul class="slides clearfix">
-                                    <li>
-                                        <a href="#">
-                                            <img src="img/blog/gallery_post_img_1.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="img/blog/gallery_post_img_2.jpg" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="img/blog/gallery_post_img_3.jpg" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> <!-- end slider -->
-
-                        <div class="entry-wrap">
-                            <div class="entry">
-                                <ul class="entry-meta">
-                                    <li class="entry-date">
-                                        <i class="fa fa-calendar-o"></i>
-                                        19 September, 2016
-                                    </li>
-                                    <li class="entry-author">
-                                        <i class="fa fa-user"></i>
-                                        <a href="#">Admin</a>
-                                    </li>
-                                    <li class="entry-category">
-                                        <i class="fa fa-folder-open"></i>
-                                        <a href="#">Fashion</a>
-                                    </li>
-                                    <li class="entry-comments">
-                                        <i class="fa fa-comment"></i>
-                                        <a href="blog-single.html">15 Comments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="entry-title">
-                                    <a href="blog-single.html">Need a Business Idea? Here are 55.</a>
-                                </h2>
-                                <div class="entry-content">
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
-                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                                    <a href="blog-single.html" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article> <!-- end gallery post -->
-
-                    <!-- video post -->
-                    <article class="entry-item">
-                        <div class="entry-video video-wrap">
-                            <iframe width="640" height="360" src="https://player.vimeo.com/video/193517656?badge=0"
-                                allowfullscreen></iframe>
-                        </div>
-
-                        <div class="entry-wrap">
-                            <div class="entry">
-                                <ul class="entry-meta">
-                                    <li class="entry-date">
-                                        <i class="fa fa-calendar-o"></i>
-                                        19 September, 2016
-                                    </li>
-                                    <li class="entry-author">
-                                        <i class="fa fa-user"></i>
-                                        <a href="#">Admin</a>
-                                    </li>
-                                    <li class="entry-category">
-                                        <i class="fa fa-folder-open"></i>
-                                        <a href="#">Fashion</a>
-                                    </li>
-                                    <li class="entry-comments">
-                                        <i class="fa fa-comment"></i>
-                                        <a href="blog-single.html">15 Comments</a>
-                                    </li>
-                                </ul>
-                                <h2 class="entry-title">
-                                    <a href="blog-single.html">This is awesome Vimeo video post.</a>
-                                </h2>
-                                <div class="entry-content">
-                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
-                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                                    <a href="blog-single.html" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article> <!-- end video post -->
-
-                    <!-- blockquote post -->
-                    <article class="entry-item">
-                        <div class="entry blockquote">
-                            <blockquote class="blockquote-style-1">
-                                <ul class="entry-meta">
-                                    <li class="entry-date">
-                                        <i class="fa fa-calendar-o"></i>
-                                        19 September, 2016
-                                    </li>
-                                    <li class="entry-author">
-                                        <i class="fa fa-user"></i>
-                                        <a href="#">Admin</a>
-                                    </li>
-                                    <li class="entry-category">
-                                        <i class="fa fa-folder-open"></i>
-                                        <a href="#">Fashion</a>
-                                    </li>
-                                    <li class="entry-comments">
-                                        <i class="fa fa-comment"></i>
-                                        <a href="blog-single.html">15 Comments</a>
-                                    </li>
-                                </ul>
-                                <p>
-                                    <a href="blog-single.html">"Incredible change happens in your life when you decide to
-                                        take control of what you do have power over instead of craving control over what you
-                                        don't."</a>
-                                </p>
-                                <span>Steve Maraboli</span>
-                            </blockquote>
-                        </div>
-                    </article> <!-- end blockquote post -->
+                        </article> <!-- end standard post -->
+                    @endforeach
 
 
                     <!-- Pagination -->
@@ -208,8 +79,8 @@
                 <aside class="col-md-3 sidebar">
 
                     <div class="widget search">
-                        <form class="relative">
-                            <input type="search" class="searchbox mb-0" placeholder="Search">
+                        <form class="relative" action="{{ route('search_paper') }}" method="POST">
+                            <input type="search" name="search" class="searchbox mb-0" placeholder="Search">
                             <button type="submit" class="search-button"><i class="ui-search"></i></button>
                         </form>
                     </div>

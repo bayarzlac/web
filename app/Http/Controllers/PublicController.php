@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Articles;
 
 class PublicController extends Controller
 {
@@ -39,5 +40,17 @@ class PublicController extends Controller
         );
 
         return redirect()->route('user.signup')->with($notification);
+    }
+
+    public function papers()
+    {
+        $papers = Articles::whereNotNull('approved')->latest()->paginate(10);
+        return view('papers', compact('papers'));
+    }
+
+    public function search_paper(Request $request)
+    {
+        $papers = Articles::find($request->search)->latest()->paginate(10);
+        return redirect()->back()->with(compact('papers'));
     }
 }

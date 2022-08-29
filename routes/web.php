@@ -13,9 +13,8 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/papers', function () {
-    return view('papers');
-})->name('papers');
+Route::get('/papers', [PublicController::class, 'papers'])->name('papers');
+Route::post('/papers', [PublicController::class, 'search_paper'])->name('search_paper');
 
 Route::get('/editions', function () {
     return view('editions');

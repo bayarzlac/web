@@ -28,7 +28,7 @@
         <link id="sleek-css" rel="stylesheet" href="{{ asset('user_assets/css/sleek.css') }}" />
 
         <!-- FAVICON -->
-        <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" />
+        <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
         <script src="assets/plugins/nprogress/nprogress.js"></script>
 
         <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
