@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Дугаар</label>
-                                    <input type="text" name="edition" class="form-control" placeholder="2022/06" />
+                                    <input type="text" name="edition" class="form-control" placeholder="202206" />
                                 </div>
                             </div>
                             <div class="col-lg-8">

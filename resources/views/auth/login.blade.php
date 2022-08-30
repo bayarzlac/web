@@ -49,7 +49,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <h4 class="text-dark mb-5">Sign In</h4>
+                        <h4 class="text-dark mb-5">Нэвтрэх</h4>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="row">
@@ -65,7 +65,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex my-2 justify-content-between">
                                         <div class="d-inline-block mr-3">
-                                            <label class="control control-checkbox">Remember me
+                                            <label class="control control-checkbox">Сануулах
                                                 <input type="checkbox" />
                                                 <div class="control-indicator"></div>
                                             </label>
