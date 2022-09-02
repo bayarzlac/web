@@ -43,7 +43,7 @@
                             data-lineheight="[40]" data-transform_idle="o:1;s:500"
                             data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                             data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
-                            data-elementdelay="0.01" data-linktoslide="next"><a href='#'
+                            data-elementdelay="0.01" data-linktoslide="next"><a href='{{ route('user.signup') }}'
                                 class='btn btn-lg btn-color'><span>Бүртгүүлэх</span></a>
                         </div>
 
@@ -53,7 +53,7 @@
                             data-transform_idle="o:1;s:500"
                             data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;"
                             data-transform_out="opacity:0;s:1000;e:Power2.easeInOut;" data-start="1200"
-                            data-elementdelay="0.01" data-linktoslide="next"><a href='#'
+                            data-elementdelay="0.01" data-linktoslide="next"><a href='{{ route('login') }}'
                                 class='btn btn-lg btn-transparent'><span>Нэвтрэх</span></a>
                         </div>
                     </li>
