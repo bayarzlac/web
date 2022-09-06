@@ -36,6 +36,16 @@
 
         <!-- Load our React component. -->
         <script src="{{ asset('js/like_button.js') }}"></script>
+
+        <script src="https://unpkg.com/vue@3"></script>
+        {{-- <script type="importmap">
+            {
+                "imports": {
+                    "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+                }
+            }
+        </script> --}}
+
     </head>
 
 </head>
@@ -55,6 +65,7 @@
                     </div>
                     <div class="card-body p-5">
                         <h4 class="text-dark mb-5">Хэрэглэгчийн бүртгэл</h4>
+                        <div id="app">Message: @{{ message }}</div>
                         <form action="{{ route('user.add') }}" method="POST">
                             @csrf
                             <div class="row">
@@ -188,13 +199,26 @@
             <p class="text-center">&copy; Боловсрол судлал сэтгүүл</p>
         </div>
     </div>
-    
+
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <!-- Load our React component. -->
     <script src="like_button.js"></script>
 
+    <script type="module">
+        import { createApp } from 'vue'
+        import locations from '{{ asset('public_files/locations.json') }}'
+      
+        createApp({
+          data() {
+            return {
+              message: locations
+            }
+          }
+        }).mount('#app')
+        
+    </script>
 </body>
 
 </html>
