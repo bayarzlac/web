@@ -29,25 +29,15 @@
 
         <!-- FAVICON -->
         <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
-        <script src="assets/plugins/nprogress/nprogress.js"></script>
-
-        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-        <!-- Load our React component. -->
-        <script src="{{ asset('js/like_button.js') }}"></script>
-
-        <script src="https://unpkg.com/vue@3"></script>
-        {{-- <script type="importmap">
+        <script src="{{ asset('user_assets/plugins/nprogress/nprogress.js') }}"></script>
+        <script type="importmap">
             {
                 "imports": {
                     "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
                 }
             }
-        </script> --}}
-
+        </script>
     </head>
-
 </head>
 
 <body class="bg-light-gray" id="body">
@@ -65,7 +55,7 @@
                     </div>
                     <div class="card-body p-5">
                         <h4 class="text-dark mb-5">Хэрэглэгчийн бүртгэл</h4>
-                        <div id="app">Message: @{{ message }}</div>
+                        
                         <form action="{{ route('user.add') }}" method="POST">
                             @csrf
                             <div class="row">
@@ -152,23 +142,23 @@
                                                 placeholder="Гар утасны дугаар">
                                         </div>
 
-                                        <div class="form-group col-md-12">
+                                        <div id="app" class="form-group col-md-12">
                                             <label>Аймаг / хот</label>
-                                            <select class="form-control" id="exampleFormControlSelect12"
-                                                name="province">
+                                            <select class="form-control" name="province" @change="provinceSelected">
                                                 <option disabled selected>--Сонго--</option>
-                                                <option>Архангай</option>
-                                                <option>Баянхонгор</option>
+                                                <option v-for="item in locs" :key="item.provinceId" :value="item.provinceId">
+                                                    @{{ item.province }}
+                                                </option>
                                             </select>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Сум / дүүрэг</label>
-                                            <select class="form-control" id="exampleFormControlSelect12"
-                                                name="district">
+                                            <select class="form-control" name="district">
                                                 <option disabled selected>--Сонго--</option>
-                                                <option>Батцэнгэл</option>
-                                                <option>Зэрэг</option>
+                                                <option v-for="item in districts" :key="item.districtId" :value="item.district">
+                                                    @{{ item.district }}
+                                                </option>
                                             </select>
                                         </div>
 
@@ -187,10 +177,8 @@
                                         <a class="text-blue" href="sign-in.html">Нэвтрэх</a>
                                     </p>
                                 </div>
-
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -200,25 +188,26 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-    <!-- Load our React component. -->
-    <script src="like_button.js"></script>
-
     <script type="module">
         import { createApp } from 'vue'
-        import locations from '{{ asset('public_files/locations.json') }}'
-      
+        import locations from '../public_files/locations.json' assert { type: "json" }
+
         createApp({
           data() {
             return {
-              message: locations
+              locs: locations,
+              districts: [],
+            }
+          },
+
+          methods: {
+            provinceSelected(e) {
+                for (item in this.locs) {
+                    console.log(this.item);
+                }
             }
           }
         }).mount('#app')
-        
-    </script>
+      </script>
 </body>
-
 </html>
