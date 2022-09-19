@@ -55,7 +55,7 @@
                     </div>
                     <div class="card-body p-5">
                         <h4 class="text-dark mb-5">Хэрэглэгчийн бүртгэл</h4>
-                        
+
                         <form action="{{ route('user.add') }}" method="POST">
                             @csrf
                             <div class="row">
@@ -146,7 +146,8 @@
                                             <label>Аймаг / хот</label>
                                             <select class="form-control" name="province" @change="provinceSelected">
                                                 <option disabled selected>--Сонго--</option>
-                                                <option v-for="item in locs" :key="item.provinceId" :value="item.provinceId">
+                                                <option v-for="item in locs" :key="item.provinceId"
+                                                    :value="item.provinceId">
                                                     @{{ item.province }}
                                                 </option>
                                             </select>
@@ -156,7 +157,8 @@
                                             <label>Сум / дүүрэг</label>
                                             <select class="form-control" name="district">
                                                 <option disabled selected>--Сонго--</option>
-                                                <option v-for="item in districts" :key="item.districtId" :value="item.district">
+                                                <option v-for="item in districts" :key="item.districtId"
+                                                    :value="item.district">
                                                     @{{ item.district }}
                                                 </option>
                                             </select>
@@ -202,12 +204,15 @@
 
           methods: {
             provinceSelected(e) {
-                for (item in this.locs) {
-                    console.log(this.item);
-                }
+                alert(e);
+
+                // for (var item in this.locs) {
+                //     console.log(this.item);
+                // }
             }
           }
         }).mount('#app')
       </script>
 </body>
+
 </html>
