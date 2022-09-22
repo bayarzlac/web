@@ -1,0 +1,1697 @@
+[
+ {
+   "provinceId": 11,
+   "district": "Батцэнгэл",
+   "districtId": 1101
+ },
+ {
+   "provinceId": 11,
+   "district": "Булган",
+   "districtId": 1102
+ },
+ {
+   "provinceId": 11,
+   "district": "Жаргалант",
+   "districtId": 1103
+ },
+ {
+   "provinceId": 11,
+   "district": "Их Тамир",
+   "districtId": 1104
+ },
+ {
+   "provinceId": 11,
+   "district": "Өгийнуур",
+   "districtId": 1105
+ },
+ {
+   "provinceId": 11,
+   "district": "Өлзийт",
+   "districtId": 1106
+ },
+ {
+   "provinceId": 11,
+   "district": "Өндөр-Улаан",
+   "districtId": 1107
+ },
+ {
+   "provinceId": 11,
+   "district": "Тариат",
+   "districtId": 1108
+ },
+ {
+   "provinceId": 11,
+   "district": "Төвшрүүлэх",
+   "districtId": 1109
+ },
+ {
+   "provinceId": 11,
+   "district": "Хайрхан",
+   "districtId": 1110
+ },
+ {
+   "provinceId": 11,
+   "district": "Хангай",
+   "districtId": 1111
+ },
+ {
+   "provinceId": 11,
+   "district": "Хашаат",
+   "districtId": 1112
+ },
+ {
+   "provinceId": 11,
+   "district": "Хотонт",
+   "districtId": 1113
+ },
+ {
+   "provinceId": 11,
+   "district": "Цахир",
+   "districtId": 1114
+ },
+ {
+   "provinceId": 11,
+   "district": "Цэнхэр",
+   "districtId": 1115
+ },
+ {
+   "provinceId": 11,
+   "district": "Цэцэрлэг",
+   "districtId": 1116
+ },
+ {
+   "provinceId": 11,
+   "district": "Чулуут",
+   "districtId": 1117
+ },
+ {
+   "provinceId": 11,
+   "district": "Эрдэнэбулган",
+   "districtId": 1118
+ },
+ {
+   "provinceId": 11,
+   "district": "Эрдэнэмандал",
+   "districtId": 1119
+ },
+ {
+   "provinceId": 12,
+   "district": "Алтай",
+   "districtId": 1201
+ },
+ {
+   "provinceId": 12,
+   "district": "Алтанцөгц",
+   "districtId": 1202
+ },
+ {
+   "provinceId": 12,
+   "district": "Баяннуур",
+   "districtId": 1203
+ },
+ {
+   "provinceId": 12,
+   "district": "Бугат",
+   "districtId": 1204
+ },
+ {
+   "provinceId": 12,
+   "district": "Булган",
+   "districtId": 1205
+ },
+ {
+   "provinceId": 12,
+   "district": "Буянт",
+   "districtId": 1206
+ },
+ {
+   "provinceId": 12,
+   "district": "Дэлүүн",
+   "districtId": 1207
+ },
+ {
+   "provinceId": 12,
+   "district": "Ногооннуур",
+   "districtId": 1208
+ },
+ {
+   "provinceId": 12,
+   "district": "Өлгий",
+   "districtId": 1209
+ },
+ {
+   "provinceId": 12,
+   "district": "Сагсай",
+   "districtId": 1210
+ },
+ {
+   "provinceId": 12,
+   "district": "Толбо",
+   "districtId": 1211
+ },
+ {
+   "provinceId": 12,
+   "district": "Улаанхус",
+   "districtId": 1212
+ },
+ {
+   "provinceId": 12,
+   "district": "Цэнгэл",
+   "districtId": 1213
+ },
+ {
+   "provinceId": 13,
+   "district": "Баацагаан",
+   "districtId": 1301
+ },
+ {
+   "provinceId": 13,
+   "district": "Баянбулаг",
+   "districtId": 1302
+ },
+ {
+   "provinceId": 13,
+   "district": "Баянговь",
+   "districtId": 1303
+ },
+ {
+   "provinceId": 13,
+   "district": "Баянлиг",
+   "districtId": 1304
+ },
+ {
+   "provinceId": 13,
+   "district": "Баян-Овоо",
+   "districtId": 1305
+ },
+ {
+   "provinceId": 13,
+   "district": "Баян-Өндөр",
+   "districtId": 1306
+ },
+ {
+   "provinceId": 13,
+   "district": "Баянхонгор",
+   "districtId": 1307
+ },
+ {
+   "provinceId": 13,
+   "district": "Баянцагаан",
+   "districtId": 1308
+ },
+ {
+   "provinceId": 13,
+   "district": "Богд",
+   "districtId": 1309
+ },
+ {
+   "provinceId": 13,
+   "district": "Бөмбөгөр",
+   "districtId": 1310
+ },
+ {
+   "provinceId": 13,
+   "district": "Бууцагаан",
+   "districtId": 1311
+ },
+ {
+   "provinceId": 13,
+   "district": "Галуут",
+   "districtId": 1312
+ },
+ {
+   "provinceId": 13,
+   "district": "Гурванбулаг",
+   "districtId": 1313
+ },
+ {
+   "provinceId": 13,
+   "district": "Жаргалант",
+   "districtId": 1314
+ },
+ {
+   "provinceId": 13,
+   "district": "Жинст",
+   "districtId": 1315
+ },
+ {
+   "provinceId": 13,
+   "district": "Заг",
+   "districtId": 1316
+ },
+ {
+   "provinceId": 13,
+   "district": "Өлзийт",
+   "districtId": 1317
+ },
+ {
+   "provinceId": 13,
+   "district": "Хүрээмарал",
+   "districtId": 1318
+ },
+ {
+   "provinceId": 13,
+   "district": "Шинэжинст",
+   "districtId": 1319
+ },
+ {
+   "provinceId": 13,
+   "district": "Эрдэнэцогт",
+   "districtId": 1320
+ },
+ {
+   "provinceId": 14,
+   "district": "Баян-Агт",
+   "districtId": 1401
+ },
+ {
+   "provinceId": 14,
+   "district": "Баяннуур",
+   "districtId": 1402
+ },
+ {
+   "provinceId": 14,
+   "district": "Бугат",
+   "districtId": 1403
+ },
+ {
+   "provinceId": 14,
+   "district": "Булган",
+   "districtId": 1404
+ },
+ {
+   "provinceId": 14,
+   "district": "Бүрэгхангай",
+   "districtId": 1405
+ },
+ {
+   "provinceId": 14,
+   "district": "Гурван Булаг",
+   "districtId": 1406
+ },
+ {
+   "provinceId": 14,
+   "district": "Дашинчилэн",
+   "districtId": 1407
+ },
+ {
+   "provinceId": 14,
+   "district": "Могод",
+   "districtId": 1408
+ },
+ {
+   "provinceId": 14,
+   "district": "Орхон",
+   "districtId": 1409
+ },
+ {
+   "provinceId": 14,
+   "district": "Рашаант",
+   "districtId": 1410
+ },
+ {
+   "provinceId": 14,
+   "district": "Сайхан",
+   "districtId": 1411
+ },
+ {
+   "provinceId": 14,
+   "district": "Сэлэнгэ",
+   "districtId": 1412
+ },
+ {
+   "provinceId": 14,
+   "district": "Тэшиг",
+   "districtId": 1413
+ },
+ {
+   "provinceId": 14,
+   "district": "Хангал",
+   "districtId": 1414
+ },
+ {
+   "provinceId": 14,
+   "district": "Хишиг-Өндөр",
+   "districtId": 1415
+ },
+ {
+   "provinceId": 14,
+   "district": "Хутаг-Өндөр",
+   "districtId": 1416
+ },
+ {
+   "provinceId": 15,
+   "district": "Алтай",
+   "districtId": 1501
+ },
+ {
+   "provinceId": 15,
+   "district": "Баян-Уул",
+   "districtId": 1502
+ },
+ {
+   "provinceId": 15,
+   "district": "Бигэр",
+   "districtId": 1503
+ },
+ {
+   "provinceId": 15,
+   "district": "Бугат",
+   "districtId": 1504
+ },
+ {
+   "provinceId": 15,
+   "district": "Дарив",
+   "districtId": 1505
+ },
+ {
+   "provinceId": 15,
+   "district": "Дэлгэр",
+   "districtId": 1506
+ },
+ {
+   "provinceId": 15,
+   "district": "Есөнбулаг",
+   "districtId": 1507
+ },
+ {
+   "provinceId": 15,
+   "district": "Жаргалан",
+   "districtId": 1508
+ },
+ {
+   "provinceId": 15,
+   "district": "Тайшир",
+   "districtId": 1509
+ },
+ {
+   "provinceId": 15,
+   "district": "Тонхил",
+   "districtId": 1510
+ },
+ {
+   "provinceId": 15,
+   "district": "Төгрөг",
+   "districtId": 1511
+ },
+ {
+   "provinceId": 15,
+   "district": "Халиун",
+   "districtId": 1512
+ },
+ {
+   "provinceId": 15,
+   "district": "Хөхморьт",
+   "districtId": 1513
+ },
+ {
+   "provinceId": 15,
+   "district": "Цогт",
+   "districtId": 1514
+ },
+ {
+   "provinceId": 15,
+   "district": "Цээл",
+   "districtId": 1515
+ },
+ {
+   "provinceId": 15,
+   "district": "Чандмань",
+   "districtId": 1516
+ },
+ {
+   "provinceId": 15,
+   "district": "Шарга",
+   "districtId": 1517
+ },
+ {
+   "provinceId": 15,
+   "district": "Эрдэнэ",
+   "districtId": 1518
+ },
+ {
+   "provinceId": 16,
+   "district": "Баянтал",
+   "districtId": 1601
+ },
+ {
+   "provinceId": 16,
+   "district": "Сүмбэр",
+   "districtId": 1602
+ },
+ {
+   "provinceId": 16,
+   "district": "Шивээговь",
+   "districtId": 1603
+ },
+ {
+   "provinceId": 17,
+   "district": "Дархан",
+   "districtId": 1701
+ },
+ {
+   "provinceId": 17,
+   "district": "Орхон",
+   "districtId": 1702
+ },
+ {
+   "provinceId": 17,
+   "district": "Хонгор",
+   "districtId": 1703
+ },
+ {
+   "provinceId": 17,
+   "district": "Шарын Гол",
+   "districtId": 1704
+ },
+ {
+   "provinceId": 18,
+   "district": "Айраг",
+   "districtId": 1801
+ },
+ {
+   "provinceId": 18,
+   "district": "Алтанширээ",
+   "districtId": 1802
+ },
+ {
+   "provinceId": 18,
+   "district": "Даланжаргалан",
+   "districtId": 1803
+ },
+ {
+   "provinceId": 18,
+   "district": "Дэлгэрэх",
+   "districtId": 1804
+ },
+ {
+   "provinceId": 18,
+   "district": "Замын-Үүд",
+   "districtId": 1805
+ },
+ {
+   "provinceId": 18,
+   "district": "Иххэт",
+   "districtId": 1806
+ },
+ {
+   "provinceId": 18,
+   "district": "Мандах",
+   "districtId": 1807
+ },
+ {
+   "provinceId": 18,
+   "district": "Өргөн",
+   "districtId": 1808
+ },
+ {
+   "provinceId": 18,
+   "district": "Сайншанд",
+   "districtId": 1809
+ },
+ {
+   "provinceId": 18,
+   "district": "Сайхандулаан",
+   "districtId": 1810
+ },
+ {
+   "provinceId": 18,
+   "district": "Улаанбадрах",
+   "districtId": 1811
+ },
+ {
+   "provinceId": 18,
+   "district": "Хатанбулаг",
+   "districtId": 1812
+ },
+ {
+   "provinceId": 18,
+   "district": "Хөвсгөл",
+   "districtId": 1813
+ },
+ {
+   "provinceId": 18,
+   "district": "Эрдэнэ",
+   "districtId": 1814
+ },
+ {
+   "provinceId": 19,
+   "district": "Баяндун",
+   "districtId": 1901
+ },
+ {
+   "provinceId": 19,
+   "district": "Баянтүмэн",
+   "districtId": 1902
+ },
+ {
+   "provinceId": 19,
+   "district": "Баян-Уул",
+   "districtId": 1903
+ },
+ {
+   "provinceId": 19,
+   "district": "Булган",
+   "districtId": 1904
+ },
+ {
+   "provinceId": 19,
+   "district": "Гурванзагал",
+   "districtId": 1905
+ },
+ {
+   "provinceId": 19,
+   "district": "Дашбалбар",
+   "districtId": 1906
+ },
+ {
+   "provinceId": 19,
+   "district": "Матад",
+   "districtId": 1907
+ },
+ {
+   "provinceId": 19,
+   "district": "Сэргэлэн",
+   "districtId": 1908
+ },
+ {
+   "provinceId": 19,
+   "district": "Халхгол",
+   "districtId": 1909
+ },
+ {
+   "provinceId": 19,
+   "district": "Хөлөнбуйр",
+   "districtId": 1910
+ },
+ {
+   "provinceId": 19,
+   "district": "Хэрлэн",
+   "districtId": 1911
+ },
+ {
+   "provinceId": 19,
+   "district": "Цагаан-Овоо",
+   "districtId": 1912
+ },
+ {
+   "provinceId": 19,
+   "district": "Чойбалсан",
+   "districtId": 1913
+ },
+ {
+   "provinceId": 19,
+   "district": "Чулуунхороот",
+   "districtId": 1914
+ },
+ {
+   "provinceId": 20,
+   "district": "Адаацаг",
+   "districtId": 2001
+ },
+ {
+   "provinceId": 20,
+   "district": "Баянжаргалан",
+   "districtId": 2002
+ },
+ {
+   "provinceId": 20,
+   "district": "Говь-Угтаал",
+   "districtId": 2003
+ },
+ {
+   "provinceId": 20,
+   "district": "Гурвансайхан",
+   "districtId": 2004
+ },
+ {
+   "provinceId": 20,
+   "district": "Дэлгэрхангай",
+   "districtId": 2005
+ },
+ {
+   "provinceId": 20,
+   "district": "Дэлгэрцогт",
+   "districtId": 2006
+ },
+ {
+   "provinceId": 20,
+   "district": "Дэрэн",
+   "districtId": 2007
+ },
+ {
+   "provinceId": 20,
+   "district": "Луус",
+   "districtId": 2008
+ },
+ {
+   "provinceId": 20,
+   "district": "Өлзийт",
+   "districtId": 2009
+ },
+ {
+   "provinceId": 20,
+   "district": "Өндөршил",
+   "districtId": 2010
+ },
+ {
+   "provinceId": 20,
+   "district": "Сайнцагаан",
+   "districtId": 2011
+ },
+ {
+   "provinceId": 20,
+   "district": "Сайхан-Овоо",
+   "districtId": 2012
+ },
+ {
+   "provinceId": 20,
+   "district": "Хулд",
+   "districtId": 2013
+ },
+ {
+   "provinceId": 20,
+   "district": "Цагаандэлгэр",
+   "districtId": 2014
+ },
+ {
+   "provinceId": 20,
+   "district": "Эрдэнэдалай",
+   "districtId": 2015
+ },
+ {
+   "provinceId": 21,
+   "district": "Алдархаан",
+   "districtId": 2101
+ },
+ {
+   "provinceId": 21,
+   "district": "Асгат",
+   "districtId": 2102
+ },
+ {
+   "provinceId": 21,
+   "district": "Баянтэс",
+   "districtId": 2103
+ },
+ {
+   "provinceId": 21,
+   "district": "Баянхайрхан",
+   "districtId": 2104
+ },
+ {
+   "provinceId": 21,
+   "district": "Дөрвөлжин",
+   "districtId": 2105
+ },
+ {
+   "provinceId": 21,
+   "district": "Завханмандал",
+   "districtId": 2106
+ },
+ {
+   "provinceId": 21,
+   "district": "Идэр",
+   "districtId": 2107
+ },
+ {
+   "provinceId": 21,
+   "district": "Их-Уул",
+   "districtId": 2108
+ },
+ {
+   "provinceId": 21,
+   "district": "Нөмрөг",
+   "districtId": 2109
+ },
+ {
+   "provinceId": 21,
+   "district": "Отгон",
+   "districtId": 2110
+ },
+ {
+   "provinceId": 21,
+   "district": "Сантмаргац",
+   "districtId": 2111
+ },
+ {
+   "provinceId": 21,
+   "district": "Сонгино",
+   "districtId": 2112
+ },
+ {
+   "provinceId": 21,
+   "district": "Тосонцэнгэл",
+   "districtId": 2113
+ },
+ {
+   "provinceId": 21,
+   "district": "Түдэвтэй",
+   "districtId": 2114
+ },
+ {
+   "provinceId": 21,
+   "district": "Тэлмэн",
+   "districtId": 2115
+ },
+ {
+   "provinceId": 21,
+   "district": "Тэс",
+   "districtId": 2116
+ },
+ {
+   "provinceId": 21,
+   "district": "Улиастай",
+   "districtId": 2117
+ },
+ {
+   "provinceId": 21,
+   "district": "Ургамал",
+   "districtId": 2118
+ },
+ {
+   "provinceId": 21,
+   "district": "Цагаанхайрхан",
+   "districtId": 2119
+ },
+ {
+   "provinceId": 21,
+   "district": "Цагаанчулуут",
+   "districtId": 2120
+ },
+ {
+   "provinceId": 21,
+   "district": "Цэцэн-Уул",
+   "districtId": 2121
+ },
+ {
+   "provinceId": 21,
+   "district": "Шилүүстэй",
+   "districtId": 2122
+ },
+ {
+   "provinceId": 21,
+   "district": "Эрдэнэхайрхан",
+   "districtId": 2123
+ },
+ {
+   "provinceId": 21,
+   "district": "Яруу",
+   "districtId": 2124
+ },
+ {
+   "provinceId": 22,
+   "district": "Баян-Өндөр",
+   "districtId": 2201
+ },
+ {
+   "provinceId": 22,
+   "district": "Жаргалант",
+   "districtId": 2202
+ },
+ {
+   "provinceId": 23,
+   "district": "Арвайхээр",
+   "districtId": 2301
+ },
+ {
+   "provinceId": 23,
+   "district": "Баруунбаян-Улаан",
+   "districtId": 2302
+ },
+ {
+   "provinceId": 23,
+   "district": "Бат-Өлзий",
+   "districtId": 2303
+ },
+ {
+   "provinceId": 23,
+   "district": "Баянгол",
+   "districtId": 2304
+ },
+ {
+   "provinceId": 23,
+   "district": "Баян-Өндөр",
+   "districtId": 2305
+ },
+ {
+   "provinceId": 23,
+   "district": "Богд",
+   "districtId": 2306
+ },
+ {
+   "provinceId": 23,
+   "district": "Бүрд",
+   "districtId": 2307
+ },
+ {
+   "provinceId": 23,
+   "district": "Гучин-Ус",
+   "districtId": 2308
+ },
+ {
+   "provinceId": 23,
+   "district": "Есөн Зүйл",
+   "districtId": 2309
+ },
+ {
+   "provinceId": 23,
+   "district": "Зүүнбаян-Улаан",
+   "districtId": 2310
+ },
+ {
+   "provinceId": 23,
+   "district": "Нарийнтээл",
+   "districtId": 2311
+ },
+ {
+   "provinceId": 23,
+   "district": "Өлзийт",
+   "districtId": 2312
+ },
+ {
+   "provinceId": 23,
+   "district": "Сант",
+   "districtId": 2313
+ },
+ {
+   "provinceId": 23,
+   "district": "Тарагт",
+   "districtId": 2314
+ },
+ {
+   "provinceId": 23,
+   "district": "Төгрөг",
+   "districtId": 2315
+ },
+ {
+   "provinceId": 23,
+   "district": "Уянга",
+   "districtId": 2316
+ },
+ {
+   "provinceId": 23,
+   "district": "Хайрхандулаан",
+   "districtId": 2317
+ },
+ {
+   "provinceId": 23,
+   "district": "Хархорин",
+   "districtId": 2318
+ },
+ {
+   "provinceId": 23,
+   "district": "Хужирт",
+   "districtId": 2319
+ },
+ {
+   "provinceId": 24,
+   "district": "Баяндалай",
+   "districtId": 2401
+ },
+ {
+   "provinceId": 24,
+   "district": "Баян-Овоо",
+   "districtId": 2402
+ },
+ {
+   "provinceId": 24,
+   "district": "Булган",
+   "districtId": 2403
+ },
+ {
+   "provinceId": 24,
+   "district": "Гурвантэс",
+   "districtId": 2404
+ },
+ {
+   "provinceId": 24,
+   "district": "Даланзадгад",
+   "districtId": 2405
+ },
+ {
+   "provinceId": 24,
+   "district": "Мандал-Овоо",
+   "districtId": 2406
+ },
+ {
+   "provinceId": 24,
+   "district": "Манлай",
+   "districtId": 2407
+ },
+ {
+   "provinceId": 24,
+   "district": "Ноён",
+   "districtId": 2408
+ },
+ {
+   "provinceId": 24,
+   "district": "Номгон",
+   "districtId": 2409
+ },
+ {
+   "provinceId": 24,
+   "district": "Сэврэй",
+   "districtId": 2410
+ },
+ {
+   "provinceId": 24,
+   "district": "Ханбогд",
+   "districtId": 2411
+ },
+ {
+   "provinceId": 24,
+   "district": "Ханхонгор",
+   "districtId": 2412
+ },
+ {
+   "provinceId": 24,
+   "district": "Хүрмэн",
+   "districtId": 2413
+ },
+ {
+   "provinceId": 24,
+   "district": "Цогт-Овоо",
+   "districtId": 2414
+ },
+ {
+   "provinceId": 24,
+   "district": "Цогтцэций",
+   "districtId": 2415
+ },
+ {
+   "provinceId": 25,
+   "district": "Асгат",
+   "districtId": 2501
+ },
+ {
+   "provinceId": 25,
+   "district": "Баруун-Урт",
+   "districtId": 2502
+ },
+ {
+   "provinceId": 25,
+   "district": "Баяндэлгэр",
+   "districtId": 2503
+ },
+ {
+   "provinceId": 25,
+   "district": "Дарьганга",
+   "districtId": 2504
+ },
+ {
+   "provinceId": 25,
+   "district": "Мөнххаан",
+   "districtId": 2505
+ },
+ {
+   "provinceId": 25,
+   "district": "Наран",
+   "districtId": 2506
+ },
+ {
+   "provinceId": 25,
+   "district": "Онгон",
+   "districtId": 2507
+ },
+ {
+   "provinceId": 25,
+   "district": "Сүхбаатар",
+   "districtId": 2508
+ },
+ {
+   "provinceId": 25,
+   "district": "Түвшинширээ",
+   "districtId": 2509
+ },
+ {
+   "provinceId": 25,
+   "district": "Түмэнцогт",
+   "districtId": 2510
+ },
+ {
+   "provinceId": 25,
+   "district": "Уулбаян",
+   "districtId": 2511
+ },
+ {
+   "provinceId": 25,
+   "district": "Халзан",
+   "districtId": 2512
+ },
+ {
+   "provinceId": 25,
+   "district": "Эрдэнэцагаан",
+   "districtId": 2513
+ },
+ {
+   "provinceId": 26,
+   "district": "Алтанбулаг",
+   "districtId": 2601
+ },
+ {
+   "provinceId": 26,
+   "district": "Баруунбүрэн",
+   "districtId": 2602
+ },
+ {
+   "provinceId": 26,
+   "district": "Баянгол",
+   "districtId": 2603
+ },
+ {
+   "provinceId": 26,
+   "district": "Ерөө",
+   "districtId": 2604
+ },
+ {
+   "provinceId": 26,
+   "district": "Жавхлант",
+   "districtId": 2605
+ },
+ {
+   "provinceId": 26,
+   "district": "Зүүнбүрэн",
+   "districtId": 2606
+ },
+ {
+   "provinceId": 26,
+   "district": "Мандал",
+   "districtId": 2607
+ },
+ {
+   "provinceId": 26,
+   "district": "Орхон",
+   "districtId": 2608
+ },
+ {
+   "provinceId": 26,
+   "district": "Орхонтуул",
+   "districtId": 2609
+ },
+ {
+   "provinceId": 26,
+   "district": "Сайхан",
+   "districtId": 2610
+ },
+ {
+   "provinceId": 26,
+   "district": "Сант",
+   "districtId": 2611
+ },
+ {
+   "provinceId": 26,
+   "district": "Сүхбаатар",
+   "districtId": 2612
+ },
+ {
+   "provinceId": 26,
+   "district": "Түшиг",
+   "districtId": 2613
+ },
+ {
+   "provinceId": 26,
+   "district": "Хушаат",
+   "districtId": 2614
+ },
+ {
+   "provinceId": 26,
+   "district": "Хүдэр",
+   "districtId": 2615
+ },
+ {
+   "provinceId": 26,
+   "district": "Цагааннуур",
+   "districtId": 2616
+ },
+ {
+   "provinceId": 26,
+   "district": "Шаамар",
+   "districtId": 2617
+ },
+ {
+   "provinceId": 27,
+   "district": "Алтанбулаг",
+   "districtId": 2701
+ },
+ {
+   "provinceId": 27,
+   "district": "Аргалант",
+   "districtId": 2702
+ },
+ {
+   "provinceId": 27,
+   "district": "Архуст",
+   "districtId": 2703
+ },
+ {
+   "provinceId": 27,
+   "district": "Батсүмбэр",
+   "districtId": 2704
+ },
+ {
+   "provinceId": 27,
+   "district": "Баян",
+   "districtId": 2705
+ },
+ {
+   "provinceId": 27,
+   "district": "Баяндэлгэр",
+   "districtId": 2706
+ },
+ {
+   "provinceId": 27,
+   "district": "Баянжаргалан",
+   "districtId": 2707
+ },
+ {
+   "provinceId": 27,
+   "district": "Баян-Өнжүүл",
+   "districtId": 2708
+ },
+ {
+   "provinceId": 27,
+   "district": "Баянхангай",
+   "districtId": 2709
+ },
+ {
+   "provinceId": 27,
+   "district": "Баянцагаан",
+   "districtId": 2710
+ },
+ {
+   "provinceId": 27,
+   "district": "Баянцогт",
+   "districtId": 2711
+ },
+ {
+   "provinceId": 27,
+   "district": "Баянчандмань",
+   "districtId": 2712
+ },
+ {
+   "provinceId": 27,
+   "district": "Борнуур",
+   "districtId": 2713
+ },
+ {
+   "provinceId": 27,
+   "district": "Бүрэн",
+   "districtId": 2714
+ },
+ {
+   "provinceId": 27,
+   "district": "Дэлгэрхаан",
+   "districtId": 2715
+ },
+ {
+   "provinceId": 27,
+   "district": "Жаргалант",
+   "districtId": 2716
+ },
+ {
+   "provinceId": 27,
+   "district": "Заамар",
+   "districtId": 2717
+ },
+ {
+   "provinceId": 27,
+   "district": "Зуунмод",
+   "districtId": 2718
+ },
+ {
+   "provinceId": 27,
+   "district": "Лүн",
+   "districtId": 2719
+ },
+ {
+   "provinceId": 27,
+   "district": "Мөнгөнморьт",
+   "districtId": 2720
+ },
+ {
+   "provinceId": 27,
+   "district": "Өндөрширээт",
+   "districtId": 2721
+ },
+ {
+   "provinceId": 27,
+   "district": "Сүмбэр",
+   "districtId": 2722
+ },
+ {
+   "provinceId": 27,
+   "district": "Сэргэлэн",
+   "districtId": 2723
+ },
+ {
+   "provinceId": 27,
+   "district": "Угтаалцайдам",
+   "districtId": 2724
+ },
+ {
+   "provinceId": 27,
+   "district": "Цээл",
+   "districtId": 2725
+ },
+ {
+   "provinceId": 27,
+   "district": "Эрдэнэ",
+   "districtId": 2726
+ },
+ {
+   "provinceId": 27,
+   "district": "Эрдэнэсант",
+   "districtId": 2727
+ },
+ {
+   "provinceId": 28,
+   "district": "Баруунтуруун",
+   "districtId": 2801
+ },
+ {
+   "provinceId": 28,
+   "district": "Бөхмөрөн",
+   "districtId": 2802
+ },
+ {
+   "provinceId": 28,
+   "district": "Давст",
+   "districtId": 2803
+ },
+ {
+   "provinceId": 28,
+   "district": "Завхан",
+   "districtId": 2804
+ },
+ {
+   "provinceId": 28,
+   "district": "Зүүнговь",
+   "districtId": 2805
+ },
+ {
+   "provinceId": 28,
+   "district": "Зүүнхангай",
+   "districtId": 2806
+ },
+ {
+   "provinceId": 28,
+   "district": "Малчин",
+   "districtId": 2807
+ },
+ {
+   "provinceId": 28,
+   "district": "Наранбулаг",
+   "districtId": 2808
+ },
+ {
+   "provinceId": 28,
+   "district": "Өлгий",
+   "districtId": 2809
+ },
+ {
+   "provinceId": 28,
+   "district": "Өмнөговь",
+   "districtId": 2810
+ },
+ {
+   "provinceId": 28,
+   "district": "Өндөрхангай",
+   "districtId": 2811
+ },
+ {
+   "provinceId": 28,
+   "district": "Сагил",
+   "districtId": 2812
+ },
+ {
+   "provinceId": 28,
+   "district": "Тариалан",
+   "districtId": 2813
+ },
+ {
+   "provinceId": 28,
+   "district": "Түргэн",
+   "districtId": 2814
+ },
+ {
+   "provinceId": 28,
+   "district": "Тэс",
+   "districtId": 2815
+ },
+ {
+   "provinceId": 28,
+   "district": "Улаангом",
+   "districtId": 2816
+ },
+ {
+   "provinceId": 28,
+   "district": "Ховд",
+   "districtId": 2817
+ },
+ {
+   "provinceId": 28,
+   "district": "Хяргас",
+   "districtId": 2818
+ },
+ {
+   "provinceId": 28,
+   "district": "Цагаанхайрхан",
+   "districtId": 2819
+ },
+ {
+   "provinceId": 29,
+   "district": "Багануур",
+   "districtId": 4101
+ },
+ {
+   "provinceId": 29,
+   "district": "Багахангай",
+   "districtId": 4201
+ },
+ {
+   "provinceId": 29,
+   "district": "Баянгол",
+   "districtId": 4301
+ },
+ {
+   "provinceId": 29,
+   "district": "Баянзүрх",
+   "districtId": 4401
+ },
+ {
+   "provinceId": 29,
+   "district": "Налайх",
+   "districtId": 4501
+ },
+ {
+   "provinceId": 29,
+   "district": "Сонгинохайрхан",
+   "districtId": 4601
+ },
+ {
+   "provinceId": 29,
+   "district": "Сүхбаатар",
+   "districtId": 4701
+ },
+ {
+   "provinceId": 29,
+   "district": "Хан-Уул",
+   "districtId": 4801
+ },
+ {
+   "provinceId": 29,
+   "district": "Чингэлтэй",
+   "districtId": 4901
+ },
+ {
+   "provinceId": 30,
+   "district": "Алтай",
+   "districtId": 3001
+ },
+ {
+   "provinceId": 30,
+   "district": "Булган",
+   "districtId": 3002
+ },
+ {
+   "provinceId": 30,
+   "district": "Буянт",
+   "districtId": 3003
+ },
+ {
+   "provinceId": 30,
+   "district": "Дарви",
+   "districtId": 3004
+ },
+ {
+   "provinceId": 30,
+   "district": "Дөргөн",
+   "districtId": 3005
+ },
+ {
+   "provinceId": 30,
+   "district": "Дуут",
+   "districtId": 3006
+ },
+ {
+   "provinceId": 30,
+   "district": "Жаргалант",
+   "districtId": 3007
+ },
+ {
+   "provinceId": 30,
+   "district": "Зэрэг",
+   "districtId": 3008
+ },
+ {
+   "provinceId": 30,
+   "district": "Манхан",
+   "districtId": 3009
+ },
+ {
+   "provinceId": 30,
+   "district": "Мөнххайрхан",
+   "districtId": 3010
+ },
+ {
+   "provinceId": 30,
+   "district": "Мөст",
+   "districtId": 3011
+ },
+ {
+   "provinceId": 30,
+   "district": "Мянгад",
+   "districtId": 3012
+ },
+ {
+   "provinceId": 30,
+   "district": "Үенч",
+   "districtId": 3013
+ },
+ {
+   "provinceId": 30,
+   "district": "Ховд",
+   "districtId": 3014
+ },
+ {
+   "provinceId": 30,
+   "district": "Цэцэг",
+   "districtId": 3015
+ },
+ {
+   "provinceId": 30,
+   "district": "Чандмань",
+   "districtId": 3016
+ },
+ {
+   "provinceId": 30,
+   "district": "Эрдэнэбүрэн",
+   "districtId": 3017
+ },
+ {
+   "provinceId": 31,
+   "district": "Алаг-Эрдэнэ",
+   "districtId": 3101
+ },
+ {
+   "provinceId": 31,
+   "district": "Арбулаг",
+   "districtId": 3102
+ },
+ {
+   "provinceId": 31,
+   "district": "Баянзүрх",
+   "districtId": 3103
+ },
+ {
+   "provinceId": 31,
+   "district": "Бүрэнтогтох",
+   "districtId": 3104
+ },
+ {
+   "provinceId": 31,
+   "district": "Галт",
+   "districtId": 3105
+ },
+ {
+   "provinceId": 31,
+   "district": "Жаргалант",
+   "districtId": 3106
+ },
+ {
+   "provinceId": 31,
+   "district": "Их-Уул",
+   "districtId": 3107
+ },
+ {
+   "provinceId": 31,
+   "district": "Мөрөн",
+   "districtId": 3108
+ },
+ {
+   "provinceId": 31,
+   "district": "Рашаант",
+   "districtId": 3109
+ },
+ {
+   "provinceId": 31,
+   "district": "Рэнчинлхүмбэ",
+   "districtId": 3110
+ },
+ {
+   "provinceId": 31,
+   "district": "Тариалан",
+   "districtId": 3111
+ },
+ {
+   "provinceId": 31,
+   "district": "Тосонцэнгэл",
+   "districtId": 3112
+ },
+ {
+   "provinceId": 31,
+   "district": "Төмөрбулаг",
+   "districtId": 3113
+ },
+ {
+   "provinceId": 31,
+   "district": "Түнэл",
+   "districtId": 3114
+ },
+ {
+   "provinceId": 31,
+   "district": "Улаан-Уул",
+   "districtId": 3115
+ },
+ {
+   "provinceId": 31,
+   "district": "Ханх",
+   "districtId": 3116
+ },
+ {
+   "provinceId": 31,
+   "district": "Цагааннуур",
+   "districtId": 3117
+ },
+ {
+   "provinceId": 31,
+   "district": "Цагаан-Уул",
+   "districtId": 3118
+ },
+ {
+   "provinceId": 31,
+   "district": "Цагаан-Үүр",
+   "districtId": 3119
+ },
+ {
+   "provinceId": 31,
+   "district": "Цэцэрлэг",
+   "districtId": 3120
+ },
+ {
+   "provinceId": 31,
+   "district": "Чандмань-Өндөр",
+   "districtId": 3121
+ },
+ {
+   "provinceId": 31,
+   "district": "Шинэ-Идэр",
+   "districtId": 3122
+ },
+ {
+   "provinceId": 31,
+   "district": "Эрдэнэбулган",
+   "districtId": 3123
+ },
+ {
+   "provinceId": 32,
+   "district": "Батноров",
+   "districtId": 3201
+ },
+ {
+   "provinceId": 32,
+   "district": "Батширээт",
+   "districtId": 3202
+ },
+ {
+   "provinceId": 32,
+   "district": "Баян-Адарга",
+   "districtId": 3203
+ },
+ {
+   "provinceId": 32,
+   "district": "Баянмөнх",
+   "districtId": 3204
+ },
+ {
+   "provinceId": 32,
+   "district": "Баян-Овоо",
+   "districtId": 3205
+ },
+ {
+   "provinceId": 32,
+   "district": "Баянхутаг",
+   "districtId": 3206
+ },
+ {
+   "provinceId": 32,
+   "district": "Биндэр",
+   "districtId": 3207
+ },
+ {
+   "provinceId": 32,
+   "district": "Бор-Өндөр",
+   "districtId": 3208
+ },
+ {
+   "provinceId": 32,
+   "district": "Галшар",
+   "districtId": 3209
+ },
+ {
+   "provinceId": 32,
+   "district": "Дадал",
+   "districtId": 3210
+ },
+ {
+   "provinceId": 32,
+   "district": "Дархан",
+   "districtId": 3211
+ },
+ {
+   "provinceId": 32,
+   "district": "Дэлгэрхаан",
+   "districtId": 3212
+ },
+ {
+   "provinceId": 32,
+   "district": "Жаргалтхаан",
+   "districtId": 3213
+ },
+ {
+   "provinceId": 32,
+   "district": "Мөрөн",
+   "districtId": 3214
+ },
+ {
+   "provinceId": 32,
+   "district": "Норовлин",
+   "districtId": 3215
+ },
+ {
+   "provinceId": 32,
+   "district": "Өмнөдэлгэр",
+   "districtId": 3216
+ },
+ {
+   "provinceId": 32,
+   "district": "Хэрлэн",
+   "districtId": 3217
+ },
+ {
+   "provinceId": 32,
+   "district": "Цэнхэрмандал",
+   "districtId": 3218
+ }
+]
