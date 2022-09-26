@@ -4,12 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 use App\Models\Articles;
 use App\Models\ArticleUsers;
 
 class ArticleController extends Controller
 {
     //
+    public function index()
+    {
+        $articles = Articles::where('article_users.u_id', '=', Auth::id())
+            ->join('article_users', 'articles.id', '=', 'article_users.a_id')->get();
+
+        return view('user.article.index', compact('articles'));
+    }
+
     public function new()
     {
         return view('user.article.new');
@@ -35,9 +46,15 @@ class ArticleController extends Controller
         // $article->approved = Carbon::now();
         $article->revised_u_id = null;
         $article->public_publish = 0;
-        
-        $article->save();
 
-        return redirect()->route('user.article.new');
+        $article->save();
+        
+        $a_id = $article->id;
+
+        $articleUser->a_id = $a_id;
+        $articleUser->u_id = Auth::id();  
+        $articleUser->save();
+
+        return redirect()->route('user.articles');
     }
 }

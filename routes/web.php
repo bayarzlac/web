@@ -46,3 +46,4 @@ Route::post('/adduser', [PublicController::class, 'adduser'])->name('user.add');
 
 Route::get('/user/article/new', [ArticleController::class, 'new'])->name('user.article.new');
 Route::post('/user/article/add', [ArticleController::class, 'add'])->name('user.article.add');
+Route::get('/user/article/index', [ArticleController::class, 'index'])->name('user.articles');
