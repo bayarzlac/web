@@ -53,13 +53,18 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="row">
+                                @if (Session::has('message'))
+                                    <div class="alert alert-info">{{ Session::get('message') }}</div>
+                                @endif
+                            </div>
+                            <div class="row">
                                 <div class="form-group col-md-12 mb-4">
                                     <input type="email" class="form-control input-lg" id="email" name="email"
-                                        aria-describedby="emailHelp" placeholder="Username">
+                                        aria-describedby="emailHelp" placeholder="Бүртгэлтэй имэйл хаяг">
                                 </div>
                                 <div class="form-group col-md-12 ">
                                     <input type="password" class="form-control input-lg" id="password" name="password"
-                                        placeholder="Password">
+                                        placeholder="Нууц үг">
                                 </div>
 
                                 <div class="col-md-12">
@@ -93,4 +98,5 @@
         </div>
     </div>
 </body>
+
 </html>

@@ -59,30 +59,55 @@
                         <form id="app" @submit="checkInputs" action="{{ route('user.add') }}" method="POST">
                             @csrf
                             <div class="row">
+                                <div class="col-md-12">
+                                    @if (Session::has('success'))
+                                        <div class="alert alert-success">
+                                            <ul>
+                                                <li>{{ Session::get('success') }}</li>
+                                            </ul>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label>Овог, нэр</label>
-                                            <input type="text" :class="[ last_name != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]"
-                                                placeholder="Овог (эцэг / эхийн нэр)" name="last_name" v-model="last_name">
+                                            <input type="text"
+                                                :class="[last_name != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                placeholder="Овог (эцэг / эхийн нэр)" name="last_name"
+                                                v-model="last_name">
                                             <div v-if="last_name == ''" class="invalid-feedback">*</div>
                                         </div>
-                                        
+
                                         <div class="form-group col-md-12">
-                                            <input type="text" :class="[ first_name != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" placeholder="Нэр" name="first_name" v-model="first_name">
+                                            <input type="text"
+                                                :class="[first_name != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                placeholder="Нэр" name="first_name" v-model="first_name">
                                             <div v-if="first_name == ''" class="invalid-feedback">*</div>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Төрсөн огноо</label>
-                                            <input type="date" :class="[ birth_date != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" placeholder="Төрсөн огноо" name="birth_date" v-model="birth_date">
+                                            <input type="date"
+                                                :class="[birth_date != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                placeholder="Төрсөн огноо" name="birth_date" v-model="birth_date">
                                             <div v-if="birth_date == ''" class="invalid-feedback">*</div>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Хүйс</label>
-                                            <select :class="[ sex != '' ? 'form-control is-valid' : 'form-control is-invalid' ]" id="sex" name="sex" v-model="sex">
-                                                <option disabled selected>--Сонго--</option>
+                                            <select
+                                                :class="[sex != '' ? 'form-control is-valid' : 'form-control is-invalid']"
+                                                id="sex" name="sex" v-model="sex">
+                                                <option disabled selected value="">--Сонго--</option>
                                                 <option>Эрэгтэй</option>
                                                 <option>Эмэгтэй</option>
                                             </select>
@@ -90,16 +115,29 @@
                                         </div>
 
                                         <div class="form-group col-md-12">
-                                            <input type="email" :class="[ email != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" id="email" aria-describedby="emailHelp" placeholder="Email хаяг" name="email" v-model="email">
+                                            <input type="email"
+                                                :class="[email != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                id="email" aria-describedby="emailHelp" placeholder="Email хаяг"
+                                                name="email" v-model="email">
                                             <div v-if="email == ''" class="invalid-feedback">*</div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="password" :class="[ password != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" name="password" placeholder="Нууц үг" v-model="password">
+                                            <input type="password"
+                                                :class="[password != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                name="password" placeholder="Нууц үг" v-model="password">
                                             <div v-if="password == ''" class="invalid-feedback">*</div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="password" :class="[ password_confirm != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" placeholder="Нууц үг давтах" v-model="password_confirm">
-                                            <div v-if="password_confirm == ''" class="invalid-feedback">*</div>
+                                            <input type="password"
+                                                :class="[password_confirm == password ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                placeholder="Нууц үг баталгаажуулах" v-model="password_confirm">
+                                            <div v-if="password_confirm != ''" class="invalid-feedback">Нууц үг баталгаажуулалт зөрүүтэй</div>
                                         </div>
                                     </div>
                                 </div>
@@ -108,9 +146,13 @@
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label>Боловсролын зэрэг</label>
-                                            <select :class="[ education_degree != '' ? 'form-control is-valid' : 'form-control is-invalid' ]" id="education_degree" name="education_degree"
+                                            <select
+                                                :class="[education_degree != '' ? 'form-control is-valid' :
+                                                    'form-control is-invalid'
+                                                ]"
+                                                id="education_degree" name="education_degree"
                                                 v-model="education_degree">
-                                                <option disabled selected>--Сонго--</option>
+                                                <option disabled selected value="">--Сонго--</option>
                                                 <option>Оюутан</option>
                                                 <option>Бакалавр</option>
                                                 <option>Магистр</option>
@@ -121,9 +163,13 @@
 
                                         <div class="form-group col-md-12">
                                             <label>Эрдмийн зэрэг</label>
-                                            <select :class="[ academic_degree != '' ? 'form-control is-valid' : 'form-control is-invalid' ]" id="academic_degree" name="academic_degree"
+                                            <select
+                                                :class="[academic_degree != '' ? 'form-control is-valid' :
+                                                    'form-control is-invalid'
+                                                ]"
+                                                id="academic_degree" name="academic_degree"
                                                 v-model="academic_degree">
-                                                <option disabled selected>--Сонго--</option>
+                                                <option disabled selected value="">--Сонго--</option>
                                                 <option>Зэрэггүй</option>
                                                 <option>ШУ Доктор</option>
                                                 <option>Дэд профессор</option>
@@ -134,26 +180,39 @@
                                         </div>
 
                                         <div class="form-group col-md-12">
-                                            <input type="text" :class="[ work != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" name="work" placeholder="Ажлын газар" v-model="work">
+                                            <input type="text"
+                                                :class="[work != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                name="work" placeholder="Ажлын газар" v-model="work">
                                             <div v-if="work == ''" class="invalid-feedback">*</div>
                                         </div>
 
                                         <div class="form-group col-md-12">
-                                            <input type="text" :class="[ position != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" name="position" placeholder="Албан тушаал" v-model="position">
+                                            <input type="text"
+                                                :class="[position != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                name="position" placeholder="Албан тушаал" v-model="position">
                                             <div v-if="position == ''" class="invalid-feedback">*</div>
                                         </div>
 
                                         <div class="form-group col-md-12">
-                                            <input type="text" :class="[ phone != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" name="phone" placeholder="Гар утасны дугаар" v-model="phone">
+                                            <input type="text"
+                                                :class="[phone != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                name="phone" placeholder="Гар утасны дугаар" v-model="phone">
                                             <div v-if="phone == ''" class="invalid-feedback">*</div>
                                         </div>
 
                                         <div class="form-group col-md-12">
                                             <label>Аймаг / хот</label>
-                                            <select 
-                                                :class="[ provinceSelected != '' ? 'form-control is-valid' : 'form-control is-invalid' ]" 
-                                                v-model="provinceSelected"
-                                                @change="onSelectProvince">
+                                            <select
+                                                :class="[provinceSelected != '' ? 'form-control is-valid' :
+                                                    'form-control is-invalid'
+                                                ]"
+                                                v-model="provinceSelected" @change="onSelectProvince">
                                                 <option value="" disabled selected>--Сонгох--</option>
                                                 <option v-for="item in provinces" v-bind:value="item.provinceId">
                                                     @{{ item.province }}</option>
@@ -164,7 +223,9 @@
 
                                         <div class="form-group col-md-12">
                                             <label>Сум / дүүрэг</label>
-                                            <select :class="[ district != '' ? 'form-control is-valid' : 'form-control is-invalid' ]" v-model="district" name="district">
+                                            <select
+                                                :class="[district != '' ? 'form-control is-valid' : 'form-control is-invalid']"
+                                                v-model="district" name="district">
                                                 <option value="" disabled selected>--Сонгох--</option>
                                                 <option v-if="provinceSelected" v-for="item in districts"
                                                     :value="item.district">@{{ item.district }}</option>
@@ -172,7 +233,11 @@
                                             <div v-if="district == ''" class="invalid-feedback">*</div>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="text" :class="[ address != '' ? 'form-control input-lg is-valid' : 'form-control input-lg is-invalid' ]" name="address" placeholder="Оршин суугаа хаяг" v-model="address">
+                                            <input type="text"
+                                                :class="[address != '' ? 'form-control input-lg is-valid' :
+                                                    'form-control input-lg is-invalid'
+                                                ]"
+                                                name="address" placeholder="Оршин суугаа хаяг" v-model="address">
                                             <div v-if="address == ''" class="invalid-feedback">*</div>
                                         </div>
                                     </div>
@@ -194,7 +259,7 @@
                                     <button type="submit"
                                         class="btn btn-lg btn-primary btn-block mb-4">Бүртгүүлэх</button>
                                     <p>Та өмнө нь бүртгүүлсэн үү?
-                                        <a class="text-blue" href="sign-in.html">Нэвтрэх</a>
+                                        <a class="text-blue" href="{{ route('login') }}">Нэвтрэх</a>
                                     </p>
                                 </div>
                             </div>
@@ -257,7 +322,8 @@
                     this.education_degree != '' && this.academic_degree != '' &&
                     this.work.trim() != '' && this.position.trim() != '' && 
                     this.phone.trim() != '' && this.district.trim() != '' &&
-                    this.address.trim() != '') {
+                    this.address.trim() != '' && this.password.trim() != '' &&
+                    this.password.trim() == this.password_confirm.trim()) {
                     return true;
                 }
 
@@ -267,8 +333,9 @@
                     this.email == '' ||
                     this.education_degree == '' || this.academic_degree == '' ||
                     this.work.trim() == '' || this.position.trim() == '' ||
-                    this.phone.trim() == '' || this.district || 
-                    this.address.trim() == '') {
+                    this.phone.trim() == '' || this.district == '' || 
+                    this.address.trim() == '' || this.password.trim() == '' ||
+                    this.password.trim() != this.password_confirm.trim()) {
                     this.errors.push('Та шаардлагатай мэдээллүүдийг оруулна уу.');
                 }
 

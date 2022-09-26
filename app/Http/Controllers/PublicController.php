@@ -39,7 +39,10 @@ class PublicController extends Controller
             'alert-type' => 'success'  
         );
 
-        return redirect()->route('user.signup')->with($notification);
+        // return redirect()->route('user.signup')->with($notification);
+        // return redirect()->route('login', 'message', 'Бүртгэл амижлттай үүслээ. Та бүртгэлээрээ нэвтэрч орно уу.');
+        
+        return redirect()->back()->with('success', 'Бүртгэл амижлттай үүслээ. Та бүртгэлээрээ нэвтэрч орно уу.');
     }
 
     public function papers()
