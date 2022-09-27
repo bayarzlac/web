@@ -1,8 +1,6 @@
 @extends('user.layouts.master')
 @section('user')
     <div class="col-lg-12">
-
-
         <div class="card card-default">
             <div class="card-header card-header-border-bottom">
                 <h2>Өгүүллүүдийн жагсаалт</h2>
@@ -30,7 +28,7 @@
                                         <td>{{ $item->authors }}</td>
                                         <td>{{ $item->received }}</td>
                                         <td>
-                                            {{ $item->approved == null ? '<span class="badge badge-warning">Нийтлээгүй</span>' : '<span class="badge badge-success">Нийтэлсэн</span>' }}
+                                            {!! $item->approved == null ? '<span class="badge badge-warning">Нийтлээгүй</span>' : '<span class="badge badge-success">Нийтэлсэн</span>' !!}
                                         </td>
                                         <td>
                                             <a href="/{{ $item->full_article_link }}">Үзэх</a>
@@ -41,9 +39,7 @@
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 @endsection
