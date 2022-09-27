@@ -95,6 +95,11 @@
                                             <span class="nav-text">Өгүүлэл илгээх</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="sidenav-item-link" href="{{ route('user.articles') }}">
+                                            <span class="nav-text">Өгүүллүүд</span>   
+                                        </a>
+                                    </li>
                                 </div>
                             </ul>
                         </li>

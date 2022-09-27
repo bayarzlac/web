@@ -16,7 +16,10 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Articles::where('article_users.u_id', '=', Auth::id())
-            ->join('article_users', 'articles.id', '=', 'article_users.a_id')->get();
+            ->join('article_users', 'articles.id', '=', 'article_users.a_id')
+            ->select('articles.title', 'articles.authors', 'articles.received', 'articles.approved', 'articles.full_article_link')
+            ->orderBy('articles.received', 'desc')
+            ->paginate(15);
 
         return view('user.article.index', compact('articles'));
     }
