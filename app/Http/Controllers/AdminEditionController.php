@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\JournalEdition;
 
-class EditionController extends Controller
+class AdminEditionController extends Controller
 {
     public function __construct() 
     {

@@ -38,7 +38,6 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/user/details/{id}', [AdminController::class, 'details'])->name('admin.user.details');
-    
 });
 
 Route::group(['middleware' => ['auth']], function () {

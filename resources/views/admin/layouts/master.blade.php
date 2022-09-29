@@ -119,6 +119,14 @@
                                 </div>
                             </ul>
                         </li>
+                        <li class="has-sub">
+                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                data-target="#edition" aria-expanded="false" aria-controls="edition">
+                                <i class="mdi mdi-library-shelves"></i>
+                                <span class="nav-text">Бүлгүүд</span> <b class="caret"></b>
+                            </a>
+                            
+                        </li>
                     </ul>
                 </div>
 
