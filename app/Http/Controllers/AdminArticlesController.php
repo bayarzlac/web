@@ -15,4 +15,11 @@ class AdminArticlesController extends Controller
 
         return view('admin.articles.index', compact('articles'));
     }
+
+    public function details($id)
+    {
+        $article = Articles::where('articles.id', '=', $id)->get();
+
+        return view('admin.articles.details', compact('article'));
+    }
 }

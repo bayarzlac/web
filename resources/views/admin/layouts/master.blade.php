@@ -33,6 +33,7 @@
 
 
 <body class="sidebar-fixed sidebar-dark header-light header-fixed" id="body">
+    
     <script>
         NProgress.configure({
             showSpinner: false
@@ -82,7 +83,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li class="has-sub {{ (request()->is('admin/articles') || request()->is('admin/article/details/*')) ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#paper" aria-expanded="false" aria-controls="paper">
                                 <i class="mdi mdi-book-open-page-variant"></i>
@@ -98,7 +99,7 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li class="has-sub {{ (request()->is('admin/edition') || request()->is('admin/edition/new')) ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#edition" aria-expanded="false" aria-controls="edition">
                                 <i class="mdi mdi-library-shelves"></i>
@@ -119,13 +120,12 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                data-target="#edition" aria-expanded="false" aria-controls="edition">
-                                <i class="mdi mdi-library-shelves"></i>
-                                <span class="nav-text">Бүлгүүд</span> <b class="caret"></b>
+
+                        <li class="{{ (request()->is('admin/chapters')) ? 'active' : '' }}">
+                            <a class="sidenav-item-link" href="{{ route('admin.chapters') }}">
+                                <i class="mdi mdi-format-page-break"></i>
+                                <span class="nav-text">Бүлгүүд</span>
                             </a>
-                            
                         </li>
                     </ul>
                 </div>
@@ -227,6 +227,8 @@
             </header>
             <div class="content-wrapper">
                 <div class="content">
+                    
+
                     @yield('admin')
                 </div>
             </div>

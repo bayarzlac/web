@@ -28,6 +28,7 @@ Route::get('/about', function () {
 Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::get('/admin/articles', [AdminArticlesController::class, 'index'])->name('admin.articles');
+    Route::get('/admin/article/details/{id}', [AdminArticlesController::class, 'details'])->name('admin.article.details');
     
     Route::get('/admin/edition', [AdminEditionController::class, 'index'])->name('admin.edition');
     Route::get('/admin/edition/new', [AdminEditionController::class, 'new'])->name('admin.edition.new');

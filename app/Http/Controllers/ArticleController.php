@@ -60,4 +60,18 @@ class ArticleController extends Controller
 
         return redirect()->route('user.articles');
     }
+
+    public function delete($id)
+    {
+        $article = Articles::find($id);
+        $file = $article->file;
+
+        if ($article->revised == null)
+        {
+            unlink($file);
+            Articles::find($id)->delete();
+        }
+
+        return Redirect()->back()->with('success', 'Өгүүлэл устлаа');
+    }
 }

@@ -51,10 +51,10 @@
                                             <ul class="dropdown-menu dropdown-menu-right"
                                                 aria-labelledby="dropdown-recent-order1">
                                                 <li class="dropdown-item">
-                                                    <a href="#">View</a>
+                                                    <a href="{{ route('admin.article.details', $item->id )}}">дэлгэрэнгүй</a>
                                                 </li>
                                                 <li class="dropdown-item">
-                                                    <a href="#">Remove</a>
+                                                    <a href="#">устгах</a>
                                                 </li>
                                             </ul>
                                         </div>
