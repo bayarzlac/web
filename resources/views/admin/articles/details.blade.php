@@ -34,10 +34,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <a href="{{ route('') }}" class="mb-1 btn btn-outline-success">
-                                <i class="mdi mdi-file-pdf-box">::before</i>
+                        <div class="col-md-12 mt-3">
+                            <a href="{{ route('admin.article.edit', $article[0]->id) }}" class="mb-1 btn btn-outline-success">
+                                <i class="mdi mdi-file-pdf-box">Үзэх</i>
                             </a>
+                            <a href="/{{ $article[0]->full_article_link }}">Үзэх</a>
                         </div>
                     </div>
                 </div>
