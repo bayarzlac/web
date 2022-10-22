@@ -45,8 +45,6 @@ class ArticleController extends Controller
         $article->keywords = $request->keywords;
         $article->full_article_link = 'articles/' . $filename;
         $article->received = Carbon::now();
-        // $article->revised = Carbon::now();
-        // $article->approved = Carbon::now();
         $article->revised_u_id = null;
         $article->public_publish = 0;
 

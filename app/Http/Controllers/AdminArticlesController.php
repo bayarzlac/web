@@ -18,15 +18,50 @@ class AdminArticlesController extends Controller
 
     public function details($id)
     {
-        $article = Articles::where('articles.id', '=', $id)->get();
+        $article = Articles::where('articles.id', '=', $id)->first();
 
         return view('admin.articles.details', compact('article'));
     }
 
     public function edit($id)
     {
-        $article = Articles::where('articles.id', '=', $id)->get();
+        $article = Articles::where('articles.id', '=', $id)->first();
 
         return view('admin.articles.edit', compact('article'));
+    }
+
+    public function update(Request $request)
+    {
+        if ($request->hasFile('file'))
+        {
+            unlink($request->old_file);
+
+            $file = $request->file('file');
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('articles'), $filename);
+
+            Articles::find($request->id)->update([
+                'title' => $request->title,
+                'authors' => $request->authors,
+                'abstract_mn' => $request->abstract_mn,
+                'abstract_en' => $request->abstract_en,
+                'keywords' => $request->keywords,
+                'full_article_link' => 'articles/' . $filename
+            ]);
+        }
+        else 
+        {
+            Articles::find($request->id)->update([
+                'title' => $request->title,
+                'authors' => $request->authors,
+                'abstract_mn' => $request->abstract_mn,
+                'abstract_en' => $request->abstract_en,
+                'keywords' => $request->keywords
+            ]);
+
+            return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
+        }
+
+        return view('admin.articles.details', $request->id);
     }
 }
