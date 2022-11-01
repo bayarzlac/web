@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::get('/admin/articles', [AdminArticlesController::class, 'index'])->name('admin.articles');
     Route::get('/admin/article/details/{id}', [AdminArticlesController::class, 'details'])->name('admin.article.details');
     Route::get('/admin/article/edit/{id}', [AdminArticlesController::class, 'edit'])->name('admin.article.edit');
+    Route::post('/admin/article/update', [AdminArticlesController::class, 'update'])->name('admin.article.update');
     
     Route::get('/admin/edition', [AdminEditionController::class, 'index'])->name('admin.edition');
     Route::get('/admin/edition/new', [AdminEditionController::class, 'new'])->name('admin.edition.new');
