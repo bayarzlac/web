@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Articles;
 use App\Models\ArticleUsers;
+use Carbon\Carbon;
 
 class AdminArticlesController extends Controller
 {
@@ -19,7 +20,7 @@ class AdminArticlesController extends Controller
     public function details($id)
     {
         $article = Articles::where('articles.id', '=', $id)->first();
-
+        
         return view('admin.articles.details', compact('article'));
     }
 
@@ -32,6 +33,13 @@ class AdminArticlesController extends Controller
 
     public function update(Request $request)
     {
+        $approved = null;
+
+        if ($request->approved == true)
+        {
+            $approved = Carbon::now();
+        }
+
         if ($request->hasFile('file'))
         {
             unlink($request->old_file);
@@ -46,7 +54,8 @@ class AdminArticlesController extends Controller
                 'abstract_mn' => $request->abstract_mn,
                 'abstract_en' => $request->abstract_en,
                 'keywords' => $request->keywords,
-                'full_article_link' => 'articles/' . $filename
+                'full_article_link' => 'articles/' . $filename,
+                'approved' => $approved
             ]);
         }
         else 
@@ -56,7 +65,8 @@ class AdminArticlesController extends Controller
                 'authors' => $request->authors,
                 'abstract_mn' => $request->abstract_mn,
                 'abstract_en' => $request->abstract_en,
-                'keywords' => $request->keywords
+                'keywords' => $request->keywords,
+                'approved' => $approved
             ]);
 
             return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');

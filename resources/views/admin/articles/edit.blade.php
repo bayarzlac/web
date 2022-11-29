@@ -24,7 +24,6 @@
                                         value="{{ $article->authors }}" required />
                                     <span class="mt-2 d-block">APA форматаар бичнэ үү.</span>
                                 </div>
-
                                 <div class="form-group">
                                     <label>Өгүүллийн хураангуй (Монгол хэлээр)</label>
                                     <textarea class="form-control" name="abstract_mn" rows="4" required>{{ $article->abstract_mn }}</textarea>
@@ -45,8 +44,12 @@
                                 <div class="form-group">
                                     <label>Өгүүллийн эх файл</label>
                                     <input type="text" name="old_file" value="{{ $article->full_article_link }}" />
-                                    <input type="file" name="file" class="form-control-file" accept="application/pdf"
-                                        required>
+                                    <input type="file" name="file" class="form-control-file" accept="application/pdf" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Шууд хүлээн авах</label>
+                                    <input name="approved" type="checkbox" name="approve" checked="{{ $article->approved != null ? true : false }}" />
                                 </div>
 
                                 <div class="form-footer pt-4 pt-5 mt-4 border-top">

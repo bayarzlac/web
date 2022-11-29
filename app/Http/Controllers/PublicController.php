@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Articles;
+use App\Models\JournalEdition;
 
 class PublicController extends Controller
 {
@@ -48,7 +49,15 @@ class PublicController extends Controller
     public function papers()
     {
         $papers = Articles::whereNotNull('approved')->latest()->paginate(10);
+        
         return view('papers', compact('papers'));
+    }
+
+    public function editions()
+    {
+        $editions = JournalEdition::orderBy('created_at', 'desc');
+
+        return view('$editions', compact('editions'));
     }
 
     public function search_paper(Request $request)

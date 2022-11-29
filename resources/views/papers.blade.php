@@ -12,177 +12,308 @@
         </div>
     </section> <!-- end page title -->
 
-
-    <!-- Blog Standard -->
-    <section class="section-wrap-sm blog-standard bg-light pb-50">
+    <!-- Blog Masonry -->
+    <section class="section-wrap-sm blog-masonry bg-light">
         <div class="container relative">
-            <div class="row">
+            <div class="row masonry blog-content">
 
-                <!-- content -->
-                <div class="col-md-9 post-content mb-50">
-                    @foreach ($papers as $item)
-                        <!-- standard post -->
-                        <article class="entry-item">
-                            {{-- <div class="entry-img">
-                            <a href="blog-single.html" class="hover-scale">
-                                <img src="{{ asset('public_files/img/blog/post_img_1.jpg') }}" alt="">
+                <!-- standard post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-img hover-scale">
+                            <a href="blog-single.html">
+                                <img src="img/blog/blog_1.jpg" alt="">
                             </a>
-                        </div> --}}
-                            <div class="entry-wrap">
-                                <div class="entry">
-                                    <ul class="entry-meta">
-                                        <li class="entry-date">
-                                            <i class="fa fa-calendar-o"></i>
-                                            {{ $item->approved }}
-                                        </li>
-                                        <li class="entry-author">
-                                            <i class="fa fa-user"></i>
-                                            <a href="#">{{ $item->authors }}</a>
-                                        </li>
-                                        <li class="entry-category">
-                                            <i class="fa fa-folder-open"></i>
-                                            <a href="#">Fashion</a>
-                                        </li>
-                                        <li class="entry-comments">
-                                            <i class="fa fa-comment"></i>
-                                            <a href="blog-single.html">15 Comments</a>
-                                        </li>
-                                    </ul>
-                                    <h2 class="entry-title">
-                                        <a href="blog-single.html">{{ $item->title }}</a>
-                                    </h2>
-                                    <div class="entry-content">
-                                        <p>
-                                            {{ $item->abstract_mn }}
-                                        </p>
-                                        <a href="blog-single.html" class="read-more">Дэлгэрэнгүй</a>
-                                    </div>
+                        </div>
+
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">19 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Fashion</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">4 Ways Advertising Agencies Can Protect Themselves From Click
+                                        Fraud.</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
                                 </div>
                             </div>
-                        </article> <!-- end standard post -->
-                    @endforeach
-
-
-                    <!-- Pagination -->
-                    <nav class="pagination clearfix">
-                        <a href="#"><i class="fa fa-angle-left"></i></a>
-                        <span class="page-numbers current">1</span>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#"><i class="fa fa-angle-right"></i></a>
-                    </nav>
-
+                        </div>
+                    </article> <!-- end standard post -->
                 </div> <!-- end col -->
 
-                <!-- Sidebar -->
-                <aside class="col-md-3 sidebar">
+                <!-- gallery post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                         <!-- end slider -->
 
-                    <div class="widget search">
-                        <form class="relative" action="{{ route('search_paper') }}" method="POST">
-                            <input type="search" name="search" class="searchbox mb-0" placeholder="Search">
-                            <button type="submit" class="search-button"><i class="ui-search"></i></button>
-                        </form>
-                    </div>
-
-                    <!-- Categories -->
-                    <div class="widget categories">
-                        <h3 class="widget-title heading uppercase relative bottom-line full-grey">Categories</h3>
-                        <ul class="list-dividers">
-                            <li>
-                                <a href="#">Business</a>
-                            </li>
-                            <li>
-                                <a href="#">Science</a>
-                            </li>
-                            <li>
-                                <a href="#">Sport</a>
-                            </li>
-                            <li>
-                                <a href="#">Politics</a>
-                            </li>
-                            <li>
-                                <a href="#">Lifestyle</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Recent posts -->
-                    <div class="widget recent-posts">
-                        <h3 class="widget-title heading uppercase relative bottom-line full-grey">Recent Posts</h3>
-                        <div class="entry-list">
-                            <ul class="posts-list">
-                                <li class="entry-li">
-                                    <article class="post-small clearfix">
-                                        <div class="entry">
-                                            <h3 class="entry-title"><a href="blog-single.html">6 Ways to Be More
-                                                    Productive</a></h3>
-                                            <ul class="entry-meta list-inline">
-                                                <li class="entry-date">
-                                                    19 Mar, 2016
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="entry-li">
-                                    <article class="post-small clearfix">
-                                        <div class="entry">
-                                            <h3 class="entry-title"><a href="blog-single.html">3 Tips to Align Your
-                                                    Startup</a></h3>
-                                            <ul class="entry-meta list-inline">
-                                                <li class="entry-date">
-                                                    16 Mar, 2016
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="entry-li">
-                                    <article class="post-small clearfix">
-                                        <div class="entry">
-                                            <h3 class="entry-title"><a href="blog-single.html">Make more money blogging
-                                                    with these 6 tips</a></h3>
-                                            <ul class="entry-meta list-inline">
-                                                <li class="entry-date">
-                                                    16 Mar, 2016
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-                            </ul>
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">15 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Business</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">Gallery blog post. Italian fashion</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </article> <!-- end gallery post -->
+                </div>
 
-                    <!-- Twitter -->
-                    <div class="widget recent-tweets">
-                        <h3 class="widget-title heading relative">Recent Tweets</h3>
-                        <ul class="list-no-dividers" id="tweets" data-twitter-id="594366594521804800"
-                            data-max-tweets="2">
-                        </ul>
-                    </div>
+                <!-- video post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-video video-wrap">
+                            <iframe width="640" height="360" src="https://player.vimeo.com/video/181027959?badge=0"
+                                allowfullscreen></iframe>
+                        </div>
 
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">14 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">World</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">This is awesome Youtube video post.</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end video post -->
+                </div>
 
-                    <!-- Tags -->
-                    <div class="widget tags light clearfix">
-                        <h3 class="widget-title heading uppercase relative bottom-line full-grey">Tags</h3>
-                        <a href="#">Multi-purpose</a>
-                        <a href="#">Creative</a>
-                        <a href="#">Elegant</a>
-                        <a href="#">Clean</a>
-                        <a href="#">Modern</a>
-                        <a href="#">Responsive</a>
-                        <a href="#">E-commerce</a>
-                        <a href="#">WordPress</a>
-                        <a href="#">Woocommerce</a>
-                        <a href="#">Store</a>
-                        <a href="#">Business</a>
-                    </div>
+                <!-- blockquote post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry blockquote">
+                            <blockquote class="blockquote-style-1">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">12 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Business</a>
+                                    </li>
+                                </ul>
+                                <p>
+                                    <a href="blog-single.html">Incredible change happens in your life when you decide to
+                                        take control of what you do have power over instead of craving control over what you
+                                        don't.</a>
+                                </p>
+                                <span>Steve Maraboli</span>
+                            </blockquote>
+                        </div>
+                    </article> <!-- end blockquote post -->
+                </div>
 
-                </aside> <!-- end sidebar -->
+                <!-- standard post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-img hover-scale">
+                            <a href="blog-single.html">
+                                <img src="img/blog/blog_5.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">09 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Quotes</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">5 Steps to start new business</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end standard post -->
+                </div> <!-- end col -->
+
+                <!-- text only post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">10 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">World</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">Text blog post. Adventurous man using bicycle</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end text only post -->
+                </div>
+
+                <!-- standard post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-img hover-scale">
+                            <a href="blog-single.html">
+                                <img src="img/blog/blog_6.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">09 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Quotes</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">5 Steps to start new business</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end standard post -->
+                </div> <!-- end col -->
+
+                <!-- standard post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-img hover-scale">
+                            <a href="blog-single.html">
+                                <img src="img/blog/blog_7.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">09 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">Quotes</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">5 Steps to start new business</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end standard post -->
+                </div> <!-- end col -->
+
+                <!-- text only post -->
+                <div class="col-md-4 col-sm-6 col-xs-12 masonry-item">
+                    <article class="entry-item">
+                        <div class="entry-wrap">
+                            <div class="entry">
+                                <ul class="entry-meta">
+                                    <li class="entry-date">
+                                        <i class="fa fa-calendar-o"></i>
+                                        <a href="#">10 July, 2015</a>
+                                    </li>
+                                    <li class="entry-category">
+                                        <i class="fa fa-folder-open"></i>
+                                        <a href="#">World</a>
+                                    </li>
+                                </ul>
+                                <h2 class="entry-title">
+                                    <a href="blog-single.html">Text blog post. Adventurous man using bicycle</a>
+                                </h2>
+                                <div class="entry-content">
+                                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amadea is a simple and
+                                        elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
+                                    <a href="blog-single.html" class="read-more sliding-link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article> <!-- end text only post -->
+                </div>
+
 
             </div> <!-- end row -->
+
+            <div class="load-more text-center mt-30">
+                <a href="#" class="btn btn-md btn-white"><span>Load More</span></a>
+            </div>
+
         </div> <!-- end container -->
-    </section> <!-- end blog standard -->
+    </section> <!-- end blog masonry -->
 @endsection
