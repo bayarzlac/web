@@ -64,7 +64,7 @@ class ArticleController extends Controller
         $article = Articles::find($id);
         $file = $article->file;
 
-        if ($article->revised == null)
+        if ($article->review == null)
         {
             unlink($file);
             Articles::find($id)->delete();
