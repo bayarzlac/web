@@ -43,13 +43,23 @@
 
                                 <div class="form-group">
                                     <label>Өгүүллийн эх файл</label>
-                                    <input type="text" name="old_file" value="{{ $article->full_article_link }}" />
+                                    <input type="hidden" name="old_file" value="{{ $article->full_article_link }}" />
                                     <input type="file" name="file" class="form-control-file" accept="application/pdf" />
                                 </div>
 
                                 <div class="form-group">
                                     <label>Шууд хүлээн авах</label>
                                     <input name="approved" type="checkbox" name="approve" checked="{{ $article->approved != null ? true : false }}" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Нийтлэх дугаар</label>
+                                    <select class="form-control" name="e_id">
+                                        <option value="" selected>Сонгох</option>
+                                        @foreach ($editions as $item)
+                                            <option value="{{ $item->id }}">{{ $item->edition . ' (' . $item->number . ')' }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
                                 <div class="form-footer pt-4 pt-5 mt-4 border-top">

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Articles;
 use App\Models\ArticleUsers;
+use App\Models\JournalEdition;
+use App\Models\JournalEditionContents;
+
 use Carbon\Carbon;
 
 class AdminArticlesController extends Controller
@@ -20,15 +23,15 @@ class AdminArticlesController extends Controller
     public function details($id)
     {
         $article = Articles::where('articles.id', '=', $id)->first();
-        
         return view('admin.articles.details', compact('article'));
     }
 
     public function edit($id)
     {
         $article = Articles::where('articles.id', '=', $id)->first();
+        $editions = JournalEdition::orderBy('created_at', 'desc')->get();
 
-        return view('admin.articles.edit', compact('article'));
+        return view('admin.articles.edit', compact('article', 'editions'));
     }
 
     public function update(Request $request)
@@ -38,6 +41,18 @@ class AdminArticlesController extends Controller
         if ($request->approved == true)
         {
             $approved = Carbon::now();
+        }
+
+        if ($request->e_id != '')
+        {
+            $articleJournal = new JournalEditionContents();
+
+            $articleJournal->je_id = $request->e_id;
+            $articleJournal->ch_id = $request->ch_id;
+            $articleJournal->a_id = $request->id;
+            $articleJournal->article_number = $request->number;
+            
+            $articleJournal->save();
         }
 
         if ($request->hasFile('file'))
