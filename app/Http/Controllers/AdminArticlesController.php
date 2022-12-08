@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Articles;
 use App\Models\ArticleUsers;
 use App\Models\JournalEdition;
 use App\Models\JournalEditionContents;
+use App\Models\Chapters;
 
 use Carbon\Carbon;
 
@@ -30,8 +32,9 @@ class AdminArticlesController extends Controller
     {
         $article = Articles::where('articles.id', '=', $id)->first();
         $editions = JournalEdition::orderBy('created_at', 'desc')->get();
+        $chapters = Chapters::orderBy('numOfOrder')->get();
 
-        return view('admin.articles.edit', compact('article', 'editions'));
+        return view('admin.articles.edit', compact('article', 'editions', 'chapters'));
     }
 
     public function update(Request $request)

@@ -12,6 +12,10 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
+                                    <label>Дэс дугаар</label>
+                                    <input type="number" name="number" class="form-control" required />
+                                </div>
+                                <div class="form-group">
                                     <label>Өгүүллийн гарчиг</label>
                                     <input type="hidden" name="id" value="{{ $article->id }}" />
                                     <input type="text" name="title" class="form-control" placeholder="" 
@@ -58,6 +62,16 @@
                                         <option value="" selected>Сонгох</option>
                                         @foreach ($editions as $item)
                                             <option value="{{ $item->id }}">{{ $item->edition . ' (' . $item->number . ')' }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Бүлэг</label>
+                                    <select class="form-control" name="ch_id" required>
+                                        <option value="" selected>Сонгох</option>
+                                        @foreach ($chapters as $item)
+                                            <option value="{{ $item->id }}">{{ $item->numOfOrder . '. ' . $item->chapter }}</option>
                                         @endforeach
                                     </select>
                                 </div>
