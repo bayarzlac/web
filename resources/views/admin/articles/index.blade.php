@@ -19,8 +19,8 @@
                                 <th>Гарчиг</th>
                                 <th class="d-none d-md-table-cell">Зохиогч</th>
                                 <th class="d-none d-md-table-cell">Ирсэн огноо</th>
-                                <th class="d-none d-md-table-cell">Order Cost</th>
-                                <th>Status</th>
+                                <th class="d-none d-md-table-cell">Хэвлэсэн</th>
+                                <th>Төлөв</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -33,7 +33,7 @@
                                     </td>
                                     <td class="d-none d-md-table-cell">{{ $item->authors }}</td>
                                     <td class="d-none d-md-table-cell">{{ $item->received }}</td>
-                                    <td class="d-none d-md-table-cell">$230</td>
+                                    <td class="d-none d-md-table-cell">{{ $item->approved }}</td>
                                     <td>
                                         @if (empty($item->revised))
                                             <span class="badge badge-danger">Хянаагүй</span>

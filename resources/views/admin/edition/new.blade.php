@@ -19,6 +19,10 @@
                                     <label>Дугаар</label>
                                     <input type="text" name="edition" class="form-control" placeholder="202206" />
                                 </div>
+                                <div class="form-group">
+                                    <label>Сэтгүүлийн нүүрний зураг</label>
+                                    <input type="file" name="coverImg" accept="image/png, image/jpeg" />
+                                </div>
                             </div>
                             <div class="col-lg-8">
                                 <div class="form-group">
@@ -43,8 +47,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <script>

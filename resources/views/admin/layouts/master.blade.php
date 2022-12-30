@@ -211,8 +211,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="profile.html">
-                                            <i class="mdi mdi-account"></i> My Profile
+                                        <a href="{{ route('user')}}">
+                                            <i class="mdi mdi-account"></i> Хэрэглэгчийн түвшин
                                         </a>
                                     </li>
 
@@ -227,8 +227,6 @@
             </header>
             <div class="content-wrapper">
                 <div class="content">
-                    
-
                     @yield('admin')
                 </div>
             </div>
@@ -270,5 +268,4 @@
     <script src="{{ asset('user_assets/js/custom.js') }}"></script>
     
 </body>
-
 </html>

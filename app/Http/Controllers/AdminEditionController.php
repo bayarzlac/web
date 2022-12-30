@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\JournalEdition;
 
+use Illuminate\Support\Str;
+
 class AdminEditionController extends Controller
 {
     public function __construct() 
@@ -48,9 +50,16 @@ class AdminEditionController extends Controller
         {
             $file = $request->file('file');
             $filename = date('YmdHi').$file->getClientOriginalName();
-            $edition->url = $filename;
-            
             $file->move(public_path('files'), $filename);
+            $edition->url = $filename;
+        }
+
+        if ($request->file('coverImg'))
+        {
+            $coverImg = $request->file('coverImg');
+            $coverImgName =  Str::random(8) . '.' . $request->file('coverImg')->extension();
+            $coverImg->move(public_path('covers'), $coverImgName);
+            $edition->coverUrl = $coverImgName;
         }
 
         $edition->save();
