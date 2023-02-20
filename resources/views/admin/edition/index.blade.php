@@ -54,7 +54,7 @@
                                             <ul class="dropdown-menu dropdown-menu-right"
                                                 aria-labelledby="dropdown-recent-order1">
                                                 <li class="dropdown-item">
-                                                    <a href="#">Дэлгэрэнгүй</a>
+                                                    <a href="{{ route('admin.edition.articles', $item->id) }}">Дэлгэрэнгүй</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="#">Устгах</a>

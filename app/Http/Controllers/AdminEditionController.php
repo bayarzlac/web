@@ -67,5 +67,10 @@ class AdminEditionController extends Controller
         return redirect()->route('admin.edition');
     }
 
+    public function articles($id)
+    {
+        $edition = JournalEdition::where('id', '=', $id)->get();
 
+        return view('admin.edition.articles', compact('edition'));
+    }
 }
