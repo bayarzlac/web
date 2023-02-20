@@ -51,9 +51,9 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector('#editor') )
             .catch( error => {
                 console.error( error );
-            } );
+            });
     </script>
 @endsection
