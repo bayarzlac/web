@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sleek - Admin Dashboard Template</title>
+    <title>Боловсрол судлал сэтгүүл</title>
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
@@ -267,5 +267,6 @@
     <script src="{{ asset('user_assets/js/map.js') }}"></script>
     <script src="{{ asset('user_assets/js/custom.js') }}"></script>
     
+    @yield('scripts')
 </body>
 </html>

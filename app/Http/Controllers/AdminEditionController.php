@@ -69,8 +69,21 @@ class AdminEditionController extends Controller
 
     public function articles($id)
     {
-        $edition = JournalEdition::where('id', '=', $id)->get();
+        $edition = JournalEdition::where('id', '=', $id)->first();
+        $articles = JournalEdition::join('journal_edition_contents', 'journal_edition_contents.je_id', 'journal_editions.id')
+            ->join('articles', 'journal_edition_contents.a_id', 'articles.id')
+            ->join('chapters', 'journal_edition_contents.ch_id', 'chapters.id')
+            ->select(
+                'articles.id',
+                'journal_edition_contents.article_number', 
+                'chapters.chapter', 
+                'articles.title', 
+                'articles.authors'
+            )
+            ->orderBy('chapters.numOfOrder')
+            ->orderBy('journal_edition_contents.article_number')
+            ->get();
 
-        return view('admin.edition.articles', compact('edition'));
+        return view('admin.edition.articles', compact('edition', 'articles'));
     }
 }
