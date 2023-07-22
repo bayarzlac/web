@@ -11,6 +11,7 @@ use App\Models\JournalEditionContents;
 use App\Models\Chapters;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class AdminArticlesController extends Controller
 {
@@ -54,7 +55,6 @@ class AdminArticlesController extends Controller
             $articleJournal->ch_id = $request->ch_id;
             $articleJournal->a_id = $request->id;
             $articleJournal->article_number = $request->number;
-            $articleJournal->review_u_id = Auth::user()->id;
             
             $articleJournal->save();
         }

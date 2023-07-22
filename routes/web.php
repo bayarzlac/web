@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminArticlesController;
 use App\Http\Controllers\AdminEditionController;
 use App\Http\Controllers\AdminChaptersController;
+use App\Http\Controllers\AdminAjaxController;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
@@ -42,6 +43,8 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/user/details/{id}', [AdminController::class, 'details'])->name('admin.user.details');
+
+    
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -55,3 +58,5 @@ Route::post('/adduser', [PublicController::class, 'adduser'])->name('user.add');
 Route::get('/user/article/new', [ArticleController::class, 'new'])->name('user.article.new');
 Route::post('/user/article/add', [ArticleController::class, 'add'])->name('user.article.add');
 Route::get('/user/article/index', [ArticleController::class, 'index'])->name('user.articles');
+
+Route::post('/ajax/removeJournalArticle/{id}', [AdminAjaxController::class, 'removeJournalArticle']);
