@@ -19,8 +19,9 @@ class AdminArticlesController extends Controller
     public function index()
     {
         $articles = Articles::latest()->paginate(10);
+        $uid = Auth::id();
 
-        return view('admin.articles.index', compact('articles'));
+        return view('admin.articles.index', compact('articles', 'uid'));
     }
 
     public function details($id)
@@ -40,57 +41,68 @@ class AdminArticlesController extends Controller
 
     public function update(Request $request)
     {
-        $approved = null;
+        $check = JournalEditionContents::where('a_id', $request->a_id)->first();
 
-        if ($request->approved == true)
-        {
-            $approved = Carbon::now();
+        if ($check) {
+            return redirect()->back()->with('success', 'Сонгосон дугаарт өгүүлэл нийтлэгдэхээр сонгогдсон байна.');
+        }
+        else {
+            return redirect()->back()->with('success', 'not found');
         }
 
-        if ($request->e_id != '')
-        {
-            $articleJournal = new JournalEditionContents();
+        // $approved = null;
 
-            $articleJournal->je_id = $request->e_id;
-            $articleJournal->ch_id = $request->ch_id;
-            $articleJournal->a_id = $request->id;
-            $articleJournal->article_number = $request->number;
+        // if ($request->approved == true)
+        // {
+        //     $approved = Carbon::now();
+        // }
+
+        // if ($request->e_id != '')
+        // {
+        //     $articleJournal = new JournalEditionContents();
+
+        //     $articleJournal->je_id = $request->e_id;
+        //     $articleJournal->ch_id = $request->ch_id;
+        //     $articleJournal->a_id = $request->id;
+        //     $articleJournal->article_number = $request->number;
             
-            $articleJournal->save();
-        }
+        //     $articleJournal->save();
+        // }
 
-        if ($request->hasFile('file'))
-        {
-            unlink($request->old_file);
+        // if ($request->hasFile('file'))
+        // {
+        //     unlink($request->old_file);
 
-            $file = $request->file('file');
-            $filename = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('articles'), $filename);
+        //     $file = $request->file('file');
+        //     $filename = date('YmdHi').$file->getClientOriginalName();
+        //     $file->move(public_path('articles'), $filename);
 
-            Articles::find($request->id)->update([
-                'title' => $request->title,
-                'authors' => $request->authors,
-                'abstract_mn' => $request->abstract_mn,
-                'abstract_en' => $request->abstract_en,
-                'keywords' => $request->keywords,
-                'full_article_link' => 'articles/' . $filename,
-                'approved' => $approved
-            ]);
-        }
-        else 
-        {
-            Articles::find($request->id)->update([
-                'title' => $request->title,
-                'authors' => $request->authors,
-                'abstract_mn' => $request->abstract_mn,
-                'abstract_en' => $request->abstract_en,
-                'keywords' => $request->keywords,
-                'approved' => $approved
-            ]);
+        //     Articles::find($request->id)->update([
+        //         'title' => $request->title,
+        //         'authors' => $request->authors,
+        //         'abstract_mn' => $request->abstract_mn,
+        //         'abstract_en' => $request->abstract_en,
+        //         'keywords' => $request->keywords,
+        //         'full_article_link' => 'articles/' . $filename,
+        //         'approved' => $approved, 
+        //         'review_u_id' => Auth::id()
+        //     ]);
+        // }
+        // else 
+        // {
+        //     Articles::find($request->id)->update([
+        //         'title' => $request->title,
+        //         'authors' => $request->authors,
+        //         'abstract_mn' => $request->abstract_mn,
+        //         'abstract_en' => $request->abstract_en,
+        //         'keywords' => $request->keywords,
+        //         'approved' => $approved,
+        //         'review_u_id' => Auth::id()
+        //     ]);
 
-            return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
-        }
+        //     return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
+        // }
 
-        return view('admin.articles.details', $request->id);
+        // return view('admin.articles.details', $request->id);
     }
 }

@@ -11,7 +11,7 @@ class AdminAjaxController extends Controller
     //
     public function removeJournalArticle($id)
     {
-        $removable = JournalEditionContents::find($id);
+        $removable = JournalEditionContents::where('id', $id)->first();
 
         if ($removable) {
             $removable->delete();
@@ -20,5 +20,12 @@ class AdminAjaxController extends Controller
         else {
             return response()->json(['warning' => 'Аль хэдийн хасагдсан эсвэл хасах боломжгүй байна.']);
         }
+    }
+
+    public function getJournalArticle($id) 
+    {
+        $removable = JournalEditionContents::where('id', $id)->first();
+
+        return $removable;
     }
 }

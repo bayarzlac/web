@@ -60,7 +60,6 @@
                 </div>
                 <!-- begin sidebar scrollbar -->
                 <div class="sidebar-scrollbar">
-
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
                         <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
@@ -91,9 +90,9 @@
                                 <i class="mdi mdi-book-open-page-variant"></i>
                                 <span class="nav-text">Өгүүлэл</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="paper" data-parent="#sidebar-menu">
+                            <ul class="collapse {{ request()->is('admin/articles') ? 'show' : '' }}" id="paper" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
-                                    <li>
+                                    <li class="{{ request()->is('admin/articles') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('admin.articles') }}">
                                             <span class="nav-text">Өгүүллүүд</span>
                                         </a>
@@ -101,20 +100,20 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub {{ (request()->is('admin/edition') || request()->is('admin/edition/new')) ? 'active' : '' }}">
+                        <li class="has-sub {{ (request()->is('admin/edition/*')) ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#edition" aria-expanded="false" aria-controls="edition">
                                 <i class="mdi mdi-library-shelves"></i>
                                 <span class="nav-text">Дугаар</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="edition" data-parent="#sidebar-menu">
+                            <ul class="collapse {{ (request()->is('admin/edition/*')) ? 'show' : '' }}" id="edition" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
-                                    <li>
+                                    <li class="{{ request()->is('admin/edition/new') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('admin.edition.new') }}">
                                             <span class="nav-text">Шинэ дугаар</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="{{ request()->is('admin/edition/index') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('admin.edition') }}">
                                             <span class="nav-text">Дугааруудын бүртгэл</span>
                                         </a>
@@ -244,7 +243,6 @@
                     document.getElementById("copy-year").innerHTML = year;
                 </script>
             </footer>
-
         </div>
     </div>
 

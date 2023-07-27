@@ -34,29 +34,34 @@ class ArticleController extends Controller
         $article = new Articles();
         $articleUser = new ArticleUsers();
 
-        $file = $request->file('file');
-        $filename = date('YmdHi').$file->getClientOriginalName();
-        $file->move(public_path('articles'), $filename);
-        
-        $article->title = $request->title;
-        $article->authors = $request->authors;
-        $article->abstract_mn = $request->abstract_mn;
-        $article->abstract_en = $request->abstract_en;
-        $article->keywords = $request->keywords;
-        $article->full_article_link = 'articles/' . $filename;
-        $article->received = Carbon::now();
-        $article->review_u_id = null;
-        $article->public_publish = 0;
+        try {
+            $file = $request->file('file');
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('articles'), $filename);
+            
+            $article->title = $request->title;
+            $article->authors = $request->authors;
+            $article->abstract_mn = $request->abstract_mn;
+            $article->abstract_en = $request->abstract_en;
+            $article->keywords = $request->keywords;
+            $article->full_article_link = 'articles/' . $filename;
+            $article->received = Carbon::now();
+            $article->review_u_id = null;
+            $article->public_publish = 0;
+    
+            $article->save();
+            
+            $a_id = $article->id;
+    
+            $articleUser->a_id = $a_id;
+            $articleUser->u_id = Auth::id();  
+            $articleUser->save();
 
-        $article->save();
-        
-        $a_id = $article->id;
-
-        $articleUser->a_id = $a_id;
-        $articleUser->u_id = Auth::id();  
-        $articleUser->save();
-
-        return redirect()->route('user.articles');
+            return redirect()->route('user.articles')->with('success', 'Таны өгүүлэл амжилттай бүртгэгдлээ.');
+        }
+        catch (Excepction $e) {
+            return redirct()->back()->with('error', 'Өгүүлэл илгээхэд алдаа гарлаа, мэдээллийг бүрэн оруулсан эсэхийг шалгаад дахин оролдоно уу.');
+        }
     }
 
     public function delete($id)

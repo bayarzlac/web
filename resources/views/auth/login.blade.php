@@ -49,6 +49,12 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+
+                        @if (session('error'))
+                            <div class="mb-4 font-medium text-sm text-green-600">
+                                {{ session('error') }}
+                            </div>
+                        @endif
                         <h4 class="text-dark mb-5">Нэвтрэх</h4>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -88,6 +94,12 @@
                                 </div>
                             </div>
                         </form>
+
+                        <div class="flex items-center justify-end mt-4">
+                            <a href="{{ url('login/google') }}">
+                                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

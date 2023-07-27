@@ -28,7 +28,7 @@
     <!-- FAVICON -->
     {{-- <link href="{{ asset('user_assets/img/favicon.png') }}" rel="shortcut icon" /> --}}
     <link rel="shortcut icon" href="{{ asset('public_files/img/favicon.ico') }}">
-    <script src="assets/plugins/nprogress/nprogress.js"></script>
+    <script src="{{ asset('user_assets/plugins/nprogress/nprogress.js') }}"></script>
 </head>
 
 
@@ -63,7 +63,7 @@
                         <li class="{{ request()->is('user') ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="{{ route('user') }}">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
-                                <span class="nav-text">Хянах самбар</span> <b class="caret"></b>
+                                <span class="nav-text">Хянах самбар</span> 
                             </a>
                         </li>
                         <li class="has-sub">
@@ -82,20 +82,20 @@
                                 </div>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <li class="has-sub {{ request()->is('user/article/*') ? 'active expand' : '' }}">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#documentation" aria-expanded="false" aria-controls="documentation">
                                 <i class="mdi mdi-book-open-page-variant"></i>
                                 <span class="nav-text">Өгүүлэл нийтлэх</span> <b class="caret"></b>
                             </a>
-                            <ul class="collapse" id="documentation" data-parent="#sidebar-menu">
+                            <ul class="collapse {{ request()->is('user/article/*') ? 'show' : '' }}" id="documentation" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
-                                    <li>
+                                    <li class="{{ request()->is('user/article/new') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('user.article.new') }}">
                                             <span class="nav-text">Өгүүлэл илгээх</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="{{ request()->is('user/article/index') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('user.articles') }}">
                                             <span class="nav-text">Өгүүллүүд</span>   
                                         </a>
@@ -143,6 +143,9 @@
                             </button>
                             <input type="text" name="query" id="search-input" class="form-control"
                                 placeholder="хайлт хийх түлхүүр үгээ бичих" autofocus autocomplete="off" />
+
+                            {{-- хайлтын түлхүүр үгүүд оруулж өгөх /user_assets/data/search.json
+                            custom.js дээр функц SimpleJekyllSearch  --}}
                         </div>
                         <div id="search-results-container">
                             <ul id="search-results"></ul>
@@ -160,8 +163,7 @@
                                     <li>
                                         <a href="#">
                                             <i class="mdi mdi-account-plus"></i> Бүртгэл үүслээ
-                                            <span class=" font-size-12 d-inline-block float-right"><i
-                                                    class="mdi mdi-clock-outline"></i> 10 AM</span>
+                                            <span class=" font-size-12 d-inline-block float-right"><i class="mdi mdi-clock-outline"></i> 10 AM</span>
                                         </a>
                                     </li>
                                     <li class="dropdown-footer">
@@ -212,9 +214,7 @@
             </header>
             <div class="content-wrapper">
                 <div class="content">
-
                     @yield('user')
-
                 </div>
             </div>
             <footer class="footer mt-auto">
@@ -229,7 +229,6 @@
                     document.getElementById("copy-year").innerHTML = year;
                 </script>
             </footer>
-
         </div>
     </div>
 
@@ -254,5 +253,4 @@
     <script src="{{ asset('user_assets/js/map.js') }}"></script>
     <script src="{{ asset('user_assets/js/custom.js') }}"></script>
 </body>
-
 </html>

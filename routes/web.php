@@ -11,6 +11,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 
+use App\Http\Controllers\GoogleLoginController;
+
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -33,7 +35,7 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::get('/admin/article/edit/{id}', [AdminArticlesController::class, 'edit'])->name('admin.article.edit');
     Route::post('/admin/article/update', [AdminArticlesController::class, 'update'])->name('admin.article.update');
     
-    Route::get('/admin/edition', [AdminEditionController::class, 'index'])->name('admin.edition');
+    Route::get('/admin/edition/index', [AdminEditionController::class, 'index'])->name('admin.edition');
     Route::get('/admin/edition/new', [AdminEditionController::class, 'new'])->name('admin.edition.new');
     Route::post('/admin/edition/add', [AdminEditionController::class, 'add'])->name('admin.edition.add');
     Route::get('/admin/edition/articles/{id}', [AdminEditionController::class, 'articles'])->name('admin.edition.articles');
@@ -42,9 +44,10 @@ Route::group(['middleware' => ['auth', 'Admin']], function () {
     Route::post('/admin/chapters/add', [AdminChaptersController::class, 'add'])->name('admin.chapters.add');
     
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
-    Route::get('/admin/user/details/{id}', [AdminController::class, 'details'])->name('admin.user.details');
+    Route::get('/admin/user/details/{id}', [AdminController::class, 'details'])->name('admin.user.details');    
 
-    
+    Route::post('/ajax/removeJournalArticle/{id}', [AdminAjaxController::class, 'removeJournalArticle']);
+    Route::get('/ajax/getJournalArticle/{id}', [AdminAjaxController::class, 'getJournalArticle']);
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -59,4 +62,5 @@ Route::get('/user/article/new', [ArticleController::class, 'new'])->name('user.a
 Route::post('/user/article/add', [ArticleController::class, 'add'])->name('user.article.add');
 Route::get('/user/article/index', [ArticleController::class, 'index'])->name('user.articles');
 
-Route::post('/ajax/removeJournalArticle/{id}', [AdminAjaxController::class, 'removeJournalArticle']);
+Route::get('/login/google', [GoogleLoginController::class, 'redirect'])->name('login.google-redirect');
+Route::get('/login/google/callback', [GoogleLoginController::class, 'callback'])->name('login.google-callback');
