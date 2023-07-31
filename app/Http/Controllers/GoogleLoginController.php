@@ -28,16 +28,19 @@ class GoogleLoginController extends Controller
 
                 return redirect()->intended('/');
             } else {
-                $newUser = User::create([
-                    'name' => $user->name,
-                    'email' => $user->email, 
-                    'google_id' => $user->id, 
-                    'password' => 'horvoo'
-                ]);
+                // $newUser = User::create([
+                //     'role' => 'User',
+                //     'first_name' => $user->name,
+                //     'email' => $user->email, 
+                //     'password' => 'horvoo',
+                //     'google_id' => $user->id
+                // ]);
 
-                Auth::login($newUser);
+                // Auth::login($newUser);
 
-                return redirect()->intended('/');
+                // return redirect()->intended('/');
+
+                return redirect()->route('login');
             }
         } catch (Exception $e) {
             dd($e->getMessage());
