@@ -8,8 +8,6 @@
                 </div>
                 <div class="card-body">
                     <h3 class="mb-5">{{ $edition->edition }} ({{ $edition->number }})</h3>
-
-
                     <table class="table table-bordered table-hover">
                         <thead>
                             <th>#</th>
@@ -50,6 +48,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function removeArticle(id) {
+            
             Swal.fire({
                 icon: 'warning',
                 title: 'Хасах',
@@ -69,18 +68,20 @@
                         method: 'POST',
                         dataType: 'json',
                         success: function(response) {
-                            document.getElementById('row' + id).remove();
+                            
                             if (response.success) {
                                 Swal.fire({
                                     icon: 'info',
                                     title: 'Устгах',
                                     text: response.success
                                 });
+
+                                document.getElementById('row' + id).remove();
                             } else {
                                 Swal.fire({
                                     icon: 'error',
-                                    title: 'Устгах',
-                                    text: response.error
+                                    title: 'Адаа',
+                                    text: 'Өгүүллийг дугаараас хасахад алдаа гарлаа: ' + response.error 
                                 });
                             }
                         },

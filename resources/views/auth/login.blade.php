@@ -44,15 +44,12 @@
                         </div>
                     </div>
                     <div class="card-body p-5">
-                        @if (session('status'))
-                            <div class="mb-4 font-medium text-sm text-green-600">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
                         @if (session('error'))
-                            <div class="mb-4 font-medium text-sm text-green-600">
+                            <div class="alert alert-dismissible fade show alert-danger" role="alert">
                                 {{ session('error') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
                         @endif
                         <h4 class="text-dark mb-5">Нэвтрэх</h4>
@@ -97,7 +94,8 @@
 
                         <div class="flex items-center justify-end mt-4">
                             <a href="{{ url('login/google') }}">
-                                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                                <img
+                                    src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
                             </a>
                         </div>
                     </div>

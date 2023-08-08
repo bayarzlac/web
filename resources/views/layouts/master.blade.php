@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Боловсрол судлал сэтгүүл</title>
     <meta charset="utf-8">
@@ -75,11 +76,18 @@
                                 </li>
                             </ul>
 
-                            <div class="col-sm-5 text-right">
-                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> Нэвтрэх</a> | 
-                                <a href="{{ route('user.signup') }}"><i class="fa fa-register"></i> Бүртгүүлэх</a>
-                            </div>
 
+
+                            @if (Auth::user())
+                                <div class="col-sm-5 text-right">
+                                    <a href="{{ route('user') }}"><i class="fa fa-user"></i> Хувийн талбар</a>
+                                </div>
+                            @else
+                                <div class="col-sm-5 text-right">
+                                    <a href="{{ route('login') }}"><i class="fa fa-user"></i> Нэвтрэх</a> |
+                                    <a href="{{ route('user.signup') }}"><i class="fa fa-register"></i> Бүртгүүлэх</a>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -106,7 +114,8 @@
                                 <div class="logo-container">
                                     <div class="logo-wrap">
                                         <a href="index-ny.html">
-                                            <img class="logo-dark" src="{{ asset('public_files/img/logo_dark.png') }}" alt="logo">
+                                            <img class="logo-dark"
+                                                src="{{ asset('public_files/img/logo_dark.png') }}" alt="logo">
                                         </a>
                                     </div>
                                 </div>
@@ -129,7 +138,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="{{ route('editions') }}">Дугаарууд</a>
-                                        </li> 
+                                        </li>
                                         <li class="dropdown">
                                             <a href="{{ route('about') }}">Сэтгүүлийн тухай</a>
                                         </li>
@@ -173,7 +182,7 @@
             </nav> <!-- end navbar -->
         </header>
         <div class="content-wrapper oh">
-            
+
             @yield('public')
 
             <!-- Footer Type-4 -->
@@ -201,7 +210,8 @@
                                     <p>Email: info@bolovsrolsudlal.mn</p>
                                     <div class="footer-socials">
                                         <div class="social-icons nobase">
-                                            <a href="https://www.facebook.com/bolovsrolsudlalsetguul"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://www.facebook.com/bolovsrolsudlalsetguul"><i
+                                                    class="fa fa-facebook"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -209,7 +219,8 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
                                     <h5 class="widget-title">Хаяг байршил</h5>
-                                    <address class="footer-address mb-0">Улаанбаатар хот<br>Сүхбааатар дүүрэг<br>8-р хороо, Энхтайваны өргөн чөлөө<br>
+                                    <address class="footer-address mb-0">Улаанбаатар хот<br>Сүхбааатар дүүрэг<br>8-р
+                                        хороо, Энхтайваны өргөн чөлөө<br>
                                         Багшийн хөгжлийн ордон, 301 тоот</address>
                                 </div>
                             </div> <!-- end address -->
@@ -247,18 +258,29 @@
     <script type="text/javascript" src="{{ asset('public_files/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/js/plugins.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public_files/revolution/js/jquery.themepunch.revolution.min.js') }}">
+    </script>
     <script type="text/javascript" src="{{ asset('public_files/js/rev-slider.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public_files/js/scripts.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public_files/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public_files/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
 </body>
+
 </html>

@@ -26,8 +26,20 @@ class GoogleLoginController extends Controller
             if ($finduser) {
                 Auth::login($finduser);
 
-                return redirect()->intended('/');
+                return redirect()->intended('/user');
             } else {
+
+                $dbuser = User::where('email', $user->email)->first();
+
+                if ($dbuser) {
+                    $dbuser->google_id = $user->id;
+                    $dbuser->save();
+                } else {
+                    return redirect()->route('login')->with('error', 'Та бүртгүүлсний дараа Google ашиглан нэвтэрнэ үү.');
+                }
+
+
+
                 // $newUser = User::create([
                 //     'role' => 'User',
                 //     'first_name' => $user->name,

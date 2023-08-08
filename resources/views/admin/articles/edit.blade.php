@@ -2,13 +2,11 @@
 @section('admin')
     <div class="col-lg-12">
         @if (Session('success'))
-            <div class="row">
-                <div class="alert alert-success">
-                    {{ Session('success') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <div class="alert alert-success">
+                {{ Session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
         @endif
     </div>
@@ -28,7 +26,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Өгүүллийн гарчиг</label>
-                                <input type="hidden" name="id" value="{{ $article->id }}" />
+                                <input type="hidden" name="a_id" value="{{ $article->id }}" />
                                 <input type="text" name="title" class="form-control" placeholder=""
                                     value="{{ $article->title }}" required />
                             </div>

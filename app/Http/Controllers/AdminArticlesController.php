@@ -18,10 +18,11 @@ class AdminArticlesController extends Controller
     //
     public function index()
     {
-        $articles = Articles::latest()->paginate(10);
-        $uid = Auth::id();
-
-        return view('admin.articles.index', compact('articles', 'uid'));
+        $articles = Articles::leftJoin('journal_edition_contents', 'journal_edition_contents.a_id', '=', 'articles.id')
+            ->select('articles.id', 'articles.title', 'articles.authors', 'articles.received', 'articles.approved')
+            ->get();
+        
+        return view('admin.articles.index', compact('articles'));
     }
 
     public function details($id)
@@ -43,11 +44,9 @@ class AdminArticlesController extends Controller
     {
         $check = JournalEditionContents::where('a_id', $request->a_id)->first();
 
+
         if ($check) {
-            return redirect()->back()->with('success', 'Сонгосон дугаарт өгүүлэл нийтлэгдэхээр сонгогдсон байна.');
-        }
-        else {
-            return redirect()->back()->with('success', 'not found');
+            return Redirect()->back()-with('error', 'Уг өгүүлэл тухайн дугаарт сонгогдсон байна.');
         }
 
         // $approved = null;

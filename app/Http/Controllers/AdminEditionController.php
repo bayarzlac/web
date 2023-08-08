@@ -74,7 +74,7 @@ class AdminEditionController extends Controller
             ->join('articles', 'journal_edition_contents.a_id', 'articles.id')
             ->join('chapters', 'journal_edition_contents.ch_id', 'chapters.id')
             ->select(
-                'articles.id',
+                'Journal_edition_contents.id',
                 'journal_edition_contents.article_number', 
                 'chapters.chapter', 
                 'articles.title', 

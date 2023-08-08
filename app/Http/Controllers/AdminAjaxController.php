@@ -18,7 +18,7 @@ class AdminAjaxController extends Controller
             return response()->json(['success' => 'Өгүүлэл тухайн дугаараас хасагдлаа']);
         }
         else {
-            return response()->json(['warning' => 'Аль хэдийн хасагдсан эсвэл хасах боломжгүй байна.']);
+            return response()->json(['error' => 'Аль хэдийн хасагдсан эсвэл хасах боломжгүй байна.']);
         }
     }
 
