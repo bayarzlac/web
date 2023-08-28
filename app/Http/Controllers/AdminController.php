@@ -21,7 +21,6 @@ class AdminController extends Controller
     public function users()
     {
         $users = User::latest()->paginate(10);
-        
         return view('admin.users.index', compact('users'));
     }
 
@@ -29,7 +28,6 @@ class AdminController extends Controller
     public function details($id)
     {
         $user = User::find($id);
-
         return view('admin.users.details', compact('user'));
     }
 }

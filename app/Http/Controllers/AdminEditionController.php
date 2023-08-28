@@ -86,4 +86,22 @@ class AdminEditionController extends Controller
 
         return view('admin.edition.articles', compact('edition', 'articles'));
     }
+
+    public function publish($id)
+    {
+        $edition = JournalEdition::where('id', $id)->update([
+            'status' => 2
+        ]);
+
+        return redirect()->back()->with('success', 'Дугаар нийтлэгдлээ');
+    }
+
+    public function unpublish($id)
+    {
+        $edition = JournalEdition::where('id', $id)->update([
+            'status' => 1
+        ]);
+
+        return redirect()->back()->with('success', 'Дугаар анпаблиш хийгдлээ');
+    }
 }

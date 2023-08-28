@@ -2,6 +2,25 @@
 @section('admin')
     <div class="row">
         <div class="col-lg-12">
+            @if (Session('success'))
+                <div class="alert alert-success">
+                    {{ Session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @elseif (Session('error'))
+                <div class="alert alert-warning">
+                    {{ Session('error') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+            @endif
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
             <div class="card card-default">
                 <div class="card-header card-header-border-bottom">
                     <h2>Дугаарын өгүүллүүд</h2>
@@ -30,7 +49,7 @@
                                     </td>
                                     <td>
                                         <button type="button" class="mb-1 btn btn-sm btn-outline-danger"
-                                            onclick="removeArticle({{ $article->id }})">
+                                            onclick="removeArticle({{ $article->id }})"  {{ $edition->status === 2 ? 'disabled' : '' }}>
                                             Хасах
                                         </button>
                                     </td>
@@ -39,6 +58,23 @@
 
                         </tbody>
                     </table>
+
+                    @if ($edition->status == 1)
+                        <form method="POST" action="{{ route('admin.edition.publish', $edition->id) }}">
+                            @csrf
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Нийтлэх</button>
+                            </div>
+                        </form>
+                    @else 
+                        <form method="POST" action="{{ route('admin.edition.unpublish', $edition->id) }}">
+                            @csrf
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-danger">Анпаблиш</button>
+                            </div>
+                        </form>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -48,7 +84,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function removeArticle(id) {
-            
+
             Swal.fire({
                 icon: 'warning',
                 title: 'Хасах',
@@ -62,13 +98,13 @@
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         }
                     });
-                    
+
                     $.ajax({
                         url: '/ajax/removeJournalArticle/' + id,
                         method: 'POST',
                         dataType: 'json',
                         success: function(response) {
-                            
+
                             if (response.success) {
                                 Swal.fire({
                                     icon: 'info',
@@ -81,7 +117,8 @@
                                 Swal.fire({
                                     icon: 'error',
                                     title: 'Адаа',
-                                    text: 'Өгүүллийг дугаараас хасахад алдаа гарлаа: ' + response.error 
+                                    text: 'Өгүүллийг дугаараас хасахад алдаа гарлаа: ' +
+                                        response.error
                                 });
                             }
                         },
@@ -90,7 +127,7 @@
                                 icon: 'error',
                                 title: status,
                                 text: error
-                            })
+                            });
                         }
                     });
                 }

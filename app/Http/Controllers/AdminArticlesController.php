@@ -42,66 +42,66 @@ class AdminArticlesController extends Controller
 
     public function update(Request $request)
     {
-        $check = JournalEditionContents::where('a_id', $request->a_id)->first();
+        return $request->approved;
+        // $check = JournalEditionContents::where('a_id', $request->a_id)->first();
 
-
-        if ($check) {
-            return Redirect()->back()-with('error', 'Уг өгүүлэл тухайн дугаарт сонгогдсон байна.');
-        }
-
-        // $approved = null;
-
-        // if ($request->approved == true)
-        // {
-        //     $approved = Carbon::now();
+        // if ($check) {
+        //     return Redirect()->back()->with('error', 'Уг өгүүлэл тухайн дугаарт сонгогдсон байна.');
         // }
+        // else {
+        //     $approved = null;
 
-        // if ($request->e_id != '')
-        // {
-        //     $articleJournal = new JournalEditionContents();
+        //     if ($request->approved == true) {
+        //         $approved = Carbon::now();
+        //     }
 
-        //     $articleJournal->je_id = $request->e_id;
-        //     $articleJournal->ch_id = $request->ch_id;
-        //     $articleJournal->a_id = $request->id;
-        //     $articleJournal->article_number = $request->number;
-            
-        //     $articleJournal->save();
+        //     if ($request->e_id != '')
+        //     {
+        //         $articleJournal = new JournalEditionContents();
+
+        //         $articleJournal->je_id = $request->e_id;
+        //         $articleJournal->ch_id = $request->ch_id;
+        //         $articleJournal->a_id = $request->a_id;
+        //         $articleJournal->article_number = $request->number;
+                
+        //         $articleJournal->save();
+        //     }
+
+        //     if ($request->hasFile('file'))
+        //     {
+        //         unlink($request->old_file);
+
+        //         $file = $request->file('file');
+        //         $filename = date('YmdHi').$file->getClientOriginalName();
+        //         $file->move(public_path('articles'), $filename);
+
+        //         Articles::find($request->a_id)->update([
+        //             'title' => $request->title,
+        //             'authors' => $request->authors,
+        //             'abstract_mn' => $request->abstract_mn,
+        //             'abstract_en' => $request->abstract_en,
+        //             'keywords' => $request->keywords,
+        //             'full_article_link' => 'articles/' . $filename,
+        //             'approved' => $approved, 
+        //             'review_u_id' => Auth::id()
+        //         ]);
+
+        //         return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
+        //     }
+        //     else 
+        //     {
+        //         Articles::find($request->a_id)->update([
+        //             'title' => $request->title,
+        //             'authors' => $request->authors,
+        //             'abstract_mn' => $request->abstract_mn,
+        //             'abstract_en' => $request->abstract_en,
+        //             'keywords' => $request->keywords,
+        //             'approved' => $approved,
+        //             'review_u_id' => Auth::id()
+        //         ]);
+
+        //         return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
+        //     }
         // }
-
-        // if ($request->hasFile('file'))
-        // {
-        //     unlink($request->old_file);
-
-        //     $file = $request->file('file');
-        //     $filename = date('YmdHi').$file->getClientOriginalName();
-        //     $file->move(public_path('articles'), $filename);
-
-        //     Articles::find($request->id)->update([
-        //         'title' => $request->title,
-        //         'authors' => $request->authors,
-        //         'abstract_mn' => $request->abstract_mn,
-        //         'abstract_en' => $request->abstract_en,
-        //         'keywords' => $request->keywords,
-        //         'full_article_link' => 'articles/' . $filename,
-        //         'approved' => $approved, 
-        //         'review_u_id' => Auth::id()
-        //     ]);
-        // }
-        // else 
-        // {
-        //     Articles::find($request->id)->update([
-        //         'title' => $request->title,
-        //         'authors' => $request->authors,
-        //         'abstract_mn' => $request->abstract_mn,
-        //         'abstract_en' => $request->abstract_en,
-        //         'keywords' => $request->keywords,
-        //         'approved' => $approved,
-        //         'review_u_id' => Auth::id()
-        //     ]);
-
-        //     return Redirect()->back()->with('success', 'Өгүүллийн мэдээлэл засварлагдлаа');
-        // }
-
-        // return view('admin.articles.details', $request->id);
     }
 }
