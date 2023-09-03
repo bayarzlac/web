@@ -75,9 +75,6 @@
                                         href="mailto:info@bolovsrolsudlal.mn">info@bolovsrolsudlal.mn</a>
                                 </li>
                             </ul>
-
-
-
                             @if (Auth::user())
                                 <div class="col-sm-5 text-right">
                                     <a href="{{ route('user') }}"><i class="fa fa-user"></i> Хувийн талбар</a>
@@ -282,5 +279,4 @@
     <script type="text/javascript"
         src="{{ asset('public_files/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
 </body>
-
 </html>

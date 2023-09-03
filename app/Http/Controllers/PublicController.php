@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Articles;
 use App\Models\JournalEdition;
+use Illuminate\Support\Facades\DB;
 
 class PublicController extends Controller
 {
@@ -55,9 +56,21 @@ class PublicController extends Controller
 
     public function editions()
     {
-        $editions = JournalEdition::orderBy('created_at', 'desc');
+        $editions = JournalEdition::orderBy('created_at', 'desc')
+            ->select(
+                'journal_editions.id', 'journal_editions.edition', 'journal_editions.number',
+                'journal_editions.status', 'journal_editions.coverUrl', 'journal_editions.created_at',
+                'users.first_name', 'users.last_name', DB::raw('count(journal_edition_contents.id) as num_of_articles')
+            )
+            ->join('users', 'users.id', '=', 'journal_editions.u_id')
+            ->join('journal_edition_contents', 'journal_edition_contents.je_id', '=', 'journal_editions.id')
+            ->groupBy(
+                'journal_editions.id', 'journal_editions.edition', 'journal_editions.number',
+                'journal_editions.status', 'journal_editions.coverUrl', 'journal_editions.created_at',
+                'users.first_name', 'users.last_name'
+            )->get();
 
-        return view('$editions', compact('editions'));
+        return view('editions', compact('editions'));
     }
 
     public function search_paper(Request $request)
