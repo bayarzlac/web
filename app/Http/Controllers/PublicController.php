@@ -73,6 +73,17 @@ class PublicController extends Controller
         return view('editions', compact('editions'));
     }
 
+    public function edition($id) 
+    {
+        $articles = Articles::join('journal_edition_contents', 'journal_edition_contents.a_id', '=', 'articles.id')
+            ->select('articles.id', 'articles.title', 'articles.authors', 'articles.keywords', 'articles.approved')
+            ->where('journal_edition_contents.je_id', $id)->get();
+
+        $edition = JournalEdition::where('id', $id)->first();
+
+        return view('edition', compact('articles', 'edition'));
+    }
+
     public function search_paper(Request $request)
     {
         $papers = Articles::find($request->search)->latest()->paginate(10);

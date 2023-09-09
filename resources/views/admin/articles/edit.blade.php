@@ -68,11 +68,12 @@
                                 <input type="file" name="file" class="form-control-file" accept="application/pdf" />
                             </div>
 
-                            <div class="form-group">
-                                <label>Шууд хүлээн авах</label>
-                                <input name="approved" type="checkbox" name="approve"
-                                    checked="{{ $article->approved != null ? true : false }}" />
-                            </div>
+                            {{-- <div class="form-group">
+                                <label class="control control-checkbox checkbox-primary">Нийтлэх
+                                    <input type="checkbox" name="approved" />
+                                    <div class="control-indicator"></div>
+                                </label>
+                            </div> --}}
 
                             <div class="form-group">
                                 <label>Нийтлэх дугаар</label>

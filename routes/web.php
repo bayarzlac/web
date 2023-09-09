@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/papers', [PublicController::class, 'papers'])->name('papers');
 Route::post('/papers', [PublicController::class, 'search_paper'])->name('search_paper');
 Route::get('/editions', [PublicController::class, 'editions'])->name('editions');
+Route::get('/edition/{id}', [PublicController::class, 'edition'])->name('edition');
 
 Route::get('/about', function () {
     return view('about');
