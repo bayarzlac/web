@@ -49,7 +49,11 @@ class PublicController extends Controller
 
     public function papers()
     {
-        $papers = Articles::whereNotNull('approved')->latest()->paginate(10);
+        $papers = Articles::where('public_publish', 1)
+            ->join('journal_edition_contents', 'articles.id', '=', 'journal_edition_contents.a_id')
+            ->join('chapters', 'journal_edition_contents.ch_id', '=', 'chapters.id')
+            ->select('articles.id', 'articles.title', 'articles.abstract_mn', 'chapters.chapter', 'articles.review')
+            ->latest('articles.created_at')->paginate(10);
         
         return view('papers', compact('papers'));
     }
