@@ -68,7 +68,7 @@
                         <div class="top-bar-links">
                             <ul class="col-sm-7">
                                 <li class="top-bar-phone">
-                                    <i class="fa fa-phone"></i><a href="tel:+976-99147780">+ 976-99147780</a>
+                                    <i class="fa fa-phone"></i><a href="tel:+976-99147780">+976-99147780</a>
                                 </li>
                                 <li class="top-bar-email">
                                     <i class="fa fa-envelope"></i><a
@@ -110,10 +110,13 @@
                                 <!-- Logo -->
                                 <div class="logo-container">
                                     <div class="logo-wrap">
-                                        <a href="index-ny.html">
+                                        <a href="{{ route('index') }}">
+                                            <img class="logo-dark" src="{{ asset('public_files/img/logo_dark.png') }}" alt="logo">
+                                        </a>
+                                        {{-- <a href="index-ny.html">
                                             <img class="logo-dark"
                                                 src="{{ asset('public_files/img/logo_dark.png') }}" alt="logo">
-                                        </a>
+                                        </a> --}}
                                     </div>
                                 </div>
                                 <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -203,7 +206,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="widget footer-get-in-touch">
                                     <h5 class="widget-title">Холбоо барих</h5>
-                                    <p>Утас: + 1-888-1554-456-123</p>
+                                    <p>Утас: +976-99147780</p>
                                     <p>Email: info@bolovsrolsudlal.mn</p>
                                     <div class="footer-socials">
                                         <div class="social-icons nobase">
