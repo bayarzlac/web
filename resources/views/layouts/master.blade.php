@@ -95,7 +95,7 @@
                     <div class="search-cell">
                         <form method="get">
                             <div class="search-field-holder">
-                                <input type="search" class="form-control main-search-input" placeholder="Search for">
+                                <input type="search" class="form-control main-search-input" placeholder="Хайлт хийх">
                                 <i class="ui-close search-close" id="search-close"></i>
                             </div>
                         </form>
